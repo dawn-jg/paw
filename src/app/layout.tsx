@@ -27,6 +27,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        {/* 51.la Analytics */}
+        <script charSet="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+        <script dangerouslySetInnerHTML={{ __html: 'LA.init({id:"LAZyhn2IA29Aj114",ck:"LAZyhn2IA29Aj114"})' }} />
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7487473818971469" crossOrigin="anonymous"></script>
       </head>
       <body>
         <Header />
