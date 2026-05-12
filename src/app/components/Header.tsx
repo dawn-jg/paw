@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import Search from './Search'
 
 const navLinks = [
   { href: '/dogs', label: 'Dogs' },
@@ -32,6 +33,7 @@ export default function Header() {
         </div>
 
         <div className="nav-right">
+          <Search />
           <Link href="/reviews" className="btn-primary btn-sm">Latest</Link>
           <button className="burger" onClick={() => setOpen(!open)} aria-label="Toggle menu">
             <span>{open ? "\u2715" : "\u2630"}</span>
