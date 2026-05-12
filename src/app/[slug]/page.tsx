@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
+import { headers } from 'next/headers';
+import ShareButtons from '../components/ShareButtons';
 
 // ─── Types ───────────────────────────────────────────
 interface Post {
@@ -180,6 +182,15 @@ async function getAdjacentPosts(slug: string, category: string) {
   };
 }
 
+async function ShareSection({ post }: { post: Post }) {
+  const headersList = await headers();
+  const host = headersList.get('host') || 'pawcritic.com';
+  const protocol = host.includes('localhost') ? 'http' : 'https';
+  const url = `${protocol}://${host}/${post.slug}`;
+
+  return <ShareButtons url={url} title={post.title} />;
+}
+
 function ArticlePageContent({ post }: { post: Post }) {
   const catSlug = post.category.toLowerCase().replace(/\s+/g, '-');
 
@@ -206,6 +217,7 @@ function ArticlePageContent({ post }: { post: Post }) {
             <span className="article-read-time">
               ~{Math.max(1, Math.round(post.charCount / 1500))} min read
             </span>
+            <ShareSection post={post} />
           </div>
         </div>
       </header>

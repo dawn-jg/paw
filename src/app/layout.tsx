@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PawCritic - Honest Reviews for Happy Pets',
+    description: 'Honest, research-backed pet product reviews for dogs, cats, small pets, birds, fish, and reptiles.',
+  },
   robots: { index: true, follow: true },
   metadataBase: new URL('https://pawcritic.com'),
 }
