@@ -156,9 +156,7 @@ function CategoryPageContent({ categoryKey }: { categoryKey: string }) {
               <h3>{post.title}</h3>
               <p>{post.description}</p>
               <div className="card-meta">
-                <span>{new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric', month: 'short', day: 'numeric'
-                })}</span>
+                <span>{post.date}</span>
                 <span className="read-more">Read Review</span>
               </div>
             </div>
@@ -210,9 +208,7 @@ function ArticlePageContent({ post }: { post: Post }) {
           <h1>{post.title}</h1>
           <div className="article-meta">
             <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString('en-US', {
-                year: 'numeric', month: 'long', day: 'numeric'
-              })}
+              {post.date}
             </time>
             <span className="article-read-time">
               ~{Math.max(1, Math.round(post.charCount / 1500))} min read
@@ -417,9 +413,7 @@ function ListingPageContent({ slug }: { slug: string }) {
               <h3>{post.title}</h3>
               <p>{post.description}</p>
               <div className="card-meta">
-                <span>{new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric', month: 'short', day: 'numeric'
-                })}</span>
+                <span>{post.date}</span>
                 <span className="read-more">Read More</span>
               </div>
             </div>
