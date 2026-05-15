@@ -52,7 +52,7 @@ export default function ReviewsPage() {
                 {post.description || post.title.substring(0, 80)}
               </p>
               <div className="card-meta">
-                <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                <span>{post.date}</span>
                 <span className="read-more">Read Review</span>
               </div>
             </div>
