@@ -347,6 +347,8 @@ img { max-width: 100%; height: auto; }
   margin-top: 12px;
 }
 
+.article-author { font-size: 0.9rem; color: var(--color-sage-dark); font-weight: 600; }
+.article-author::before { content: '•'; margin-right: 0.5rem; color: var(--color-sage); }
 .article-meta time {
   font-style: italic;
 }

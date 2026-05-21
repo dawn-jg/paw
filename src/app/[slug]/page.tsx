@@ -15,6 +15,9 @@ interface Post {
   charCount: number;
   description: string;
   content: string;
+  author?: string;
+  authorSlug?: string;
+  authorBio?: string;
 }
 
 interface CatPost {
@@ -192,8 +195,36 @@ async function ShareSection({ post }: { post: Post }) {
 function ArticlePageContent({ post }: { post: Post }) {
   const catSlug = post.category.toLowerCase().replace(/\s+/g, '-');
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: post.author ? {
+      '@type': 'Person',
+      name: post.author,
+    } : {
+      '@type': 'Organization',
+      name: 'PawCritic',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'PawCritic',
+      url: 'https://pawcritic.com',
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://pawcritic.com/${post.slug}`,
+    },
+  };
+
   return (
     <article className="article-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container article-breadcrumb">
         <Link href="/">Home</Link>
         <span>/</span>
@@ -210,6 +241,11 @@ function ArticlePageContent({ post }: { post: Post }) {
             <time dateTime={post.date}>
               {post.date}
             </time>
+            {post.author && (
+              <span className="article-author">
+                By {post.author}
+              </span>
+            )}
             <span className="article-read-time">
               ~{Math.max(1, Math.round(post.charCount / 1500))} min read
             </span>
