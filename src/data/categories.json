@@ -417,6 +417,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Best Aquarium Canister Filters 2026: Powerful Filtration for Crystal Clear Water",
+        "slug": "best-aquarium-canister-filters-2026-powerful-filtration-crystal-clear-water",
+        "date": "2026-05-25",
+        "description": "Canister filters are the workhorses of serious aquarium keeping — they deliver mechanical, biologica"
+      },
+      {
         "title": "Best Aquarium UV Sterilizers 2026: Crystal Clear Water & Disease Prevention",
         "slug": "best-aquarium-uv-sterilizers-2026",
         "date": "2026-05-23",
@@ -555,11 +561,17 @@
         "description": "Getting your first fish tank is exciting, but it can also be overwhelming. The right tank makes all the difference between a thriving aquarium and con"
       }
     ],
-    "count": 23
+    "count": 24
   },
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Best Bird Foraging Toys & Puzzle Feeders 2026: Mental Enrichment for Happy Parrots",
+        "slug": "best-bird-foraging-toys-puzzle-feeders-2026-mental-enrichment-for-parrots",
+        "date": "2026-05-25",
+        "description": "Parrots are among the most intelligent animals on the planet — with cognitive abilities comparable t"
+      },
       {
         "title": "Best Bird Feeders & Water Dispensers 2026: Clean Hydration & Mess-Free Feeding",
         "slug": "best-bird-feeders-water-dispensers-2026",
@@ -693,11 +705,17 @@
         "description": "Parakeets (also called budgies) are small but have big nutritional needs. In the wild, they eat a variety of seeds, grasses, fruits, and vegetables. I"
       }
     ],
-    "count": 22
+    "count": 23
   },
   "Reptiles": {
     "name": "Reptiles",
     "posts": [
+      {
+        "title": "Best Live Vivarium Plants for Reptiles 2026: Create a Thriving Bioactive Terrarium",
+        "slug": "best-live-vivarium-plants-for-reptiles-2026-bioactive-terrarium",
+        "date": "2026-05-25",
+        "description": "Live plants transform a reptile enclosure from a bare cage into a thriving, self-sustaining ecosyste"
+      },
       {
         "title": "Best Reptile Egg Incubators 2026: Perfect Hatch Rates for Serious Breeders",
         "slug": "best-reptile-egg-incubators-2026",
@@ -825,7 +843,7 @@
         "description": "Reptiles are ectothermic animals that rely on external heat sources to regulate their body temperature. A proper heat lamp is essential for digestion,"
       }
     ],
-    "count": 21
+    "count": 22
   },
   "未分类": {
     "name": "未分类",
