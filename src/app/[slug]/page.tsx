@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
-import { headers } from 'next/headers';
 import ShareButtons from '../components/ShareButtons';
 
 // ─── Types ───────────────────────────────────────────
@@ -183,11 +182,8 @@ async function getAdjacentPosts(slug: string, category: string) {
   };
 }
 
-async function ShareSection({ post }: { post: Post }) {
-  const headersList = await headers();
-  const host = headersList.get('host') || 'pawcritic.com';
-  const protocol = host.includes('localhost') ? 'http' : 'https';
-  const url = `${protocol}://${host}/${post.slug}`;
+function ShareSection({ post }: { post: Post }) {
+  const url = `https://www.pawcritic.com/${post.slug}`;
 
   return <ShareButtons url={url} title={post.title} />;
 }
