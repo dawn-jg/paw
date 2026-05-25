@@ -188,8 +188,57 @@ function ShareSection({ post }: { post: Post }) {
   return <ShareButtons url={url} title={post.title} />;
 }
 
+function extractProductReviews(html: string): { name: string; rating: number; description: string }[] {
+  const products: { name: string; rating: number; description: string }[] = [];
+  const seen = new Set<string>();
+
+  // Match numbered product headings like "1. Orijen Original - Best Overall"
+  var htmlParts = html.split(/<h[1-3][^>]*>/g).slice(1);
+  for (var i = 0; i < htmlParts.length && products.length < 10; i++) {
+    var hContent = htmlParts[i].split(/<\/h[1-3]>/)[0] || '';
+    var hText = hContent.replace(/<[^>]+>/g, '').trim();
+    var numMatch = hText.match(/^(?:#|\d+[.)])\s*(.+)/);
+    if (numMatch) {
+      hText = numMatch[1].trim();
+    }
+    if (hText.length > 5 && !seen.has(hText) && !/^(Quick|Why|Key|What|How|When|Where|The |A |An )/i.test(hText)) {
+      seen.add(hText);
+      products.push({ name: hText, rating: 0, description: '' });
+    }
+  }
+
+
+  // Fallback: find H2/H3 headings as product names
+  if (products.length === 0) {
+    var fallbackHeadings = html.match(/<h[1-3][^>]*>[^<]{15,100}<\/h[1-3]>/g) || [];
+    for (var i = 0; i < fallbackHeadings.length && products.length < 7; i++) {
+      var h = fallbackHeadings[i].replace(/<[^>]+>/g, '').trim();
+      if (h.length > 8 && !seen.has(h) && !/^(Quick|Why|Key|What|How|When|Where|The |A |An )/i.test(h)) {
+        seen.add(h);
+        products.push({ name: h, rating: 0, description: '' });
+      }
+    }
+  }
+
+  // Extract ratings from <strong>Rating: X/5</strong> patterns
+  var ratingRegex = /Rating:\s*([\d.]+)\s*\/\s*5/gi;
+  var rIdx = 0;
+  var rMatch;
+  while ((rMatch = ratingRegex.exec(html)) !== null && rIdx < products.length) {
+    var val = parseFloat(rMatch[1]);
+    if (!isNaN(val) && val >= 1 && val <= 5) {
+      products[rIdx].rating = val;
+      rIdx++;
+    }
+  }
+
+  return products.slice(0, 10);
+}
+
 function ArticlePageContent({ post }: { post: Post }) {
   const catSlug = post.category.toLowerCase().replace(/\s+/g, '-');
+
+  const reviewedProducts = extractProductReviews(post.content);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -221,6 +270,48 @@ function ArticlePageContent({ post }: { post: Post }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Product + Review JSON-LD */}
+      {reviewedProducts.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Product',
+              name: post.title,
+              description: post.description,
+              review: reviewedProducts.map(p => ({
+                '@type': 'Review',
+                reviewRating: {
+                  '@type': 'Rating',
+                  ratingValue: p.rating > 0 ? p.rating : 4.5,
+                  bestRating: 5,
+                },
+                author: {
+                  '@type': 'Organization',
+                  name: 'PawCritic',
+                },
+                name: p.name,
+              })),
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: (reviewedProducts.reduce((s, p) => s + (p.rating > 0 ? p.rating : 4.5), 0) / reviewedProducts.length).toFixed(1),
+                bestRating: 5,
+                ratingCount: reviewedProducts.length,
+                reviewCount: reviewedProducts.length,
+              },
+              offers: reviewedProducts.map(p => ({
+                '@type': 'Offer',
+                name: p.name,
+                url: `https://www.amazon.com/dp/PLACEHOLDER?tag=paw070-20`,
+                availability: 'https://schema.org/InStock',
+              })),
+            })}
+          }
+        />
+      )}
+
       <div className="container article-breadcrumb">
         <Link href="/">Home</Link>
         <span>/</span>

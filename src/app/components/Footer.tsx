@@ -16,6 +16,7 @@ const cols: Record<string, { href: string; label: string }[]> = {
     { href: '/how-we-test', label: 'How We Test' },
     { href: '/contact', label: 'Contact' },
     { href: '/editorial-policy', label: 'Editorial Policy' },
+    { href: '/privacy-policy', label: 'Privacy Policy' },
   ],
   Resources: [
     { href: '/blog', label: 'Blog' },
