@@ -840,3 +840,60 @@ img { max-width: 100%; height: auto; }
   color: var(--amber-dark);
   margin-bottom: 0.5rem;
 }
+
+/* ═══════ Dark Mode ═══════ */
+:root.dark {
+  --color-sage: #7AB87A;
+  --color-sage-dark: #5B8C5A;
+  --color-sage-light: #1A2E1A;
+  --color-amber: #E8A838;
+  --color-amber-dark: #D4952A;
+  --color-amber-light: #2E241A;
+  --color-bg: #0F1A0F;
+  --color-cream: #1A241A;
+  --color-charcoal: #E5E7EB;
+  --color-text: #D1D5DB;
+  --color-text-muted: #9CA3AF;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.35);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.45);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-sage: #7AB87A;
+    --color-sage-dark: #5B8C5A;
+    --color-sage-light: #1A2E1A;
+    --color-amber: #E8A838;
+    --color-amber-dark: #D4952A;
+    --color-amber-light: #2E241A;
+    --color-bg: #0F1A0F;
+    --color-cream: #1A241A;
+    --color-charcoal: #E5E7EB;
+    --color-text: #D1D5DB;
+    --color-text-muted: #9CA3AF;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.35);
+    --shadow-md: 0 4px 14px rgba(0,0,0,0.45);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.55);
+  }
+}
+
+.dark .site-header { background: rgba(15,26,15,0.96); border-bottom-color: #1A2E1A; }
+.dark .hero { background: linear-gradient(160deg, #1A241A 0%, #0F1A0F 40%, #1A2E1A 100%); }
+.dark .hero-chip { background: #1A241A; color: var(--color-sage); box-shadow: var(--shadow-sm); }
+.dark .hero-card { background: #1A241A; box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.dark .trust { background: var(--color-bg); }
+.dark .featured { background: var(--color-bg); }
+.dark .cat-card { background: var(--color-cream); border-color: transparent; }
+.dark .cat-card:hover { border-color: var(--color-sage); }
+.dark .review-card { background: var(--color-cream); }
+.dark .search-popup { background: var(--color-cream); border-color: #1A2E1A; }
+.dark .search-input-row { border-bottom-color: #1A2E1A; }
+.dark .search-result-item:hover { background: #1A2E1A; }
+.dark .card { background: var(--color-cream); }
+.dark .btn-outline { border-color: var(--color-sage); }
+.dark .footer { background: #0A140A; }
+.dark .nav-links.open { background: var(--color-bg); border-bottom-color: var(--color-sage-light); }
+.dark .burger { color: var(--color-charcoal); }
+.dark .static-section { border-bottom-color: rgba(255,255,255,0.06); }
+.dark ::-webkit-scrollbar-thumb { background: #374151; }

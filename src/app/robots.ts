@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://www.pawcritic.com/sitemap.xml',
+    sitemap: 'https://pawcritic.com/sitemap.xml',
   };
 }
