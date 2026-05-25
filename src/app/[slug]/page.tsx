@@ -117,13 +117,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: `Best ${resolved.key} Products & Reviews | PawCritic`,
       description: `Honest, expert reviews of the best ${resolved.key.toLowerCase()} products. Find top-rated food, toys, accessories and more for your pet.`,
+      alternates: { canonical: `https://pawcritic.com/${slug}` },
     };
   }
-  if (resolved.type === 'info') return PAGE_META[slug] ?? { title: slug };
-  if (resolved.type === 'listing') return PAGE_META[slug] ?? { title: slug };
+  if (resolved.type === 'info') return { ...(PAGE_META[slug] ?? { title: slug }), alternates: { canonical: `https://pawcritic.com/${slug}` } };
+  if (resolved.type === 'listing') return { ...(PAGE_META[slug] ?? { title: slug }), alternates: { canonical: `https://pawcritic.com/${slug}` } };
   return {
     title: `${resolved.post.title} | PawCritic`,
     description: resolved.post.description,
+    alternates: { canonical: `https://pawcritic.com/${slug}` },
     openGraph: {
       title: resolved.post.title,
       description: resolved.post.description,

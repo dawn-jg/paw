@@ -1,5 +1,10 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import latestPosts from '@/data/latest.json'
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://pawcritic.com' },
+}
 
 // Use top 3 latest posts for featured section
 const featuredReviews = latestPosts.slice(0, 3).map((p: any) => ({
