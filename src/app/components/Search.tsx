@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import Fuse from 'fuse.js'
 import allPosts from '@/data/posts.json'
 
@@ -25,6 +26,7 @@ export default function Search() {
   const [results, setResults] = useState<Post[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
   const wrapperRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
   useEffect(() => {
     if (open && inputRef.current) {
@@ -84,6 +86,13 @@ export default function Search() {
               placeholder="Search pet product reviews..."
               value={query}
               onChange={e => setQuery(e.target.value)}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && results.length > 0) {
+                  setOpen(false);
+                  setQuery('');
+                  router.push('/' + results[0].slug);
+                }
+              }}
               autoComplete="off"
             />
             {query && (
