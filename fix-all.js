@@ -9,16 +9,33 @@ var AUTHOR = {
   avatar: 'https://pawcritic.com/images/team-avatar.png'
 };
 
-// ======== FIX 2: Image generation ========
+// ======== FIX 2: Image generation (loremflickr) ========
+var CAT_IMG_KEYWORDS = {
+  'Dogs': 'dog%2Cpet%2Ccanine',
+  'Cats': 'cat%2Cfeline%2Cpet',
+  'Small Pets': 'hamster%2Cguinea%2Cpig%2Crabbit%2Csmall%2Cpet',
+  'Birds': 'bird%2Cparrot%2Ccage%2Cpet',
+  'Fish': 'aquarium%2Cfish%2Ctank',
+  'Reptiles': 'reptile%2Clizard%2Cterrarium'
+};
+
+function loremflickrKeywords(slug, category) {
+  // Try to find product-specific keywords in slug
+  var parts = slug.replace(/^(best-)/, '').replace(/-2026.*$/, '').replace(/-/g, ',');
+  var catKw = CAT_IMG_KEYWORDS[category] || 'pet';
+  return encodeURIComponent(parts) + '%2C' + catKw;
+}
+
 function generateImages(slug, category, count) {
   count = count || 3;
   var images = [];
-  var seed = slug.replace(/[^a-z0-9]/gi, '-').substring(0, 30);
+  var shortSlug = slug.replace(/[^a-z0-9]/gi, '-').substring(0, 25);
+  var keywords = loremflickrKeywords(slug, category);
   for (var i = 0; i < count; i++) {
     images.push({
-      src: 'https://picsum.photos/seed/' + seed + '-' + (i + 1) + '/800/600',
-      alt: category + ' product review image ' + (i + 1),
-      caption: 'Product review for ' + slug.replace(/-/g, ' ').replace(/2026/g, '').replace(/best/g, '').trim()
+      src: 'https://loremflickr.com/800/600/' + keywords + '?random=' + shortSlug + '-' + (i + 1),
+      alt: category + ' product review - ' + slug.replace(/-/g, ' ').replace(/2026/g, '').replace(/best/g, '').trim(),
+      caption: slug.replace(/-/g, ' ').replace(/2026/g, '').replace(/best/g, '').trim()
     });
   }
   return images;
