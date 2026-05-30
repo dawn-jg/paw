@@ -5,9 +5,9 @@ const path = require('path');
 const crypto = require('crypto');
 
 const ACCOUNT_ID = '8f8a634cf513b18815c7889124088b0f';
-const PROJECT_NAME = 'pawcritic';
+const PROJECT_NAME = 'paw2';
 const BUILD_DIR = path.join(__dirname, 'out');
-const OAUTH_TOKEN = 'N21oWdFFkvAkpNKypQzhNLvZQQm2Mk9a08yOJzLvIe8.gzTvpP2X-e5jjBMWxfRasKCmNB2QHwPgIucPa5zbNGg';
+const OAUTH_TOKEN = 'hIONc9WGIIr2buz2HuUIZCWwhRO8hjzTkJZ9U_-Cb9w.uChIsRP-xy6CofSzotMq0rN-SjjYn3eA80C2QWylskA';
 
 function api(method, urlPath, body, raw) {
   return new Promise((resolve, reject) => {
@@ -117,10 +117,6 @@ async function main() {
     let retries = 3;
     while (retries > 0) {
       try {
-        const r = await api('POST', `/accounts/${ACCOUNT_ID}/pages/projects/${PROJECT_NAME}/upload`, {
-          headers: { 'Content-Type': 'application/json' }
-        }, null);
-        // Actually use the real upload endpoint
         const result = await uploadForm(
           `/accounts/${ACCOUNT_ID}/pages/projects/${PROJECT_NAME}/upload`, 
           batch

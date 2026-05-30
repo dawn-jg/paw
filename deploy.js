@@ -1,13 +1,13 @@
-// Cloudflare Pages direct deploy - simple batch upload
+// Cloudflare Pages direct deploy using two-step API
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
 const ACCT = '8f8a634cf513b18815c7889124088b0f';
-const PROJ = 'pawcritic';
+const PROJ = 'paw2';
 const DIR = path.join(__dirname, 'out');
-const TOKEN = 'N21oWdFFkvAkpNKypQzhNLvZQQm2Mk9a08yOJzLvIe8.gzTvpP2X-e5jjBMWxfRasKCmNB2QHwPgIucPa5zbNGg';
+const TOKEN = 'hIONc9WGIIr2buz2HuUIZCWwhRO8hjzTkJZ9U_-Cb9w.uChIsRP-xy6CofSzotMq0rN-SjjYn3eA80C2QWylskA';
 
 function request(method, urlPath, body) {
   return new Promise((resolve, reject) => {
@@ -32,42 +32,20 @@ function request(method, urlPath, body) {
   });
 }
 
-async function uploadFile(url, buf) {
-  return new Promise((resolve, reject) => {
-    const u = new URL(url);
-    const opts = {
-      hostname: u.hostname, port: 443,
-      path: u.pathname + u.search,
-      method: 'POST',
-      headers: { 'Content-Type': 'application/octet-stream', 'Content-Length': buf.length },
-      timeout: 120000,
-    };
-    const req = https.request(opts, res => {
-      let d = '';
-      res.on('data', c => d += c);
-      res.on('end', () => { try { resolve(JSON.parse(d)); } catch(e) { resolve({success:false}); } });
-    });
-    req.on('error', reject);
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
-    req.write(buf);
-    req.end();
-  });
-}
-
 async function main() {
-  // Gather files
+  console.log(`Building file manifest from: ${DIR}`);
   const files = [];
   (function walk(dir) {
     for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
       const fp = path.join(dir, e.name);
       if (e.isDirectory()) walk(fp);
-      else files.push(fp);
+      else if (e.isFile()) files.push(fp);
     }
   })(DIR);
 
   console.log(`Files: ${files.length}`);
 
-  // Build manifest
+  // Build manifest (sha256 of each file)
   const manifest = {};
   const fileBufs = {};
   for (const fp of files) {
@@ -77,58 +55,81 @@ async function main() {
     fileBufs[rp] = buf;
   }
 
-  // Create deployment
-  console.log('Creating deployment...');
+  // Step 1: Create deployment draft
+  console.log('Creating deployment draft...');
   const dep = await request('POST', `/accounts/${ACCT}/pages/projects/${PROJ}/deployments`, { branch: 'main' });
   if (!dep.success) {
     console.error('Create deployment failed:', JSON.stringify(dep.errors, null, 2));
     process.exit(1);
   }
 
-  console.log(`Deployment: ${dep.result.id}`);
-  const missing = dep.result.manifest;
-  const toUpload = Object.keys(missing).filter(k => missing[k] !== manifest[k]);
-  console.log(`Files to upload: ${toUpload.length}`);
+  console.log(`Deployment ID: ${dep.result.id}`);
 
-  // Get upload URLs
+  // Check if we need to upload files
   const uploadUrls = dep.result.upload_urls || {};
-  let uploadToken = dep.result.upload_token || dep.result.jwt;
+  const jwt = dep.result.jwt || '';
+  const requiredHash = dep.result.manifest || {};
 
-  if (!uploadToken || Object.keys(uploadUrls).length === 0) {
-    console.log('No upload URLs in response, trying alternative approach...');
-    // Try the upload endpoint
-    console.log('Using direct manifest-only deployment...');
-    const deploy2 = await request('POST', `/accounts/${ACCT}/pages/projects/${PROJ}/deployments`, {
+  if (jwt && Object.keys(uploadUrls).length > 0) {
+    // Two-step: upload files individually, then validate
+    const toUpload = Object.keys(requiredHash).filter(k => requiredHash[k] !== manifest[k]);
+    console.log(`Files to upload (two-step): ${toUpload.length}`);
+
+    const B = 10;
+    for (let i = 0; i < toUpload.length; i += B) {
+      const batch = toUpload.slice(i, i + B);
+      console.log(`Uploading ${i+1}-${Math.min(i+B, toUpload.length)}/${toUpload.length}...`);
+      for (const rp of batch) {
+        const url = uploadUrls[rp];
+        if (!url) { console.log(`  ${rp}: no upload URL, skipping`); continue; }
+        await uploadFile(url, fileBufs[rp], jwt, rp);
+      }
+    }
+
+    console.log('Files uploaded. Deployment will auto-complete.');
+    console.log('URL: https://paw2.pages.dev');
+  } else {
+    // One-step: upload everything with the deployment
+    console.log('Using one-step manifest deployment...');
+    const result = await request('POST', `/accounts/${ACCT}/pages/projects/${PROJ}/deployments`, {
       branch: 'main',
       manifest: manifest,
     });
-    if (deploy2.success) {
-      console.log(`✅ Deployed! ID: ${deploy2.result.id}`);
-      return;
-    }
-    console.error('Also failed:', JSON.stringify(deploy2.errors || {}));
-    return;
-  }
-
-  // Upload missing files in batches
-  const B = 20;
-  for (let i = 0; i < toUpload.length; i += B) {
-    const batch = toUpload.slice(i, i + B);
-    console.log(`Uploading ${i+1}-${Math.min(i+B, toUpload.length)}/${toUpload.length}...`);
-    
-    for (const rp of batch) {
-      const url = uploadUrls[rp];
-      if (!url) continue;
-      try {
-        await uploadFile(url, fileBufs[rp]);
-      } catch(e) {
-        console.log(`  ${rp}: ${e.message}`);
-      }
+    if (result.success) {
+      console.log(`✅ Deployed! ID: ${result.result.id}`);
+      console.log(`URL: ${result.result.url || 'https://paw2.pages.dev'}`);
+    } else {
+      console.error('Deployment failed:', JSON.stringify(result.errors, null, 2));
+      process.exit(1);
     }
   }
+}
 
-  console.log('✅ Deploy complete!');
-  console.log('URL: https://pawcritic.pages.dev');
+async function uploadFile(url, buf, jwt, fileName) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const opts = {
+      hostname: u.hostname,
+      port: 443,
+      path: u.pathname + u.search,
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/octet-stream',
+        'Content-Length': buf.length,
+      },
+      timeout: 30000,
+    };
+    if (jwt) opts.headers['Authorization'] = `Bearer ${jwt}`;
+    const req = https.request(opts, res => {
+      let d = '';
+      res.on('data', c => d += c);
+      res.on('end', () => { resolve(true); });
+    });
+    req.on('error', (e) => { console.log(`  ${fileName}: ${e.message}`); resolve(false); });
+    req.on('timeout', () => { req.destroy(); console.log(`  ${fileName}: timeout`); resolve(false); });
+    req.write(buf);
+    req.end();
+  });
 }
 
 main().catch(console.error);
