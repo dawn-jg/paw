@@ -32,6 +32,13 @@ posts.forEach(function(p) {
   });
 });
 
+// Sort each category's posts by date descending (newest first)
+Object.keys(categories).forEach(function(k) {
+  categories[k].posts.sort(function(a, b) {
+    return new Date(b.date) - new Date(a.date);
+  });
+});
+
 fs.writeFileSync(CATS_FILE, JSON.stringify(categories, null, 2) + "\n", "utf8");
 console.log("categories.json rebuilt: " + Object.keys(categories).length + " categories");
 Object.keys(categories).forEach(function(k) {
