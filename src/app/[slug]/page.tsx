@@ -336,7 +336,7 @@ function ArticlePageContent({ post }: { post: Post }) {
               </span>
             )}
             <span className="article-read-time">
-              ~{Math.max(1, Math.round(post.charCount / 1500))} min read
+              ~{Math.max(1, Math.round((post.charCount || (post.content || '').length) / 1500))} min read
             </span>
             <ShareSection post={post} />
           </div>
