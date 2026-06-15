@@ -1,4 +1,595 @@
 {
+  "Dogs": {
+    "name": "Dogs",
+    "posts": [
+      {
+        "title": "Best Dog Collars 2026: ID Collars, Training Collars, Reflective & Martingale Options for Every Dog",
+        "slug": "best-dog-collars-id-training-reflective-2026",
+        "date": "2026-06-16",
+        "description": "A collar is your dog's most essential accessory — it holds their ID, connects to their leash, and communicates vital info to the world. We tested 45 collars across 12 weeks, evaluating materials, hard"
+      },
+      {
+        "title": "Best Dog Crates 2026: Top Crates for Home, Travel, Training & Every Breed Size",
+        "slug": "best-dog-crates-home-travel-2026",
+        "date": "2026-06-14",
+        "description": "A crate is one of the most important purchases you'll make for your dog—it serves as a den, a travel safety zone, a housetraining tool, and a secure space when you can't supervise. We tested 15 dog cr"
+      },
+      {
+        "title": "Best Dog Harnesses 2026: No-Pull, Crash-Tested & Adventure Harnesses for Every Breed",
+        "slug": "best-dog-harnesses-no-pull-crash-tested-adventure-2026",
+        "date": "2026-06-12",
+        "description": "A collar can damage your dog's trachea and spine. We tested 14 dog harnesses across 8 weeks with dogs from 6 to 110 pounds, evaluating no-pull effectiveness, crash-test certification, comfort, and dur"
+      },
+      {
+        "title": "Best Dog Cooling Mats & Elevated Beds 2026: Beat the Summer Heat in Style",
+        "slug": "best-dog-cooling-mats-elevated-beds-2026-beat-summer-heat",
+        "date": "2026-06-10",
+        "description": "When summer temperatures soar, your dog feels the heat even more than you do. We tested 12 cooling mats and elevated beds across 8 weeks of summer heat, measuring real temperature reduction, durabilit"
+      },
+      {
+        "title": "Best Dog Leashes 2026: Hands-Free, Retractable & Everyday Walk Essentials",
+        "slug": "best-dog-leashes-hands-free-retractable-2026-durable-comfortable",
+        "date": "2026-06-08",
+        "description": "A leash is your most-used piece of dog gear 鈥?yet most owners settle for the cheap nylon strap that came with the puppy starter kit. This guide covers the 8 best dog leashes in 2026, from hands-free r"
+      },
+      {
+        "title": "Best Dog Life Jackets & Swimming Gear 2026: Keep Your Dog Safe on the Water",
+        "slug": "best-dog-life-jackets-swimming-gear-2026-water-safety-flotation",
+        "date": "2026-06-05",
+        "description": "Not every dog is a natural swimmer 鈥?and even strong swimmers can tire out fast. Whether you're boating, paddleboarding, or hitting the beach, a quality dog life jacket is non-negotiable. This compreh"
+      },
+      {
+        "title": "Best Dog Ramps & Stairs 2026: Joint-Friendly Access for Cars, Beds & Couches",
+        "slug": "best-dog-ramps-stairs-2026-joint-friendly-access-cars-beds-couches",
+        "date": "2026-06-03",
+        "description": "Every jump onto a tall bed, every leap out of an SUV, every scramble onto the couch 鈥?for a dog with arthritis, hip dysplasia, or simply short legs, these daily actions accumulate micro-trauma that ac"
+      },
+      {
+        "title": "Best Dog Puzzle Toys & Slow Feeders 2026: Mental Stimulation, Enrichment & Bloat Prevention",
+        "slug": "best-dog-puzzle-toys-slow-feeders-2026-mental-stimulation-enrichment",
+        "date": "2026-06-01",
+        "description": "A tired dog isn't just a physically exercised dog 鈥?it's a mentally stimulated one. Puzzle toys and slow feeders engage your dog's problem-solving instincts, prevent destructive boredom behaviors, red"
+      },
+      {
+        "title": "Best Dog Nail Grinders & Clippers 2026: Safe, Quiet & Professional-Grade Grooming Tools",
+        "slug": "best-dog-nail-grinders-clippers-2026-safe-quiet-professional-grooming",
+        "date": "2026-05-30",
+        "description": "Nail trimming is one of the most stressful grooming tasks for both dogs and their owners 鈥?but it doesn't have to be. From whisper-quiet cordless grinders ideal for anxious pups to heavy-duty guilloti"
+      },
+      {
+        "title": "Best Dog Beds 2026: Orthopedic, Heated & Luxury Beds for Every Breed",
+        "slug": "best-dog-beds-2026-orthopedic-heated-luxury-beds-every-breed",
+        "date": "2026-05-28",
+        "description": "A great dog bed is more than a sleeping spot 鈥?it's an investment in your dog's joint health, spinal alignment, and overall wellbeing. Whether you need an orthopedic memory foam bed for an aging Labra"
+      },
+      {
+        "title": "Best Dog Harnesses 2026 鈥?No-Pull, Step-In & Adventure Harnesses",
+        "slug": "best-dog-harnesses-2026",
+        "date": "2026-05-26",
+        "description": "We tested 8 of the best dog harnesses of 2026 鈥?from no-pull and step-in designs to rugged adventure gear. In-depth reviews, pros & cons, comparison table, and FAQ to help you find the perfect harness"
+      },
+      {
+        "title": "Best Dog Cooling Vests 2026: Beat the Summer Heat & Prevent Overheating",
+        "slug": "best-dog-cooling-vests-2026-beat-the-summer-heat",
+        "date": "2026-05-24",
+        "description": "Dogs don't sweat like humans 鈥?their primary cooling mechanism is panting, which is far less efficient in high heat and humidity. A quality cooling vest uses evaporative cooling to lower your dog's co"
+      },
+      {
+        "title": "Best Dog Joint Supplements 2026: Hip & Joint Health for Active Dogs",
+        "slug": "best-dog-joint-supplements-2026-hip-joint-health",
+        "date": "2026-05-22",
+        "description": "As dogs age, their joints take a beating. From Golden Retrievers prone to hip dysplasia to active working dogs who never stop moving, joint health is one of the most important factors affecting your d"
+      },
+      {
+        "title": "Best Dog GPS Trackers 2026: Keep Tabs on Your Adventure Buddy",
+        "slug": "best-dog-gps-trackers-2026-keep-tabs-on-your-adventure-buddy",
+        "date": "2026-05-04",
+        "description": "After extensive research and testing, we've compiled our top picks for Best Dog GPS Trackers 2026: Keep Tabs on Your Adventure Buddy. Each product below has..."
+      },
+      {
+        "title": "Best Dog Shampoo 2026: Gentle Cleansing for Sensitive Skin",
+        "slug": "best-dog-shampoo-2026-gentle-cleansing-for-sensitive-skin",
+        "date": "2026-04-22",
+        "description": "Remember, the best supplies is one that meets your specific needs and keeps your dog happy and..."
+      },
+      {
+        "title": "Best Dog Harnesses 2026: Comfort and Control on Every Walk",
+        "slug": "best-dog-harnesses-2026-comfort-and-control-on-every-walk",
+        "date": "2026-04-19",
+        "description": "# Best Dog Harnesses 2026: Comfort and Control on Every WalkA quality dog harness is one of the most important investments you can make for your canine..."
+      },
+      {
+        "title": "Best Dog Treats 2026: Healthy Rewards Your Pup Will Love",
+        "slug": "best-dog-treats-2026-healthy-rewards-your-pup-will-love",
+        "date": "2026-04-19",
+        "description": "# Best Dog Treats 2026: Healthy Rewards Your Pup Will LoveDog treats are more than just snacks-they're powerful tools for training, bonding, and rewarding good..."
+      },
+      {
+        "title": "Best Dog Carriers 2026: Safe Travel Solutions for Dogs",
+        "slug": "best-dog-carriers-2026-safe-travel-solutions-for-dogs",
+        "date": "2026-04-18",
+        "description": "# Best Dog Carriers 2026: Safe Travel Solutions for DogsTraveling with your dog requires careful planning, and choosing the right carrier is one of the most..."
+      },
+      {
+        "title": "Best Dog Beds 2026: Cozy Resting Spots for Large and Small Dogs",
+        "slug": "best-dog-beds-2026-cozy-resting-spots-for-large-and-small-dogs",
+        "date": "2026-04-18",
+        "description": "# Best Dog Beds 2026: Cozy Resting Spots for Large and Small DogsA good dog bed is more than just a place for your pet to sleep-it's their sanctuary, their..."
+      },
+      {
+        "title": "Best Dog Training Clickers 2026: Precision Tools for Positive Reinforcement",
+        "slug": "best-dog-training-clickers-2026-precision-tools-for-positive-reinforcement-3",
+        "date": "2026-04-11",
+        "description": "After extensive research and testing, we have curated our top picks for best dog training clickers 2026: precision tools for positive reinforcement. Each..."
+      },
+      {
+        "title": "Best Dog Leashes 2026: From Standard to Retractable Options",
+        "slug": "best-dog-leashes-2026-from-standard-to-retractable-options",
+        "date": "2026-04-09",
+        "description": "Finding the right dog leash can feel overwhelming 鈥?after all, this is one of the most important tools in your daily routine with your pup. Whether you're..."
+      },
+      {
+        "title": "Best Dog Training Treats 2026: High-Value Treats for Effective Training",
+        "slug": "best-dog-training-treats-2026-high-value-treats-for-effective-training",
+        "date": "2026-04-08",
+        "description": "Training your dog is one of the most rewarding experiences you can have as a pet parent. Whether you are teaching basic commands like sit and stay, or working..."
+      },
+      {
+        "title": "Best Dog Dental Care Products 2026: Maintaining Your Dog's Oral Health",
+        "slug": "best-dog-dental-care-products-2026",
+        "date": "2026-04-08",
+        "description": "As a responsible dog owner, you want your furry companion to live a long, healthy, and happy life. But here's a fact that many pet parents overlook: dental..."
+      },
+      {
+        "title": "The 10 Best Dog Beds for Large Breeds in 2026: Ultimate Comfort for Big Dogs",
+        "slug": "the-10-best-dog-beds-for-large-breeds-in-2026-ultimate-comfort-for-big-dogs",
+        "date": "2026-04-07",
+        "description": "Finding the perfect bed for your large breed dog is crucial for their health and happiness. Large dogs have unique needs that standard pet beds cannot meet. In..."
+      },
+      {
+        "title": "The 7 Best Dog Foods for Active Dogs and High-Energy Breeds in 2026",
+        "slug": "the-7-best-dog-foods-for-active-dogs-and-high-energy-breeds-in-2026",
+        "date": "2026-04-06",
+        "description": "Is your dog constantly on the move? Whether you have a Border Collie who needs to chase every ball, a Belgian Malinois who lives for working jobs, or a..."
+      },
+      {
+        "title": "Best Dog Food for Puppies 2026: Complete Nutrition Guide",
+        "slug": "best-dog-food-for-puppies-2026-complete-nutrition-guide",
+        "date": "2026-04-04",
+        "description": "Puppies grow at an incredible rate-sometimes doubling their weight in just weeks. This rapid development requires specific nutrients that adult dog food simply..."
+      },
+      {
+        "title": "Best Dog Shampoos 2026: Gentle Care for Every Coat",
+        "slug": "best-dog-shampoos-2026-gentle-care-for-every-coat",
+        "date": "2026-04-04",
+        "description": "Human shampoo has a different pH balance than what dogs need. Using the wrong product can strip your dog's coat of natural oils, causing dryness, itching, and..."
+      },
+      {
+        "title": "Best Dog Food for Large Breeds in 2026: Top 5 Picks Reviewed",
+        "slug": "best-dog-food-for-large-breeds-in-2026-top-5-picks-reviewed",
+        "date": "2026-04-03",
+        "description": "Affiliate Disclosure: PawCritic participates in affiliate advertising programs. We may earn a commission when you purchase through links on this page, at no..."
+      },
+      {
+        "title": "Best Dog Food 2026: Complete Guide to Feeding Your Dog Right",
+        "slug": "best-dog-food-2026",
+        "date": "2026-03-31",
+        "description": ""
+      },
+      {
+        "title": "Best Dog Toys for Aggressive Chewers 2026: Indestructible Options",
+        "slug": "best-dog-toys-aggressive-chewers",
+        "date": "2026-03-31",
+        "description": "Some dogs can destroy any toy in minutes. If you have a German Shepherd, Pit Bull, Golden Retriever, or any powerful chewer, you know the frustration of buying..."
+      },
+      {
+        "title": "Best Dog Beds for Large Breeds 2026: Comfortable Sleep for Big Dogs",
+        "slug": "best-dog-beds-large-breeds",
+        "date": "2026-03-31",
+        "description": "Large breed dogs like German Shepherds, Golden Retrievers, and Great Danes have unique sleeping needs. Their heavier weight puts more pressure on joints, and..."
+      },
+      {
+        "title": "Best Dog Crates for Travel 2026: Safe Carriers for Road Trips and Flights",
+        "slug": "best-dog-crates-travel",
+        "date": "2026-03-31",
+        "description": "Traveling with a dog isn't as simple as putting them in the backseat. For safety, legal requirements, and your dog's comfort, a proper travel crate is..."
+      }
+    ]
+  },
+  "Cats": {
+    "name": "Cats",
+    "posts": [
+      {
+        "title": "Best Cat Collars 2026: Breakaway Safety Collars, Reflective, GPS-Compatible & Personalized Options for Indoor and Outdoor Cats",
+        "slug": "best-cat-collars-breakaway-safety-reflective-2026",
+        "date": "2026-06-16",
+        "description": "A cat collar is a safety device first and a style statement second. We tested 38 collars over 10 weeks, evaluating breakaway mechanisms, material quality, comfort, reflectivity, and durability to find"
+      },
+      {
+        "title": "Best Cat Food 2026: Dry, Wet, Raw & Freeze-Dried Diets for Kittens, Adults & Seniors",
+        "slug": "best-cat-food-dry-wet-raw-2026",
+        "date": "2026-06-14",
+        "description": "Cats are obligate carnivores with unique nutritional requirements that differ dramatically from dogs and humans. We analyzed 18 cat food brands across dry, wet, raw, and freeze-dried categories, consu"
+      },
+      {
+        "title": "Best Cat Trees & Scratching Posts 2026: Cat Condos, Wall-Mounted Systems & Multi-Level Towers",
+        "slug": "best-cat-trees-scratching-posts-2026-cat-condos-wall-mounted-systems",
+        "date": "2026-06-12",
+        "description": "Vertical territory is not optional for indoor cats—it's a biological necessity. We tested 12 cat trees, scratching posts, and wall-mounted climbing systems across 8 weeks with 10 cats, evaluating stab"
+      },
+      {
+        "title": "Best Cat Food Bowls, Slow Feeders & Elevated Stands 2026: Prevent Vomiting & Improve Digestion",
+        "slug": "best-cat-food-bowls-slow-feeders-elevated-stands-2026",
+        "date": "2026-06-10",
+        "description": "The wrong bowl can cause your cat to vomit after meals, develop chin acne, or avoid eating altogether. We tested 14 cat food bowls, slow feeders, and elevated stands across 6 weeks, evaluating bowl ma"
+      },
+      {
+        "title": "Best Cat Grooming Tools 2026: Brushes, Deshedders & Complete Coat Care",
+        "slug": "best-cat-grooming-tools-brushes-2026-deshedding-nail-trimmers-shampoo",
+        "date": "2026-06-08",
+        "description": "Regular grooming keeps your cat's coat glossy, reduces hairballs, and strengthens your bond 鈥?but the wrong tool can hurt or frighten your cat. This comprehensive guide covers the 8 best cat grooming "
+      },
+      {
+        "title": "Best Cat Calming Products & Pheromone Diffusers 2026: Soothe Feline Anxiety Naturally",
+        "slug": "best-cat-calming-products-pheromone-diffusers-2026-anxiety-stress-relief",
+        "date": "2026-06-05",
+        "description": "Urinating outside the box, hiding under the bed, fighting with other cats 鈥?feline anxiety can tear your household apart. But before you reach for prescription meds, the right calming products can wor"
+      },
+      {
+        "title": "Best Cat Dental Care Products 2026: Toothbrushes, Water Additives & Dental Treats for Feline Oral Health",
+        "slug": "best-cat-dental-care-products-2026-toothbrushes-water-additives-dental-treats",
+        "date": "2026-06-03",
+        "description": "By age three, 70% of cats have some form of periodontal disease 鈥?and since cats are masters of hiding pain, most owners have no idea until the damage is severe. Feline dental disease doesn't just mea"
+      },
+      {
+        "title": "Best Cat Carriers & Travel Backpacks 2026: Safe, Comfortable Transport for Every Feline",
+        "slug": "best-cat-carriers-travel-backpacks-2026-safe-feline-transport",
+        "date": "2026-06-01",
+        "description": "Vet visits. Moving day. Emergency evacuations. Road trips. For a species that famously hates change, getting a cat into a carrier is often the most stressful interaction between owner and pet 鈥?but th"
+      },
+      {
+        "title": "Best Cat Beds & Window Perches 2026: Ultimate Comfort & Cozy Lounging Spots",
+        "slug": "best-cat-beds-window-perches-2026-cozy-lounging-comfort",
+        "date": "2026-05-30",
+        "description": "Cats sleep an average of 12-16 hours a day 鈥?which means the bed you choose is one of the most important purchases you'll make for your feline friend. From self-warming cave beds for anxious kitties t"
+      },
+      {
+        "title": "Best Self-Cleaning Litter Boxes 2026: Automatic, Sifting & Smart Litter Solutions",
+        "slug": "best-self-cleaning-litter-boxes-2026-automatic-sifting-smart-litter",
+        "date": "2026-05-28",
+        "description": "Self-cleaning litter boxes promise to eliminate the most hated chore in cat ownership 鈥?daily scooping. But with prices ranging from $80 to $800, choosing the right automatic litter box requires under"
+      },
+      {
+        "title": "Best Cat Trees 2026 鈥?Scratching Posts, Condo Towers & Activity Centers",
+        "slug": "best-cat-trees-2026-scratching-posts-condo-towers-activity-centers",
+        "date": "2026-05-26",
+        "description": "Cat trees are essential furniture for indoor cats 鈥?they provide vertical territory for climbing, safe perches for observing their domain, and scratching surfaces that save your sofa. Whether you're o"
+      },
+      {
+        "title": "Best Cat Water Fountains 2026: Encourage Hydration for Healthier Cats",
+        "slug": "best-cat-water-fountains-2026-hydration-for-healthier-cats",
+        "date": "2026-05-24",
+        "description": "Cats are descended from desert-dwelling ancestors and have a naturally low thirst drive 鈥?they evolved to get most of their moisture from prey. In a domestic setting, this means many cats live in a st"
+      },
+      {
+        "title": "Best Cat Harnesses & Leashes 2026: Safe Outdoor Adventures for Your Feline",
+        "slug": "best-cat-harnesses-leashes-2026-safe-outdoor-adventures",
+        "date": "2026-05-22",
+        "description": "Taking your cat outdoors on a harness isn't just trendy 鈥?it's one of the best things you can do for their physical and mental health. But cats are escape artists, and a poorly-fitting harness can be "
+      },
+      {
+        "title": "Best Cat Vitamin Supplements 2026: Boost Your Cats Health",
+        "slug": "best-cat-vitamin-supplements-2026-boost-your-cats-health",
+        "date": "2026-05-01",
+        "description": "After extensive research and testing, we've compiled our top picks for Best Cat Vitamin Supplements 2026: Boost Your Cats Health. Each product below has been..."
+      },
+      {
+        "title": "Best Cat Litter for Multiple Cats 2026: Heavy-Duty Solutions",
+        "slug": "best-cat-litter-for-multiple-cats-2026-heavy-duty-solutions",
+        "date": "2026-05-01",
+        "description": "After extensive research and testing, we've compiled our top picks for Best Cat Litter for Multiple Cats 2026: Heavy-Duty Solutions. Each product below has..."
+      },
+      {
+        "title": "Best Cat Food 2026: Premium Nutrition for Your Feline Friend",
+        "slug": "best-cat-food-2026-premium-nutrition-for-your-feline-friend",
+        "date": "2026-04-20",
+        "description": "Remember, the best food is one that meets your specific needs and keeps your cat happy and..."
+      },
+      {
+        "title": "Best Cat GPS Trackers 2026: Know Where Your Cat Goes",
+        "slug": "best-cat-gps-trackers-2026-know-where-your-cat-goes",
+        "date": "2026-04-19",
+        "description": "# Best Cat GPS Trackers 2026: Know Where Your Cat GoesFor outdoor cats or escape-prone indoor cats, a GPS tracker provides invaluable peace of mind. In 2026,..."
+      },
+      {
+        "title": "Best Cat Treats 2026: Tasty Rewards Your Cat Will Crave",
+        "slug": "best-cat-treats-2026-tasty-rewards-your-cat-will-crave",
+        "date": "2026-04-18",
+        "description": "# Best Cat Treats 2026: Tasty Rewards Your Cat Will CraveFinding the perfect cat treat is about more than just spoiling your feline friend-it's about providing..."
+      },
+      {
+        "title": "Best Catnip Toys 2026: Irresistible Fun for Your Cat",
+        "slug": "best-catnip-toys-2026-irresistible-fun-for-your-cat",
+        "date": "2026-04-18",
+        "description": "# Best Catnip Toys 2026: Irresistible Fun for Your CatCatnip has been delighting felines for centuries, and modern catnip toys combine this magical herb with..."
+      },
+      {
+        "title": "Best Automatic Cat Feeders 2026: Smart Feeding on Your Schedule",
+        "slug": "best-automatic-cat-feeders-2026-smart-feeding-on-your-schedule",
+        "date": "2026-04-18",
+        "description": "# Best Automatic Cat Feeders 2026: Smart Feeding on Your ScheduleAutomatic cat feeders have evolved from simple timer-based dispensers to sophisticated smart..."
+      },
+      {
+        "title": "Best Cat Trees 2026: Climbing Paradise for Your Feline Friend",
+        "slug": "best-cat-trees-2026-climbing-paradise-for-your-feline-friend-2",
+        "date": "2026-04-11",
+        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
+      },
+      {
+        "title": "Best Cat Window Perches 2026: Sunny Spots for Your Kitty to Lounge",
+        "slug": "best-cat-window-perches-2026-sunny-spots-for-your-kitty-to-lounge",
+        "date": "2026-04-11",
+        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
+      },
+      {
+        "title": "Best Cat Litter 2026: Top Picks for Odor Control & Easy Cleaning",
+        "slug": "best-cat-litter-2026-top-picks-for-odor-control-easy-cleaning",
+        "date": "2026-04-10",
+        "description": ""
+      },
+      {
+        "title": "Best Automatic Cat Feeder 2026: Smart Feeding Solutions",
+        "slug": "best-automatic-cat-feeder-2026-smart-feeding-solutions",
+        "date": "2026-04-10",
+        "description": ""
+      },
+      {
+        "title": "Best Cat Food for Kittens 2026: Essential Nutrition for Growing Cats",
+        "slug": "best-cat-food-for-kittens-2026-essential-nutrition-for-growing-cats",
+        "date": "2026-04-09",
+        "description": "Bringing a kitten into your home is one of the most joyful experiences a pet parent can have 鈥?but with that joy comes serious responsibility. Kittens grow at..."
+      },
+      {
+        "title": "Best Cat Toys 2026: Interactive Toys, Puzzle Feeders, Feather Wands & Enrichment Toys",
+        "slug": "best-cat-toys-2026-interactive-toys-puzzle-feeders-feather-wands-enrichment-toys",
+        "date": "2026-04-08",
+        "description": "As cat parents, we all want to provide our feline companions with the best possible entertainment and mental stimulation. In 2026, the cat toy market has..."
+      },
+      {
+        "title": "Best Cat Scratching Posts 2026: Top 5 Reviews & Ultimate Buying Guide",
+        "slug": "best-cat-scratching-posts-2026-top-5-reviews-ultimate-buying-guide",
+        "date": "2026-04-08",
+        "description": "Is your sofa starting to look like a feline attack victim? Does your cat prefer your expensive curtains as a climbing apparatus? If you've answered yes to..."
+      },
+      {
+        "title": "Best Cat Grooming Tools 2026: Brushes, Clippers & Nail Trimmers",
+        "slug": "best-cat-grooming-tools-2026-brushes-clippers-nail-trimmers",
+        "date": "2026-04-08",
+        "description": "Regular grooming is one of the most important aspects of cat care 閳?and yet, it is all too often overlooked by pet parents. Whether you have a long-haired..."
+      },
+      {
+        "title": "The 5 Best Cat Trees for Large Cats: Sturdy Condos for Maine Coons, Ragdolls & Big Boys in 2026",
+        "slug": "the-5-best-cat-trees-for-large-cats-sturdy-condos-for-maine-coons-ragdolls-big-boys-in-2026",
+        "date": "2026-04-06",
+        "description": "Your standard cat tree was not designed for a 20-pound Maine Coon. We've all seen it: the wobbly tower that sways when a large cat hops on it, the carpeted..."
+      },
+      {
+        "title": "Best Cat Trees for Small Apartments 2026",
+        "slug": "best-cat-trees-for-small-apartments-2026",
+        "date": "2026-04-04",
+        "description": "Cats are natural climbers and scratchers. Without proper outlets, they'll find alternatives-usually your furniture. Even in a small apartment, a compact cat..."
+      },
+      {
+        "title": "Best Cat Litter Boxes 2026: Top Picks for Every Cat",
+        "slug": "best-cat-litter-boxes",
+        "date": "2026-04-02",
+        "description": "A good litter box keeps your home clean and your cat happy. The wrong one can lead to messes, odors, and even behavioral issues where your cat refuses to use..."
+      },
+      {
+        "title": "Best Cat Food for Indoor Cats 2026: Keep Your Indoor Kitty Healthy",
+        "slug": "best-cat-food-indoor-cats",
+        "date": "2026-03-31",
+        "description": ""
+      },
+      {
+        "title": "Best Cat Trees for Large Cats 2026: Sturdy Towers for Big Felines",
+        "slug": "best-cat-trees-large-cats",
+        "date": "2026-03-31",
+        "description": "If you have a Maine Coon, Ragdoll, or just a chunky domestic shorthair, you know the struggle. Standard cat trees wobble, tip over, or simply collapse under a..."
+      }
+    ]
+  },
+  "Small Pets": {
+    "name": "Small Pets",
+    "posts": [
+      {
+        "title": "Best Small Pet Water Bottles & Sipper Tubes 2026: Leak-Proof, No-Drip Hydration Solutions for Rabbits, Guinea Pigs, Hamsters & Chinchillas",
+        "slug": "best-small-pet-water-bottles-sipper-tubes-2026",
+        "date": "2026-06-16",
+        "description": "Fresh, clean water is the most essential element of any small pet's habitat. We tested 32 water bottles and sipper tube systems over 8 weeks, evaluating leak resistance, flow rate, mounting security, "
+      },
+      {
+        "title": "Best Small Pet Food 2026: Complete Nutrition for Rabbits, Guinea Pigs, Hamsters, Chinchillas & Rats",
+        "slug": "best-small-pet-food-guinea-pig-rabbit-hamster-chinchilla-2026",
+        "date": "2026-06-14",
+        "description": "Small pets have wildly different nutritional needs — a rabbit's high-fiber digestive system is nothing like a hamster's omnivorous needs or a guinea pig's unique vitamin C requirement. We tested 16 sm"
+      },
+      {
+        "title": "Best Small Pet Cages & Habitats 2026: Rabbit Hutches, Guinea Pig Cages & Hamster Homes",
+        "slug": "best-small-pet-cages-habitats-2026-rabbit-hutches-guinea-pig-cages-hamster-homes",
+        "date": "2026-06-12",
+        "description": "Your small pet's cage is their entire world—get it wrong and they suffer in silence. We tested 14 cages across rabbits, guinea pigs, hamsters, and chinchillas over 8 weeks, evaluating floor space, ven"
+      },
+      {
+        "title": "Best Small Pet Grooming Tools & Nail Care 2026: Brushes, Clippers & Coat Care for Rabbits, Guinea Pigs & Hamsters",
+        "slug": "best-small-pet-grooming-tools-nail-care-2026-rabbits-guinea-pigs-hamsters",
+        "date": "2026-06-10",
+        "description": "Small pets need grooming too 鈥?but their delicate skin, fast-growing nails, and sensitive temperaments require specialized tools that won't cause injury or stress. We tested 15 grooming tools and nail"
+      },
+      {
+        "title": "Best Small Pet Hay & Forage Products 2026: Timothy Hay, Treats & Enrichment for Rabbits, Guinea Pigs & More",
+        "slug": "best-small-pet-hay-forage-products-2026-timothy-hay-treats-enrichment",
+        "date": "2026-06-08",
+        "description": "Hay is not just bedding 鈥?it is the foundation of every small herbivore's diet. The right hay provides essential fiber for dental and digestive health, while forage products add enrichment and variety"
+      },
+      {
+        "title": "Best Hamster Bedding & Substrate 2026: Safe Burrowing, Superior Odor Control",
+        "slug": "best-hamster-bedding-substrate-2026-safe-burrowing-odor-control",
+        "date": "2026-06-05",
+        "description": "Hamsters spend 95% of their lives on, in, or under their bedding 鈥?yet most owners grab whatever bag is cheapest at the pet store. The wrong bedding can cause respiratory infections, skin irritation, "
+      },
+      {
+        "title": "Best Small Pet Chew Toys & Enrichment 2026: Teeth-Friendly Chews for Rabbits, Guinea Pigs, Hamsters & Chinchillas",
+        "slug": "best-small-pet-chew-toys-enrichment-2026-rabbits-guinea-pigs-hamsters-chinchillas",
+        "date": "2026-06-03",
+        "description": "Rabbits' teeth grow 2-3mm per week. Guinea pigs' teeth grow continuously for their entire lives. Hamsters' incisors elongate at nearly 1mm per day. Without appropriate chew materials to wear them down"
+      },
+      {
+        "title": "Best Small Pet Playpens & Exercise Pens 2026: Safe Play Spaces for Rabbits, Guinea Pigs & More",
+        "slug": "best-small-pet-playpens-exercise-pens-2026-safe-rabbit-guinea-pig",
+        "date": "2026-06-01",
+        "description": "Small pets need space to run, explore, and express natural behaviors 鈥?and a cage alone rarely provides enough room. Whether you're giving your rabbit supervised outdoor time, creating a safe floor-pl"
+      },
+      {
+        "title": "Best Small Pet Carriers & Travel Cages 2026: Safe Transportation for Hamsters, Guinea Pigs & Rabbits",
+        "slug": "best-small-pet-carriers-travel-cages-2026-safe-transport-hamsters-guinea-pigs-rabbits",
+        "date": "2026-05-30",
+        "description": "Whether you're heading to the vet, moving homes, or taking your small pet on a road trip, the right carrier makes the difference between a stressful ordeal and a safe, comfortable journey. From airlin"
+      },
+      {
+        "title": "Best Rabbit Cages & Hutches 2026: Indoor and Outdoor Housing for Happy Bunnies",
+        "slug": "best-rabbit-cages-hutches-2026-indoor-outdoor-housing-happy-bunnies",
+        "date": "2026-05-28",
+        "description": "Rabbits are the third most popular small pet in North America, but they are also one of the most commonly improperly housed. A rabbit's cage or hutch is the foundation of its health and happiness 鈥?to"
+      },
+      {
+        "title": "Best Guinea Pig Cages & Habitats 2026 鈥?Spacious Homes for Happy Piggies",
+        "slug": "best-guinea-pig-cages-habitats-2026-spacious-homes-happy-piggies",
+        "date": "2026-05-26",
+        "description": "Guinea pigs need far more space than most owners realize 鈥?the old pet-store myth of a 30x18-inch cage being adequate has caused decades of chronic stress and health problems in pet guinea pigs. The s"
+      },
+      {
+        "title": "Best Rabbit Litter Boxes 2026: Odor Control & Easy Cleaning for Bunnies",
+        "slug": "best-rabbit-litter-boxes-2026-odor-control-for-bunnies",
+        "date": "2026-05-24",
+        "description": "Rabbits are naturally clean animals 鈥?in the wild, they designate specific latrine areas and keep the rest of their warren spotless. With the right litter box, setup, and training, your house rabbit c"
+      },
+      {
+        "title": "Best Small Pet Hay Feeders & Hay Racks 2026: Fresh Hay for Happy Bunnies, Guinea Pigs & Chinchillas",
+        "slug": "best-small-pet-hay-feeders-hay-racks-2026",
+        "date": "2026-05-22",
+        "description": "Hay is the cornerstone of every small herbivore's diet, but how you deliver it matters just as much as the hay itself. A good hay feeder reduces waste, prevents soiling, and encourages natural foragin"
+      },
+      {
+        "title": "Best Chinchilla Dust Bath 2026: Grooming Essentials",
+        "slug": "best-chinchilla-dust-bath-2026-grooming-essentials",
+        "date": "2026-05-02",
+        "description": "After extensive research and testing, we've compiled our top picks for Best Chinchilla Dust Bath 2026: Grooming Essentials. Each product below has been..."
+      },
+      {
+        "title": "Best Rat Cages 2026: Social Spaces for Your Pet Rats",
+        "slug": "best-rat-cages-2026-social-spaces-for-your-pet-rats-2",
+        "date": "2026-05-01",
+        "description": "After extensive research and testing, we've compiled our top picks for Best Rat Cages 2026: Social Spaces for Your Pet Rats. Each product below has been..."
+      },
+      {
+        "title": "Best Fish Tank Gravel 2026: Substrate for Healthy Aquariums",
+        "slug": "best-fish-tank-gravel-2026-substrate-for-healthy-aquariums",
+        "date": "2026-04-22",
+        "description": "Remember, the best enclosures is one that meets your specific needs and keeps your fish happy and..."
+      },
+      {
+        "title": "Best Aquarium Heaters 2026: Maintain Perfect Water Temperature",
+        "slug": "best-aquarium-heaters-2026-maintain-perfect-water-temperature",
+        "date": "2026-04-22",
+        "description": "Remember, the best supplies is one that meets your specific needs and keeps your fish happy and..."
+      },
+      {
+        "title": "Best Small Pet Toys 2026: Enrichment for Happy Small Pets",
+        "slug": "best-small-pet-toys-2026-enrichment-for-happy-small-pets",
+        "date": "2026-04-12",
+        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
+      },
+      {
+        "title": "Best Ferret Cages 2026: Spacious Homes for Your Playful Ferret",
+        "slug": "best-ferret-cages-2026-spacious-homes-for-your-playful-ferret-2",
+        "date": "2026-04-11",
+        "description": ""
+      },
+      {
+        "title": "Best Hedgehog Supplies 2026: Essential Gear for Your Spiky Companion",
+        "slug": "best-hedgehog-supplies-2026-essential-gear-for-your-spiky-companion",
+        "date": "2026-04-11",
+        "description": "After extensive research and testing, we have compiled our top picks for Best Hedgehog Supplies 2026. Each product below has been carefully evaluated for..."
+      },
+      {
+        "title": "Best Dog Crates 2026: Comfortable Spaces for Your Canine Companion",
+        "slug": "best-dog-crates-2026-comfortable-spaces-for-your-canine-companion-2",
+        "date": "2026-04-11",
+        "description": "After extensive research and testing, we have curated our top picks for best dog crates 2026: comfortable spaces for your canine companion. Each product below..."
+      },
+      {
+        "title": "Best Guinea Pig Bedding 2026: Comfortable Litter for Your Cavy",
+        "slug": "best-guinea-pig-bedding-2026-comfortable-litter-for-your-cavy-2",
+        "date": "2026-04-11",
+        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
+      },
+      {
+        "title": "Best Indoor Rabbit Hutches 2026: Cozy Homes for Your Bunny",
+        "slug": "best-indoor-rabbit-hutches-2026-cozy-homes-for-your-bunny",
+        "date": "2026-04-11",
+        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
+      },
+      {
+        "title": "Best Hamster Cage 2026: Safe & Engaging Homes for Hamsters",
+        "slug": "best-hamster-cage-2026-safe-engaging-homes-for-hamsters",
+        "date": "2026-04-10",
+        "description": ""
+      },
+      {
+        "title": "Best Hamster Bedding 2026: Safe and Comfortable Litter Options",
+        "slug": "best-hamster-bedding-2026-safe-and-comfortable-litter-options",
+        "date": "2026-04-09",
+        "description": "Choosing the right hamster bedding is one of the most important decisions you'll make as a hamster owner. Your little companion spends the majority of their..."
+      },
+      {
+        "title": "Best Pet Water Fountains 2026: Keep Your Pets Hydrated with Fresh Water",
+        "slug": "best-pet-water-fountains-2026-keep-your-pets-hydrated-with-fresh-water",
+        "date": "2026-04-08",
+        "description": "As pet owners, we all want the best for our furry companions閳ユ攣nd hydration is one of the most fundamental yet overlooked aspects of pet care. Many pets,..."
+      },
+      {
+        "title": "The 5 Best Hamster Cages for 2026: From Budget Bin Setups to Premium Habitats",
+        "slug": "the-5-best-hamster-cages-for-2026-from-budget-bin-setups-to-premium-habitats",
+        "date": "2026-04-06",
+        "description": "Choosing the right hamster cage is one of the most consequential decisions you'll make as a hamster owner. These nocturnal burrowers are incredibly active 閳?a..."
+      },
+      {
+        "title": "Best Hamster Wheels 2026: Safe Exercise for Your Pet",
+        "slug": "best-hamster-wheels-2026-safe-exercise-for-your-pet",
+        "date": "2026-04-04",
+        "description": "In the wild, hamsters can run up to 5 miles per night searching for food. Without proper exercise, pet hamsters can develop obesity, boredom, and..."
+      },
+      {
+        "title": "Best Guinea Pig Food 2026: Complete Nutrition Guide",
+        "slug": "best-guinea-pig-food",
+        "date": "2026-04-02",
+        "description": "Guinea pigs have specific dietary needs that must be met for optimal health. Unlike many animals, they cannot produce their own Vitamin C, making diet choices..."
+      },
+      {
+        "title": "Best Rabbit Food 2026: Complete Nutrition Guide for Your Bunny",
+        "slug": "best-rabbit-food",
+        "date": "2026-03-31",
+        "description": ""
+      },
+      {
+        "title": "Best Hamster Cages 2026: Spacious Homes for Your Furry Friend",
+        "slug": "best-hamster-cages",
+        "date": "2026-03-31",
+        "description": "Most store-bought hamster cages are too small. Hamsters are active animals that need space to run, burrow, and explore. A cage that's too small leads to..."
+      }
+    ]
+  },
   "Fish": {
     "name": "Fish",
     "posts": [
@@ -605,579 +1196,6 @@
         "slug": "best-bird-food-parakeets",
         "date": "2026-03-31",
         "description": "Parakeets (also called budgies) are small but have big nutritional needs. In the wild, they eat a variety of seeds, grasses, fruits, and vegetables. In..."
-      }
-    ]
-  },
-  "Dogs": {
-    "name": "Dogs",
-    "posts": [
-      {
-        "title": "Best Dog Crates 2026: Top Crates for Home, Travel, Training & Every Breed Size",
-        "slug": "best-dog-crates-home-travel-2026",
-        "date": "2026-06-14",
-        "description": "A crate is one of the most important purchases you'll make for your dog—it serves as a den, a travel safety zone, a housetraining tool, and a secure space when you can't supervise. We tested 15 dog cr"
-      },
-      {
-        "title": "Best Dog Harnesses 2026: No-Pull, Crash-Tested & Adventure Harnesses for Every Breed",
-        "slug": "best-dog-harnesses-no-pull-crash-tested-adventure-2026",
-        "date": "2026-06-12",
-        "description": "A collar can damage your dog's trachea and spine. We tested 14 dog harnesses across 8 weeks with dogs from 6 to 110 pounds, evaluating no-pull effectiveness, crash-test certification, comfort, and dur"
-      },
-      {
-        "title": "Best Dog Cooling Mats & Elevated Beds 2026: Beat the Summer Heat in Style",
-        "slug": "best-dog-cooling-mats-elevated-beds-2026-beat-summer-heat",
-        "date": "2026-06-10",
-        "description": "When summer temperatures soar, your dog feels the heat even more than you do. We tested 12 cooling mats and elevated beds across 8 weeks of summer heat, measuring real temperature reduction, durabilit"
-      },
-      {
-        "title": "Best Dog Leashes 2026: Hands-Free, Retractable & Everyday Walk Essentials",
-        "slug": "best-dog-leashes-hands-free-retractable-2026-durable-comfortable",
-        "date": "2026-06-08",
-        "description": "A leash is your most-used piece of dog gear 鈥?yet most owners settle for the cheap nylon strap that came with the puppy starter kit. This guide covers the 8 best dog leashes in 2026, from hands-free r"
-      },
-      {
-        "title": "Best Dog Life Jackets & Swimming Gear 2026: Keep Your Dog Safe on the Water",
-        "slug": "best-dog-life-jackets-swimming-gear-2026-water-safety-flotation",
-        "date": "2026-06-05",
-        "description": "Not every dog is a natural swimmer 鈥?and even strong swimmers can tire out fast. Whether you're boating, paddleboarding, or hitting the beach, a quality dog life jacket is non-negotiable. This compreh"
-      },
-      {
-        "title": "Best Dog Ramps & Stairs 2026: Joint-Friendly Access for Cars, Beds & Couches",
-        "slug": "best-dog-ramps-stairs-2026-joint-friendly-access-cars-beds-couches",
-        "date": "2026-06-03",
-        "description": "Every jump onto a tall bed, every leap out of an SUV, every scramble onto the couch 鈥?for a dog with arthritis, hip dysplasia, or simply short legs, these daily actions accumulate micro-trauma that ac"
-      },
-      {
-        "title": "Best Dog Puzzle Toys & Slow Feeders 2026: Mental Stimulation, Enrichment & Bloat Prevention",
-        "slug": "best-dog-puzzle-toys-slow-feeders-2026-mental-stimulation-enrichment",
-        "date": "2026-06-01",
-        "description": "A tired dog isn't just a physically exercised dog 鈥?it's a mentally stimulated one. Puzzle toys and slow feeders engage your dog's problem-solving instincts, prevent destructive boredom behaviors, red"
-      },
-      {
-        "title": "Best Dog Nail Grinders & Clippers 2026: Safe, Quiet & Professional-Grade Grooming Tools",
-        "slug": "best-dog-nail-grinders-clippers-2026-safe-quiet-professional-grooming",
-        "date": "2026-05-30",
-        "description": "Nail trimming is one of the most stressful grooming tasks for both dogs and their owners 鈥?but it doesn't have to be. From whisper-quiet cordless grinders ideal for anxious pups to heavy-duty guilloti"
-      },
-      {
-        "title": "Best Dog Beds 2026: Orthopedic, Heated & Luxury Beds for Every Breed",
-        "slug": "best-dog-beds-2026-orthopedic-heated-luxury-beds-every-breed",
-        "date": "2026-05-28",
-        "description": "A great dog bed is more than a sleeping spot 鈥?it's an investment in your dog's joint health, spinal alignment, and overall wellbeing. Whether you need an orthopedic memory foam bed for an aging Labra"
-      },
-      {
-        "title": "Best Dog Harnesses 2026 鈥?No-Pull, Step-In & Adventure Harnesses",
-        "slug": "best-dog-harnesses-2026",
-        "date": "2026-05-26",
-        "description": "We tested 8 of the best dog harnesses of 2026 鈥?from no-pull and step-in designs to rugged adventure gear. In-depth reviews, pros & cons, comparison table, and FAQ to help you find the perfect harness"
-      },
-      {
-        "title": "Best Dog Cooling Vests 2026: Beat the Summer Heat & Prevent Overheating",
-        "slug": "best-dog-cooling-vests-2026-beat-the-summer-heat",
-        "date": "2026-05-24",
-        "description": "Dogs don't sweat like humans 鈥?their primary cooling mechanism is panting, which is far less efficient in high heat and humidity. A quality cooling vest uses evaporative cooling to lower your dog's co"
-      },
-      {
-        "title": "Best Dog Joint Supplements 2026: Hip & Joint Health for Active Dogs",
-        "slug": "best-dog-joint-supplements-2026-hip-joint-health",
-        "date": "2026-05-22",
-        "description": "As dogs age, their joints take a beating. From Golden Retrievers prone to hip dysplasia to active working dogs who never stop moving, joint health is one of the most important factors affecting your d"
-      },
-      {
-        "title": "Best Dog GPS Trackers 2026: Keep Tabs on Your Adventure Buddy",
-        "slug": "best-dog-gps-trackers-2026-keep-tabs-on-your-adventure-buddy",
-        "date": "2026-05-04",
-        "description": "After extensive research and testing, we've compiled our top picks for Best Dog GPS Trackers 2026: Keep Tabs on Your Adventure Buddy. Each product below has..."
-      },
-      {
-        "title": "Best Dog Shampoo 2026: Gentle Cleansing for Sensitive Skin",
-        "slug": "best-dog-shampoo-2026-gentle-cleansing-for-sensitive-skin",
-        "date": "2026-04-22",
-        "description": "Remember, the best supplies is one that meets your specific needs and keeps your dog happy and..."
-      },
-      {
-        "title": "Best Dog Harnesses 2026: Comfort and Control on Every Walk",
-        "slug": "best-dog-harnesses-2026-comfort-and-control-on-every-walk",
-        "date": "2026-04-19",
-        "description": "# Best Dog Harnesses 2026: Comfort and Control on Every WalkA quality dog harness is one of the most important investments you can make for your canine..."
-      },
-      {
-        "title": "Best Dog Treats 2026: Healthy Rewards Your Pup Will Love",
-        "slug": "best-dog-treats-2026-healthy-rewards-your-pup-will-love",
-        "date": "2026-04-19",
-        "description": "# Best Dog Treats 2026: Healthy Rewards Your Pup Will LoveDog treats are more than just snacks-they're powerful tools for training, bonding, and rewarding good..."
-      },
-      {
-        "title": "Best Dog Carriers 2026: Safe Travel Solutions for Dogs",
-        "slug": "best-dog-carriers-2026-safe-travel-solutions-for-dogs",
-        "date": "2026-04-18",
-        "description": "# Best Dog Carriers 2026: Safe Travel Solutions for DogsTraveling with your dog requires careful planning, and choosing the right carrier is one of the most..."
-      },
-      {
-        "title": "Best Dog Beds 2026: Cozy Resting Spots for Large and Small Dogs",
-        "slug": "best-dog-beds-2026-cozy-resting-spots-for-large-and-small-dogs",
-        "date": "2026-04-18",
-        "description": "# Best Dog Beds 2026: Cozy Resting Spots for Large and Small DogsA good dog bed is more than just a place for your pet to sleep-it's their sanctuary, their..."
-      },
-      {
-        "title": "Best Dog Training Clickers 2026: Precision Tools for Positive Reinforcement",
-        "slug": "best-dog-training-clickers-2026-precision-tools-for-positive-reinforcement-3",
-        "date": "2026-04-11",
-        "description": "After extensive research and testing, we have curated our top picks for best dog training clickers 2026: precision tools for positive reinforcement. Each..."
-      },
-      {
-        "title": "Best Dog Leashes 2026: From Standard to Retractable Options",
-        "slug": "best-dog-leashes-2026-from-standard-to-retractable-options",
-        "date": "2026-04-09",
-        "description": "Finding the right dog leash can feel overwhelming 鈥?after all, this is one of the most important tools in your daily routine with your pup. Whether you're..."
-      },
-      {
-        "title": "Best Dog Training Treats 2026: High-Value Treats for Effective Training",
-        "slug": "best-dog-training-treats-2026-high-value-treats-for-effective-training",
-        "date": "2026-04-08",
-        "description": "Training your dog is one of the most rewarding experiences you can have as a pet parent. Whether you are teaching basic commands like sit and stay, or working..."
-      },
-      {
-        "title": "Best Dog Dental Care Products 2026: Maintaining Your Dog's Oral Health",
-        "slug": "best-dog-dental-care-products-2026",
-        "date": "2026-04-08",
-        "description": "As a responsible dog owner, you want your furry companion to live a long, healthy, and happy life. But here's a fact that many pet parents overlook: dental..."
-      },
-      {
-        "title": "The 10 Best Dog Beds for Large Breeds in 2026: Ultimate Comfort for Big Dogs",
-        "slug": "the-10-best-dog-beds-for-large-breeds-in-2026-ultimate-comfort-for-big-dogs",
-        "date": "2026-04-07",
-        "description": "Finding the perfect bed for your large breed dog is crucial for their health and happiness. Large dogs have unique needs that standard pet beds cannot meet. In..."
-      },
-      {
-        "title": "The 7 Best Dog Foods for Active Dogs and High-Energy Breeds in 2026",
-        "slug": "the-7-best-dog-foods-for-active-dogs-and-high-energy-breeds-in-2026",
-        "date": "2026-04-06",
-        "description": "Is your dog constantly on the move? Whether you have a Border Collie who needs to chase every ball, a Belgian Malinois who lives for working jobs, or a..."
-      },
-      {
-        "title": "Best Dog Food for Puppies 2026: Complete Nutrition Guide",
-        "slug": "best-dog-food-for-puppies-2026-complete-nutrition-guide",
-        "date": "2026-04-04",
-        "description": "Puppies grow at an incredible rate-sometimes doubling their weight in just weeks. This rapid development requires specific nutrients that adult dog food simply..."
-      },
-      {
-        "title": "Best Dog Shampoos 2026: Gentle Care for Every Coat",
-        "slug": "best-dog-shampoos-2026-gentle-care-for-every-coat",
-        "date": "2026-04-04",
-        "description": "Human shampoo has a different pH balance than what dogs need. Using the wrong product can strip your dog's coat of natural oils, causing dryness, itching, and..."
-      },
-      {
-        "title": "Best Dog Food for Large Breeds in 2026: Top 5 Picks Reviewed",
-        "slug": "best-dog-food-for-large-breeds-in-2026-top-5-picks-reviewed",
-        "date": "2026-04-03",
-        "description": "Affiliate Disclosure: PawCritic participates in affiliate advertising programs. We may earn a commission when you purchase through links on this page, at no..."
-      },
-      {
-        "title": "Best Dog Food 2026: Complete Guide to Feeding Your Dog Right",
-        "slug": "best-dog-food-2026",
-        "date": "2026-03-31",
-        "description": ""
-      },
-      {
-        "title": "Best Dog Toys for Aggressive Chewers 2026: Indestructible Options",
-        "slug": "best-dog-toys-aggressive-chewers",
-        "date": "2026-03-31",
-        "description": "Some dogs can destroy any toy in minutes. If you have a German Shepherd, Pit Bull, Golden Retriever, or any powerful chewer, you know the frustration of buying..."
-      },
-      {
-        "title": "Best Dog Beds for Large Breeds 2026: Comfortable Sleep for Big Dogs",
-        "slug": "best-dog-beds-large-breeds",
-        "date": "2026-03-31",
-        "description": "Large breed dogs like German Shepherds, Golden Retrievers, and Great Danes have unique sleeping needs. Their heavier weight puts more pressure on joints, and..."
-      },
-      {
-        "title": "Best Dog Crates for Travel 2026: Safe Carriers for Road Trips and Flights",
-        "slug": "best-dog-crates-travel",
-        "date": "2026-03-31",
-        "description": "Traveling with a dog isn't as simple as putting them in the backseat. For safety, legal requirements, and your dog's comfort, a proper travel crate is..."
-      }
-    ]
-  },
-  "Cats": {
-    "name": "Cats",
-    "posts": [
-      {
-        "title": "Best Cat Food 2026: Dry, Wet, Raw & Freeze-Dried Diets for Kittens, Adults & Seniors",
-        "slug": "best-cat-food-dry-wet-raw-2026",
-        "date": "2026-06-14",
-        "description": "Cats are obligate carnivores with unique nutritional requirements that differ dramatically from dogs and humans. We analyzed 18 cat food brands across dry, wet, raw, and freeze-dried categories, consu"
-      },
-      {
-        "title": "Best Cat Trees & Scratching Posts 2026: Cat Condos, Wall-Mounted Systems & Multi-Level Towers",
-        "slug": "best-cat-trees-scratching-posts-2026-cat-condos-wall-mounted-systems",
-        "date": "2026-06-12",
-        "description": "Vertical territory is not optional for indoor cats—it's a biological necessity. We tested 12 cat trees, scratching posts, and wall-mounted climbing systems across 8 weeks with 10 cats, evaluating stab"
-      },
-      {
-        "title": "Best Cat Food Bowls, Slow Feeders & Elevated Stands 2026: Prevent Vomiting & Improve Digestion",
-        "slug": "best-cat-food-bowls-slow-feeders-elevated-stands-2026",
-        "date": "2026-06-10",
-        "description": "The wrong bowl can cause your cat to vomit after meals, develop chin acne, or avoid eating altogether. We tested 14 cat food bowls, slow feeders, and elevated stands across 6 weeks, evaluating bowl ma"
-      },
-      {
-        "title": "Best Cat Grooming Tools 2026: Brushes, Deshedders & Complete Coat Care",
-        "slug": "best-cat-grooming-tools-brushes-2026-deshedding-nail-trimmers-shampoo",
-        "date": "2026-06-08",
-        "description": "Regular grooming keeps your cat's coat glossy, reduces hairballs, and strengthens your bond 鈥?but the wrong tool can hurt or frighten your cat. This comprehensive guide covers the 8 best cat grooming "
-      },
-      {
-        "title": "Best Cat Calming Products & Pheromone Diffusers 2026: Soothe Feline Anxiety Naturally",
-        "slug": "best-cat-calming-products-pheromone-diffusers-2026-anxiety-stress-relief",
-        "date": "2026-06-05",
-        "description": "Urinating outside the box, hiding under the bed, fighting with other cats 鈥?feline anxiety can tear your household apart. But before you reach for prescription meds, the right calming products can wor"
-      },
-      {
-        "title": "Best Cat Dental Care Products 2026: Toothbrushes, Water Additives & Dental Treats for Feline Oral Health",
-        "slug": "best-cat-dental-care-products-2026-toothbrushes-water-additives-dental-treats",
-        "date": "2026-06-03",
-        "description": "By age three, 70% of cats have some form of periodontal disease 鈥?and since cats are masters of hiding pain, most owners have no idea until the damage is severe. Feline dental disease doesn't just mea"
-      },
-      {
-        "title": "Best Cat Carriers & Travel Backpacks 2026: Safe, Comfortable Transport for Every Feline",
-        "slug": "best-cat-carriers-travel-backpacks-2026-safe-feline-transport",
-        "date": "2026-06-01",
-        "description": "Vet visits. Moving day. Emergency evacuations. Road trips. For a species that famously hates change, getting a cat into a carrier is often the most stressful interaction between owner and pet 鈥?but th"
-      },
-      {
-        "title": "Best Cat Beds & Window Perches 2026: Ultimate Comfort & Cozy Lounging Spots",
-        "slug": "best-cat-beds-window-perches-2026-cozy-lounging-comfort",
-        "date": "2026-05-30",
-        "description": "Cats sleep an average of 12-16 hours a day 鈥?which means the bed you choose is one of the most important purchases you'll make for your feline friend. From self-warming cave beds for anxious kitties t"
-      },
-      {
-        "title": "Best Self-Cleaning Litter Boxes 2026: Automatic, Sifting & Smart Litter Solutions",
-        "slug": "best-self-cleaning-litter-boxes-2026-automatic-sifting-smart-litter",
-        "date": "2026-05-28",
-        "description": "Self-cleaning litter boxes promise to eliminate the most hated chore in cat ownership 鈥?daily scooping. But with prices ranging from $80 to $800, choosing the right automatic litter box requires under"
-      },
-      {
-        "title": "Best Cat Trees 2026 鈥?Scratching Posts, Condo Towers & Activity Centers",
-        "slug": "best-cat-trees-2026-scratching-posts-condo-towers-activity-centers",
-        "date": "2026-05-26",
-        "description": "Cat trees are essential furniture for indoor cats 鈥?they provide vertical territory for climbing, safe perches for observing their domain, and scratching surfaces that save your sofa. Whether you're o"
-      },
-      {
-        "title": "Best Cat Water Fountains 2026: Encourage Hydration for Healthier Cats",
-        "slug": "best-cat-water-fountains-2026-hydration-for-healthier-cats",
-        "date": "2026-05-24",
-        "description": "Cats are descended from desert-dwelling ancestors and have a naturally low thirst drive 鈥?they evolved to get most of their moisture from prey. In a domestic setting, this means many cats live in a st"
-      },
-      {
-        "title": "Best Cat Harnesses & Leashes 2026: Safe Outdoor Adventures for Your Feline",
-        "slug": "best-cat-harnesses-leashes-2026-safe-outdoor-adventures",
-        "date": "2026-05-22",
-        "description": "Taking your cat outdoors on a harness isn't just trendy 鈥?it's one of the best things you can do for their physical and mental health. But cats are escape artists, and a poorly-fitting harness can be "
-      },
-      {
-        "title": "Best Cat Vitamin Supplements 2026: Boost Your Cats Health",
-        "slug": "best-cat-vitamin-supplements-2026-boost-your-cats-health",
-        "date": "2026-05-01",
-        "description": "After extensive research and testing, we've compiled our top picks for Best Cat Vitamin Supplements 2026: Boost Your Cats Health. Each product below has been..."
-      },
-      {
-        "title": "Best Cat Litter for Multiple Cats 2026: Heavy-Duty Solutions",
-        "slug": "best-cat-litter-for-multiple-cats-2026-heavy-duty-solutions",
-        "date": "2026-05-01",
-        "description": "After extensive research and testing, we've compiled our top picks for Best Cat Litter for Multiple Cats 2026: Heavy-Duty Solutions. Each product below has..."
-      },
-      {
-        "title": "Best Cat Food 2026: Premium Nutrition for Your Feline Friend",
-        "slug": "best-cat-food-2026-premium-nutrition-for-your-feline-friend",
-        "date": "2026-04-20",
-        "description": "Remember, the best food is one that meets your specific needs and keeps your cat happy and..."
-      },
-      {
-        "title": "Best Cat GPS Trackers 2026: Know Where Your Cat Goes",
-        "slug": "best-cat-gps-trackers-2026-know-where-your-cat-goes",
-        "date": "2026-04-19",
-        "description": "# Best Cat GPS Trackers 2026: Know Where Your Cat GoesFor outdoor cats or escape-prone indoor cats, a GPS tracker provides invaluable peace of mind. In 2026,..."
-      },
-      {
-        "title": "Best Cat Treats 2026: Tasty Rewards Your Cat Will Crave",
-        "slug": "best-cat-treats-2026-tasty-rewards-your-cat-will-crave",
-        "date": "2026-04-18",
-        "description": "# Best Cat Treats 2026: Tasty Rewards Your Cat Will CraveFinding the perfect cat treat is about more than just spoiling your feline friend-it's about providing..."
-      },
-      {
-        "title": "Best Catnip Toys 2026: Irresistible Fun for Your Cat",
-        "slug": "best-catnip-toys-2026-irresistible-fun-for-your-cat",
-        "date": "2026-04-18",
-        "description": "# Best Catnip Toys 2026: Irresistible Fun for Your CatCatnip has been delighting felines for centuries, and modern catnip toys combine this magical herb with..."
-      },
-      {
-        "title": "Best Automatic Cat Feeders 2026: Smart Feeding on Your Schedule",
-        "slug": "best-automatic-cat-feeders-2026-smart-feeding-on-your-schedule",
-        "date": "2026-04-18",
-        "description": "# Best Automatic Cat Feeders 2026: Smart Feeding on Your ScheduleAutomatic cat feeders have evolved from simple timer-based dispensers to sophisticated smart..."
-      },
-      {
-        "title": "Best Cat Trees 2026: Climbing Paradise for Your Feline Friend",
-        "slug": "best-cat-trees-2026-climbing-paradise-for-your-feline-friend-2",
-        "date": "2026-04-11",
-        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
-      },
-      {
-        "title": "Best Cat Window Perches 2026: Sunny Spots for Your Kitty to Lounge",
-        "slug": "best-cat-window-perches-2026-sunny-spots-for-your-kitty-to-lounge",
-        "date": "2026-04-11",
-        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
-      },
-      {
-        "title": "Best Cat Litter 2026: Top Picks for Odor Control & Easy Cleaning",
-        "slug": "best-cat-litter-2026-top-picks-for-odor-control-easy-cleaning",
-        "date": "2026-04-10",
-        "description": ""
-      },
-      {
-        "title": "Best Automatic Cat Feeder 2026: Smart Feeding Solutions",
-        "slug": "best-automatic-cat-feeder-2026-smart-feeding-solutions",
-        "date": "2026-04-10",
-        "description": ""
-      },
-      {
-        "title": "Best Cat Food for Kittens 2026: Essential Nutrition for Growing Cats",
-        "slug": "best-cat-food-for-kittens-2026-essential-nutrition-for-growing-cats",
-        "date": "2026-04-09",
-        "description": "Bringing a kitten into your home is one of the most joyful experiences a pet parent can have 鈥?but with that joy comes serious responsibility. Kittens grow at..."
-      },
-      {
-        "title": "Best Cat Toys 2026: Interactive Toys, Puzzle Feeders, Feather Wands & Enrichment Toys",
-        "slug": "best-cat-toys-2026-interactive-toys-puzzle-feeders-feather-wands-enrichment-toys",
-        "date": "2026-04-08",
-        "description": "As cat parents, we all want to provide our feline companions with the best possible entertainment and mental stimulation. In 2026, the cat toy market has..."
-      },
-      {
-        "title": "Best Cat Scratching Posts 2026: Top 5 Reviews & Ultimate Buying Guide",
-        "slug": "best-cat-scratching-posts-2026-top-5-reviews-ultimate-buying-guide",
-        "date": "2026-04-08",
-        "description": "Is your sofa starting to look like a feline attack victim? Does your cat prefer your expensive curtains as a climbing apparatus? If you've answered yes to..."
-      },
-      {
-        "title": "Best Cat Grooming Tools 2026: Brushes, Clippers & Nail Trimmers",
-        "slug": "best-cat-grooming-tools-2026-brushes-clippers-nail-trimmers",
-        "date": "2026-04-08",
-        "description": "Regular grooming is one of the most important aspects of cat care 閳?and yet, it is all too often overlooked by pet parents. Whether you have a long-haired..."
-      },
-      {
-        "title": "The 5 Best Cat Trees for Large Cats: Sturdy Condos for Maine Coons, Ragdolls & Big Boys in 2026",
-        "slug": "the-5-best-cat-trees-for-large-cats-sturdy-condos-for-maine-coons-ragdolls-big-boys-in-2026",
-        "date": "2026-04-06",
-        "description": "Your standard cat tree was not designed for a 20-pound Maine Coon. We've all seen it: the wobbly tower that sways when a large cat hops on it, the carpeted..."
-      },
-      {
-        "title": "Best Cat Trees for Small Apartments 2026",
-        "slug": "best-cat-trees-for-small-apartments-2026",
-        "date": "2026-04-04",
-        "description": "Cats are natural climbers and scratchers. Without proper outlets, they'll find alternatives-usually your furniture. Even in a small apartment, a compact cat..."
-      },
-      {
-        "title": "Best Cat Litter Boxes 2026: Top Picks for Every Cat",
-        "slug": "best-cat-litter-boxes",
-        "date": "2026-04-02",
-        "description": "A good litter box keeps your home clean and your cat happy. The wrong one can lead to messes, odors, and even behavioral issues where your cat refuses to use..."
-      },
-      {
-        "title": "Best Cat Food for Indoor Cats 2026: Keep Your Indoor Kitty Healthy",
-        "slug": "best-cat-food-indoor-cats",
-        "date": "2026-03-31",
-        "description": ""
-      },
-      {
-        "title": "Best Cat Trees for Large Cats 2026: Sturdy Towers for Big Felines",
-        "slug": "best-cat-trees-large-cats",
-        "date": "2026-03-31",
-        "description": "If you have a Maine Coon, Ragdoll, or just a chunky domestic shorthair, you know the struggle. Standard cat trees wobble, tip over, or simply collapse under a..."
-      }
-    ]
-  },
-  "Small Pets": {
-    "name": "Small Pets",
-    "posts": [
-      {
-        "title": "Best Small Pet Food 2026: Complete Nutrition for Rabbits, Guinea Pigs, Hamsters, Chinchillas & Rats",
-        "slug": "best-small-pet-food-guinea-pig-rabbit-hamster-chinchilla-2026",
-        "date": "2026-06-14",
-        "description": "Small pets have wildly different nutritional needs — a rabbit's high-fiber digestive system is nothing like a hamster's omnivorous needs or a guinea pig's unique vitamin C requirement. We tested 16 sm"
-      },
-      {
-        "title": "Best Small Pet Cages & Habitats 2026: Rabbit Hutches, Guinea Pig Cages & Hamster Homes",
-        "slug": "best-small-pet-cages-habitats-2026-rabbit-hutches-guinea-pig-cages-hamster-homes",
-        "date": "2026-06-12",
-        "description": "Your small pet's cage is their entire world—get it wrong and they suffer in silence. We tested 14 cages across rabbits, guinea pigs, hamsters, and chinchillas over 8 weeks, evaluating floor space, ven"
-      },
-      {
-        "title": "Best Small Pet Grooming Tools & Nail Care 2026: Brushes, Clippers & Coat Care for Rabbits, Guinea Pigs & Hamsters",
-        "slug": "best-small-pet-grooming-tools-nail-care-2026-rabbits-guinea-pigs-hamsters",
-        "date": "2026-06-10",
-        "description": "Small pets need grooming too 鈥?but their delicate skin, fast-growing nails, and sensitive temperaments require specialized tools that won't cause injury or stress. We tested 15 grooming tools and nail"
-      },
-      {
-        "title": "Best Small Pet Hay & Forage Products 2026: Timothy Hay, Treats & Enrichment for Rabbits, Guinea Pigs & More",
-        "slug": "best-small-pet-hay-forage-products-2026-timothy-hay-treats-enrichment",
-        "date": "2026-06-08",
-        "description": "Hay is not just bedding 鈥?it is the foundation of every small herbivore's diet. The right hay provides essential fiber for dental and digestive health, while forage products add enrichment and variety"
-      },
-      {
-        "title": "Best Hamster Bedding & Substrate 2026: Safe Burrowing, Superior Odor Control",
-        "slug": "best-hamster-bedding-substrate-2026-safe-burrowing-odor-control",
-        "date": "2026-06-05",
-        "description": "Hamsters spend 95% of their lives on, in, or under their bedding 鈥?yet most owners grab whatever bag is cheapest at the pet store. The wrong bedding can cause respiratory infections, skin irritation, "
-      },
-      {
-        "title": "Best Small Pet Chew Toys & Enrichment 2026: Teeth-Friendly Chews for Rabbits, Guinea Pigs, Hamsters & Chinchillas",
-        "slug": "best-small-pet-chew-toys-enrichment-2026-rabbits-guinea-pigs-hamsters-chinchillas",
-        "date": "2026-06-03",
-        "description": "Rabbits' teeth grow 2-3mm per week. Guinea pigs' teeth grow continuously for their entire lives. Hamsters' incisors elongate at nearly 1mm per day. Without appropriate chew materials to wear them down"
-      },
-      {
-        "title": "Best Small Pet Playpens & Exercise Pens 2026: Safe Play Spaces for Rabbits, Guinea Pigs & More",
-        "slug": "best-small-pet-playpens-exercise-pens-2026-safe-rabbit-guinea-pig",
-        "date": "2026-06-01",
-        "description": "Small pets need space to run, explore, and express natural behaviors 鈥?and a cage alone rarely provides enough room. Whether you're giving your rabbit supervised outdoor time, creating a safe floor-pl"
-      },
-      {
-        "title": "Best Small Pet Carriers & Travel Cages 2026: Safe Transportation for Hamsters, Guinea Pigs & Rabbits",
-        "slug": "best-small-pet-carriers-travel-cages-2026-safe-transport-hamsters-guinea-pigs-rabbits",
-        "date": "2026-05-30",
-        "description": "Whether you're heading to the vet, moving homes, or taking your small pet on a road trip, the right carrier makes the difference between a stressful ordeal and a safe, comfortable journey. From airlin"
-      },
-      {
-        "title": "Best Rabbit Cages & Hutches 2026: Indoor and Outdoor Housing for Happy Bunnies",
-        "slug": "best-rabbit-cages-hutches-2026-indoor-outdoor-housing-happy-bunnies",
-        "date": "2026-05-28",
-        "description": "Rabbits are the third most popular small pet in North America, but they are also one of the most commonly improperly housed. A rabbit's cage or hutch is the foundation of its health and happiness 鈥?to"
-      },
-      {
-        "title": "Best Guinea Pig Cages & Habitats 2026 鈥?Spacious Homes for Happy Piggies",
-        "slug": "best-guinea-pig-cages-habitats-2026-spacious-homes-happy-piggies",
-        "date": "2026-05-26",
-        "description": "Guinea pigs need far more space than most owners realize 鈥?the old pet-store myth of a 30x18-inch cage being adequate has caused decades of chronic stress and health problems in pet guinea pigs. The s"
-      },
-      {
-        "title": "Best Rabbit Litter Boxes 2026: Odor Control & Easy Cleaning for Bunnies",
-        "slug": "best-rabbit-litter-boxes-2026-odor-control-for-bunnies",
-        "date": "2026-05-24",
-        "description": "Rabbits are naturally clean animals 鈥?in the wild, they designate specific latrine areas and keep the rest of their warren spotless. With the right litter box, setup, and training, your house rabbit c"
-      },
-      {
-        "title": "Best Small Pet Hay Feeders & Hay Racks 2026: Fresh Hay for Happy Bunnies, Guinea Pigs & Chinchillas",
-        "slug": "best-small-pet-hay-feeders-hay-racks-2026",
-        "date": "2026-05-22",
-        "description": "Hay is the cornerstone of every small herbivore's diet, but how you deliver it matters just as much as the hay itself. A good hay feeder reduces waste, prevents soiling, and encourages natural foragin"
-      },
-      {
-        "title": "Best Chinchilla Dust Bath 2026: Grooming Essentials",
-        "slug": "best-chinchilla-dust-bath-2026-grooming-essentials",
-        "date": "2026-05-02",
-        "description": "After extensive research and testing, we've compiled our top picks for Best Chinchilla Dust Bath 2026: Grooming Essentials. Each product below has been..."
-      },
-      {
-        "title": "Best Rat Cages 2026: Social Spaces for Your Pet Rats",
-        "slug": "best-rat-cages-2026-social-spaces-for-your-pet-rats-2",
-        "date": "2026-05-01",
-        "description": "After extensive research and testing, we've compiled our top picks for Best Rat Cages 2026: Social Spaces for Your Pet Rats. Each product below has been..."
-      },
-      {
-        "title": "Best Fish Tank Gravel 2026: Substrate for Healthy Aquariums",
-        "slug": "best-fish-tank-gravel-2026-substrate-for-healthy-aquariums",
-        "date": "2026-04-22",
-        "description": "Remember, the best enclosures is one that meets your specific needs and keeps your fish happy and..."
-      },
-      {
-        "title": "Best Aquarium Heaters 2026: Maintain Perfect Water Temperature",
-        "slug": "best-aquarium-heaters-2026-maintain-perfect-water-temperature",
-        "date": "2026-04-22",
-        "description": "Remember, the best supplies is one that meets your specific needs and keeps your fish happy and..."
-      },
-      {
-        "title": "Best Small Pet Toys 2026: Enrichment for Happy Small Pets",
-        "slug": "best-small-pet-toys-2026-enrichment-for-happy-small-pets",
-        "date": "2026-04-12",
-        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
-      },
-      {
-        "title": "Best Ferret Cages 2026: Spacious Homes for Your Playful Ferret",
-        "slug": "best-ferret-cages-2026-spacious-homes-for-your-playful-ferret-2",
-        "date": "2026-04-11",
-        "description": ""
-      },
-      {
-        "title": "Best Hedgehog Supplies 2026: Essential Gear for Your Spiky Companion",
-        "slug": "best-hedgehog-supplies-2026-essential-gear-for-your-spiky-companion",
-        "date": "2026-04-11",
-        "description": "After extensive research and testing, we have compiled our top picks for Best Hedgehog Supplies 2026. Each product below has been carefully evaluated for..."
-      },
-      {
-        "title": "Best Dog Crates 2026: Comfortable Spaces for Your Canine Companion",
-        "slug": "best-dog-crates-2026-comfortable-spaces-for-your-canine-companion-2",
-        "date": "2026-04-11",
-        "description": "After extensive research and testing, we have curated our top picks for best dog crates 2026: comfortable spaces for your canine companion. Each product below..."
-      },
-      {
-        "title": "Best Guinea Pig Bedding 2026: Comfortable Litter for Your Cavy",
-        "slug": "best-guinea-pig-bedding-2026-comfortable-litter-for-your-cavy-2",
-        "date": "2026-04-11",
-        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
-      },
-      {
-        "title": "Best Indoor Rabbit Hutches 2026: Cozy Homes for Your Bunny",
-        "slug": "best-indoor-rabbit-hutches-2026-cozy-homes-for-your-bunny",
-        "date": "2026-04-11",
-        "description": "Affiliate Disclosure: As an Amazon Associate, we may earn commissions from qualifying..."
-      },
-      {
-        "title": "Best Hamster Cage 2026: Safe & Engaging Homes for Hamsters",
-        "slug": "best-hamster-cage-2026-safe-engaging-homes-for-hamsters",
-        "date": "2026-04-10",
-        "description": ""
-      },
-      {
-        "title": "Best Hamster Bedding 2026: Safe and Comfortable Litter Options",
-        "slug": "best-hamster-bedding-2026-safe-and-comfortable-litter-options",
-        "date": "2026-04-09",
-        "description": "Choosing the right hamster bedding is one of the most important decisions you'll make as a hamster owner. Your little companion spends the majority of their..."
-      },
-      {
-        "title": "Best Pet Water Fountains 2026: Keep Your Pets Hydrated with Fresh Water",
-        "slug": "best-pet-water-fountains-2026-keep-your-pets-hydrated-with-fresh-water",
-        "date": "2026-04-08",
-        "description": "As pet owners, we all want the best for our furry companions閳ユ攣nd hydration is one of the most fundamental yet overlooked aspects of pet care. Many pets,..."
-      },
-      {
-        "title": "The 5 Best Hamster Cages for 2026: From Budget Bin Setups to Premium Habitats",
-        "slug": "the-5-best-hamster-cages-for-2026-from-budget-bin-setups-to-premium-habitats",
-        "date": "2026-04-06",
-        "description": "Choosing the right hamster cage is one of the most consequential decisions you'll make as a hamster owner. These nocturnal burrowers are incredibly active 閳?a..."
-      },
-      {
-        "title": "Best Hamster Wheels 2026: Safe Exercise for Your Pet",
-        "slug": "best-hamster-wheels-2026-safe-exercise-for-your-pet",
-        "date": "2026-04-04",
-        "description": "In the wild, hamsters can run up to 5 miles per night searching for food. Without proper exercise, pet hamsters can develop obesity, boredom, and..."
-      },
-      {
-        "title": "Best Guinea Pig Food 2026: Complete Nutrition Guide",
-        "slug": "best-guinea-pig-food",
-        "date": "2026-04-02",
-        "description": "Guinea pigs have specific dietary needs that must be met for optimal health. Unlike many animals, they cannot produce their own Vitamin C, making diet choices..."
-      },
-      {
-        "title": "Best Rabbit Food 2026: Complete Nutrition Guide for Your Bunny",
-        "slug": "best-rabbit-food",
-        "date": "2026-03-31",
-        "description": ""
-      },
-      {
-        "title": "Best Hamster Cages 2026: Spacious Homes for Your Furry Friend",
-        "slug": "best-hamster-cages",
-        "date": "2026-03-31",
-        "description": "Most store-bought hamster cages are too small. Hamsters are active animals that need space to run, burrow, and explore. A cage that's too small leads to..."
       }
     ]
   }
