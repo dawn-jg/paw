@@ -45,12 +45,8 @@ function loadCategories(): Record<string, Category> {
 // ─── Route resolution ────────────────────────────────
 const CAT_SLUGS = new Set(['dogs', 'cats', 'small-pets', 'birds', 'fish', 'reptiles']);
 
-// Static info pages (footer links)
+// Static info pages (footer links) — those with dedicated pages are excluded
 const INFO_SLUGS = new Set([
-  'about',
-  'how-we-test',
-  'contact',
-  'editorial-policy',
   'newsletter',
 ]);
 
