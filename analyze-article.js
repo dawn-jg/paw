@@ -1,0 +1,18 @@
+const p = require('D:/pawcritic-next/src/data/posts.json');
+const arr = Array.isArray(p) ? p : (p.posts || []);
+const article = arr.find(a => a.slug === 'best-automatic-fish-feeders-vacation-2026');
+const c = article.content;
+console.log('=== H2s ===');
+const h2s = c.match(/<h2[^>]*>.*?<\/h2>/gi);
+h2s.forEach(h => console.log(h));
+console.log('\n=== IMGs ===');
+const imgs = c.match(/<img[^>]+>/gi);
+if (imgs) imgs.forEach(i => console.log(i));
+console.log('\n=== Amazon Links ===');
+const amz = c.match(/amazon\.com\/dp\/[A-Z0-9]+/gi);
+if (amz) amz.forEach(a => console.log(a));
+console.log('\n=== Internal Links ===');
+const ilinks = c.match(/href="\/(?!\/)[^"]+"/gi);
+if (ilinks) ilinks.forEach(i => console.log(i));
+console.log('\nFirst 1000 chars:');
+console.log(c.substring(0, 1000));
