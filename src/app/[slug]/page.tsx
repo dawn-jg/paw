@@ -247,6 +247,7 @@ function ArticlePageContent({ post }: { post: Post }) {
     author: post.author ? {
       '@type': 'Person',
       name: post.author,
+      url: post.authorSlug ? `https://pawcritic.com/author/${post.authorSlug}` : undefined,
     } : {
       '@type': 'Organization',
       name: 'PawCritic',
@@ -326,9 +327,9 @@ function ArticlePageContent({ post }: { post: Post }) {
             <time dateTime={post.date}>
               {post.date}
             </time>
-            {post.author && (
+            {post.author && post.authorSlug && (
               <span className="article-author">
-                By {post.author}
+                By <Link href={`/author/${post.authorSlug}`} style={{ color: 'inherit', textDecoration: 'underline' }}>{post.author}</Link>
               </span>
             )}
             <span className="article-read-time">
