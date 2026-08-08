@@ -1086,6 +1086,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Heatstroke: How to Spot It, Cool a Dog Down, and Know When It's an Emergency",
+        "slug": "dog-heatstroke-recognition-treatment-emergency",
+        "date": "2026-08-09",
+        "description": "Heatstroke kills dogs fast. Here's how to spot the early signs, cool a dog down the right way, and know when a trip to the emergency vet can't wait."
+      },
+      {
         "title": "Wet Dog Food vs Dry Dog Food: Which Is Actually Better?",
         "slug": "wet-vs-dry-dog-food-which-is-better",
         "date": "2026-08-07",
@@ -1420,6 +1426,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Choose Cat Litter: Clumping, Clay, Silica, and What Actually Controls Odor",
+        "slug": "how-to-choose-cat-litter-buying-guide",
+        "date": "2026-08-09",
+        "description": "Clumping vs non-clumping, clay vs silica vs plant-based: what actually matters when you pick cat litter, plus the mistakes that make every box smell bad."
+      },
       {
         "title": "15 Cat Myths Debunked: What's True and What's Total Nonsense",
         "slug": "cat-myths-debunked-common-misconceptions",
@@ -1761,6 +1773,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Feed Your Rabbit Right: Hay, Pellets, Veggies, and the Mistakes That Cause GI Stasis",
+        "slug": "how-to-feed-rabbit-hay-pellets-vegetables",
+        "date": "2026-08-09",
+        "description": "Rabbits need hay, not just pellets. Here's how much of each to feed, which vegetables are safe, and how to avoid the feeding mistakes behind GI stasis."
+      },
       {
         "title": "How to Set Up a Hamster Cage the Right Way: A Step-by-Step Guide",
         "slug": "how-to-set-up-hamster-cage-step-by-step",
