@@ -1086,6 +1086,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Stop Your Dog From Pulling on Leash: A Step-by-Step Guide",
+        "slug": "how-to-stop-dog-leash-pulling-step-by-step",
+        "date": "2026-08-10",
+        "description": "Leash pulling makes walks miserable. This step-by-step guide shows you exactly how to train loose leash walking — from equipment to technique to troubleshooting."
+      },
+      {
         "title": "Best Dog Beds for Large Breeds 2026",
         "slug": "best-dog-beds-large-breeds",
         "date": "2026-08-09",
@@ -1426,6 +1432,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Cat Food Recall Alerts: What to Do When Your Brand Gets Pulled",
+        "slug": "cat-food-recall-alerts-safety-guide",
+        "date": "2026-08-10",
+        "description": "A cat food recall hits — now what? This guide covers how to check if your food is affected, symptoms to watch for, safe brands to switch to, and where to get real-time alerts."
+      },
       {
         "title": "Best Cat Food for Indoor Cats 2026",
         "slug": "best-cat-food-indoor-cats",
@@ -1773,6 +1785,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Guinea Pig vs Hamster: Which Pet Is Right for You?",
+        "slug": "guinea-pig-vs-hamster-which-pet-choose",
+        "date": "2026-08-10",
+        "description": "Guinea pig or hamster? We compare size, lifespan, care needs, personality, and costs so you can pick the right small pet for your lifestyle — not just the cute face."
+      },
       {
         "title": "How to Feed Your Rabbit Right: Hay, Pellets, Veggies, and the Mistakes That Cause GI Stasis",
         "slug": "how-to-feed-rabbit-hay-pellets-vegetables",
