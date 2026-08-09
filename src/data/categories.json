@@ -715,6 +715,12 @@
     "name": "Birds",
     "posts": [
       {
+        "title": "Best Bird Food for Parakeets 2026: Complete Nutrition Guide",
+        "slug": "best-bird-food-parakeets",
+        "date": "2026-08-09",
+        "description": "Budgies need more than seeds. We tested the best parakeet foods of 2026, from organic pellets to budget mixes, plus a simple seed-to-pellet transition plan."
+      },
+      {
         "title": "How to Tell If Your Bird Is Sick: 15 Warning Signs You Shouldn't Ignore",
         "slug": "how-to-tell-if-your-bird-is-sick-warning-signs",
         "date": "2026-08-08",
@@ -1073,18 +1079,30 @@
         "slug": "the-6-best-bird-cages-for-parrots-and-parakeets-in-2026-size-safety-and-setup-guide",
         "date": "2026-04-06",
         "description": "A bird's cage isn't just where they sleep 閳?it's their entire world. Unlike dogs and cats who roam freely, most pet birds spend the majority of their lives..."
-      },
-      {
-        "title": "Best Bird Food for Parakeets 2026: Complete Nutrition Guide",
-        "slug": "best-bird-food-parakeets",
-        "date": "2026-03-31",
-        "description": "Parakeets (also called budgies) are small but have big nutritional needs. In the wild, they eat a variety of seeds, grasses, fruits, and vegetables. In..."
       }
     ]
   },
   "Dogs": {
     "name": "Dogs",
     "posts": [
+      {
+        "title": "Best Dog Beds for Large Breeds 2026",
+        "slug": "best-dog-beds-large-breeds",
+        "date": "2026-08-09",
+        "description": "Big dogs need serious support. These are the best orthopedic dog beds for large breeds in 2026, from budget picks to 10-year-warranty beds."
+      },
+      {
+        "title": "Best Dog Crates for Travel 2026",
+        "slug": "best-dog-crates-travel",
+        "date": "2026-08-09",
+        "description": "Flying, road trips, or vet visits — these are the best travel dog crates of 2026, tested for safety, airline approval, and comfort."
+      },
+      {
+        "title": "Best Dog Food 2026: Complete Guide to Feeding Your Dog Right",
+        "slug": "best-dog-food-2026",
+        "date": "2026-08-09",
+        "description": "The best dog foods of 2026, tested and ranked. From premium picks to budget-friendly bags, here's what to feed your dog at every life stage."
+      },
       {
         "title": "Dog Heatstroke: How to Spot It, Cool a Dog Down, and Know When It's an Emergency",
         "slug": "dog-heatstroke-recognition-treatment-emergency",
@@ -1398,24 +1416,6 @@
         "description": "Affiliate Disclosure: PawCritic participates in affiliate advertising programs. We may earn a commission when you purchase through links on this page, at no..."
       },
       {
-        "title": "Best Dog Beds for Large Breeds 2026",
-        "slug": "best-dog-beds-large-breeds",
-        "date": "2026-03-31",
-        "description": "Large breed dogs like German Shepherds, Golden Retrievers, and Great Danes have unique sleeping needs. Their heavier weight puts more pressure on joints, and..."
-      },
-      {
-        "title": "Best Dog Crates for Travel 2026",
-        "slug": "best-dog-crates-travel",
-        "date": "2026-03-31",
-        "description": "Traveling with a dog isn't as simple as putting them in the backseat. For safety, legal requirements, and your dog's comfort, a proper travel crate is..."
-      },
-      {
-        "title": "Best Dog Food 2026: Complete Guide to Feeding Your Dog Right",
-        "slug": "best-dog-food-2026",
-        "date": "2026-03-31",
-        "description": "Best Dog Food 2026: Complete Guide to Feeding Your Dog Right Choosing the right dog food is one of the most important decisions you'll make for your pet's healt"
-      },
-      {
         "title": "Best Dog Toys for Aggressive Chewers 2026",
         "slug": "best-dog-toys-aggressive-chewers",
         "date": "2026-03-31",
@@ -1426,6 +1426,18 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Best Cat Food for Indoor Cats 2026",
+        "slug": "best-cat-food-indoor-cats",
+        "date": "2026-08-09",
+        "description": "Indoor cats gain weight easily and battle hairballs. These are the best indoor-specific cat foods of 2026, from budget picks to vet favorites."
+      },
+      {
+        "title": "Best Cat Trees for Large Cats 2026",
+        "slug": "best-cat-trees-large-cats",
+        "date": "2026-08-09",
+        "description": "Maine Coons and other big cats need sturdy, stable cat trees. We tested the best heavy-duty trees of 2026 that won't wobble, tip, or collapse."
+      },
       {
         "title": "How to Choose Cat Litter: Clumping, Clay, Silica, and What Actually Controls Odor",
         "slug": "how-to-choose-cat-litter-buying-guide",
@@ -1755,18 +1767,6 @@
         "slug": "best-cat-litter-boxes",
         "date": "2026-04-02",
         "description": "A good litter box keeps your home clean and your cat happy. The wrong one can lead to messes, odors, and even behavioral issues where your cat refuses to use..."
-      },
-      {
-        "title": "Best Cat Food for Indoor Cats 2026",
-        "slug": "best-cat-food-indoor-cats",
-        "date": "2026-03-31",
-        "description": "Best Cat Food for Indoor Cats 2026: Keep Your Indoor Kitty Healthy Indoor cats have unique nutritional needs compared to their outdoor counterparts."
-      },
-      {
-        "title": "Best Cat Trees for Large Cats 2026",
-        "slug": "best-cat-trees-large-cats",
-        "date": "2026-03-31",
-        "description": "If you have a Maine Coon, Ragdoll, or just a chunky domestic shorthair, you know the struggle. Standard cat trees wobble, tip over, or simply collapse under a..."
       }
     ]
   },
