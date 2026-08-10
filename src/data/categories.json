@@ -3,6 +3,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Common Aquarium Fish Diseases: Symptoms, Treatment, and How to Prevent Them",
+        "slug": "common-aquarium-fish-diseases-symptoms-treatment-prevention",
+        "date": "2026-08-11",
+        "description": "Ich, fin rot, velvet, dropsy and more. How to spot aquarium fish diseases early, what actually treats them, and why water quality prevents most of it."
+      },
+      {
         "title": "Aquarium Gravel vs Sand: Which Substrate Is Actually Better?",
         "slug": "aquarium-gravel-vs-sand-substrate-comparison",
         "date": "2026-08-08",
@@ -362,6 +368,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "How to Set Up a Bearded Dragon Enclosure: A Step-by-Step Build",
+        "slug": "how-to-set-up-bearded-dragon-enclosure-step-by-step",
+        "date": "2026-08-11",
+        "description": "A step-by-step bearded dragon enclosure build: sizing, heat gradient, T5 UVB, substrate, furnishings, and the 48-hour test run before your dragon moves in."
+      },
+      {
         "title": "Reptile Myths Debunked: 12 Things New Owners Get Wrong",
         "slug": "reptile-myths-debunked-common-misconceptions",
         "date": "2026-08-08",
@@ -714,6 +726,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Parakeet vs Cockatiel: Which Bird Actually Fits Your Life?",
+        "slug": "parakeet-vs-cockatiel-which-bird-fits-your-life",
+        "date": "2026-08-11",
+        "description": "Budgie or cockatiel? We compare noise, talking ability, cuddliness, cage size, dust, health risks and lifetime cost so you pick the right first bird."
+      },
       {
         "title": "Best Bird Food for Parakeets 2026: Complete Nutrition Guide",
         "slug": "best-bird-food-parakeets",
