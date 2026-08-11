@@ -4,23 +4,22 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 export const metadata: Metadata = {
-  title: { default: 'PawCritic - Honest Reviews for Happy Pets', template: '%s | PawCritic' },
-  description: 'Honest, research-backed pet product reviews to help you choose the best for your furry, feathered, and scaly friends.',
-  keywords: ['pet product reviews', 'dog food', 'cat toys', 'honest pet reviews', 'pet supplies', 'PawCritic'],
+  title: { default: 'PawCritic: Honest Pet Product Reviews & Buying Guides (2026)', template: '%s | PawCritic' },
+  description: 'Honest, research-backed pet product reviews and buying guides for dogs, cats, birds, fish, reptiles, and small pets. Expert-tested picks to help you choose the best for your furry, feathered, and scaly friends.',
   openGraph: {
-    title: 'PawCritic - Honest Reviews for Happy Pets',
-    description: 'Honest, research-backed pet product reviews for dogs, cats, small pets, birds, fish, and reptiles.',
+    title: 'PawCritic: Honest Pet Product Reviews & Buying Guides (2026)',
+    description: 'Honest, research-backed pet product reviews and buying guides for dogs, cats, birds, fish, reptiles, and small pets. Expert-tested picks to help you choose the best.',
     url: 'https://pawcritic.com',
     siteName: 'PawCritic',
     locale: 'en_US',
     type: 'website',
-    images: [{ url: 'https://pawcritic.com/og-image.svg', width: 1200, height: 630 }],
+    images: [{ url: 'https://pawcritic.com/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'PawCritic - Honest Reviews for Happy Pets',
     description: 'Honest, research-backed pet product reviews for dogs, cats, small pets, birds, fish, and reptiles.',
-    images: ['https://pawcritic.com/og-image.svg'],
+    images: ['https://pawcritic.com/og-image.png'],
   },
   metadataBase: new URL('https://pawcritic.com'),
   other: {
@@ -39,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebSite","name":"PawCritic","url":"https://pawcritic.com","description":"Honest pet product reviews backed by research, testing, and a genuine love for animals.","potentialAction":{"@type":"SearchAction","target":"https://pawcritic.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"PawCritic","url":"https://pawcritic.com","logo":"https://pawcritic.com/favicon.ico","description":"Honest, research-backed pet product reviews.","sameAs":[]}) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"PawCritic","url":"https://pawcritic.com","logo":"https://pawcritic.com/favicon.ico","description":"Honest, research-backed pet product reviews.","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"hello@pawcritic.com"},"sameAs":[]}) }} />
         {/* 51.la Analytics — polls until SDK is ready (static-export safe) */}
         <script src="https://sdk.51.la/js-sdk-pro.min.js" async />
         <script dangerouslySetInnerHTML={{

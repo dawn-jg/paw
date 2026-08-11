@@ -32,7 +32,7 @@ export default function AboutPage() {
             not all products are created equal.
           </p>
           <p>
-            We started PawCritic in 2025 to bridge the gap between marketing claims and real-world performance. 
+            We started PawCritic to bridge the gap between marketing claims and real-world performance. 
             Since then, we've tested <strong>hundreds of pet products</strong> across six categories — Dogs, Cats, 
             Small Pets, Birds, Fish, and Reptiles — and published in-depth reviews that cut through the noise.
           </p>

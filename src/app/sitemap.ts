@@ -3,7 +3,7 @@ import posts from '@/data/posts.json';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = 'https://www.pawcritic.com';
+const BASE_URL = 'https://pawcritic.com';
 
 const categories = [
   { slug: 'dogs', name: 'Dogs' },

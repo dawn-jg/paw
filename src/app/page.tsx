@@ -12,13 +12,12 @@ const featuredReviews = latestPosts.slice(0, 3).map((p: any) => ({
   category: p.category,
   slug: p.slug,
   excerpt: p.description || `${p.title.substring(0, 80)}...`,
-  rating: 4.5 + Math.random() * 0.5, // placeholder rating until real ratings are added
 }))
 
 const trustStats = [
-  { number: '1,200+', label: 'Products Tested' },
-  { number: '50,000+', label: 'Monthly Readers' },
-  { number: '8+', label: 'Years of Expertise' },
+  { number: '300+', label: 'In-Depth Reviews Published' },
+  { number: '6', label: 'Pet Categories Covered' },
+  { number: '3', label: 'Expert Reviewers on Staff' },
   { number: '100%', label: 'Honest Reviews' },
 ]
 
@@ -157,7 +156,6 @@ export default function Home() {
                   <span className="badge review-badge">{r.category}</span>
                 </div>
                 <div className="review-body">
-                  <span className="review-rating">&#11088; {r.rating.toFixed(1)}</span>
                   <h3 className="review-title">{r.title}</h3>
                   <p className="review-excerpt">{r.excerpt.substring(0, 100)}</p>
                   <span className="review-link">Read Full Review</span>

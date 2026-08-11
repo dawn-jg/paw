@@ -126,7 +126,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: resolved.post.title,
       description: resolved.post.description,
       type: 'article',
+      url: `https://pawcritic.com/${slug}`,
       publishedTime: resolved.post.date,
+      images: [{ url: 'https://pawcritic.com/og-image.png', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: resolved.post.title,
+      description: resolved.post.description,
+      images: ['https://pawcritic.com/og-image.png'],
     },
   };
 }
@@ -186,57 +194,93 @@ function ShareSection({ post }: { post: Post }) {
   return <ShareButtons url={url} title={post.title} />;
 }
 
-function extractProductReviews(html: string): { name: string; rating: number; description: string }[] {
-  const products: { name: string; rating: number; description: string }[] = [];
+function extractProductReviews(html: string): { name: string; rating: number; description: string; asin: string | null }[] {
+  const products: { name: string; rating: number; description: string; asin: string | null }[] = [];
   const seen = new Set<string>();
 
-  // Match numbered product headings like "1. Orijen Original - Best Overall"
-  var htmlParts = html.split(/<h[1-3][^>]*>/g).slice(1);
-  for (var i = 0; i < htmlParts.length && products.length < 10; i++) {
-    var hContent = htmlParts[i].split(/<\/h[1-3]>/)[0] || '';
-    var hText = hContent.replace(/<[^>]+>/g, '').trim();
-    var numMatch = hText.match(/^(?:#|\d+[.)])\s*(.+)/);
-    if (numMatch) {
-      hText = numMatch[1].trim();
-    }
-    if (hText.length > 5 && !seen.has(hText) && !/^(Quick|Why|Key|What|How|When|Where|The |A |An )/i.test(hText)) {
+  // All ASINs in the document, in order of appearance (used to backfill products whose segment lacks a link)
+  const allAsins = [...html.matchAll(/amazon\.com\/dp\/([A-Z0-9]{10})/gi)].map(m => m[1]);
+
+  // Split by headings; within each segment look for "Rating: X/5" and an Amazon ASIN
+  const htmlParts = html.split(/<h[1-3][^>]*>/g).slice(1);
+  for (let i = 0; i < htmlParts.length && products.length < 10; i++) {
+    const seg = htmlParts[i].split(/<h[1-3][^>]*>/)[0] || '';
+    const hContent = htmlParts[i].split(/<\/h[1-3]>/)[0] || '';
+    let hText = hContent.replace(/<[^>]+>/g, '').trim();
+    const numMatch = hText.match(/^(?:#|\d+[.)])\s*(.+)/);
+    if (numMatch) hText = numMatch[1].trim();
+
+    if (hText.length > 5 && !seen.has(hText) && !/^(Quick|Why|Key|What|How|When|Where|The |A |An |Our Verdict|Frequently|Comparison|Shop|Final)/i.test(hText)) {
+      const rMatch = seg.match(/Rating:\s*([\d.]+)\s*\/\s*5/i);
+      const rating = rMatch ? parseFloat(rMatch[1]) : 0;
+      const aMatch = seg.match(/amazon\.com\/dp\/([A-Z0-9]{10})/i);
+      const asin = aMatch ? aMatch[1] : null;
+      const descMatch = seg.match(/(?:Best for|Ideal for|Great for|Perfect for)[^.<]{5,120}/i);
+      const description = descMatch ? descMatch[0].trim() : '';
+
       seen.add(hText);
-      products.push({ name: hText, rating: 0, description: '' });
+      products.push({ name: hText, rating, asin, description });
     }
   }
 
+  // Backfill ASINs for rated products in document order (product headings and ASIN links appear in the same order)
+  const ratedWithAsin = products.filter(p => p.rating > 0);
+  let asinIdx = 0;
+  ratedWithAsin.forEach(p => {
+    if (!p.asin && asinIdx < allAsins.length) {
+      p.asin = allAsins[asinIdx++];
+    }
+  });
 
-  // Fallback: find H2/H3 headings as product names
+  // Fallback: H2/H3 headings as product names when nothing matched
   if (products.length === 0) {
-    var fallbackHeadings = html.match(/<h[1-3][^>]*>[^<]{15,100}<\/h[1-3]>/g) || [];
-    for (var i = 0; i < fallbackHeadings.length && products.length < 7; i++) {
-      var h = fallbackHeadings[i].replace(/<[^>]+>/g, '').trim();
+    const fallbackHeadings = html.match(/<h[1-3][^>]*>[^<]{15,100}<\/h[1-3]>/g) || [];
+    for (let i = 0; i < fallbackHeadings.length && products.length < 7; i++) {
+      const h = fallbackHeadings[i].replace(/<[^>]+>/g, '').trim();
       if (h.length > 8 && !seen.has(h) && !/^(Quick|Why|Key|What|How|When|Where|The |A |An )/i.test(h)) {
         seen.add(h);
-        products.push({ name: h, rating: 0, description: '' });
+        products.push({ name: h, rating: 0, asin: null, description: '' });
       }
-    }
-  }
-
-  // Extract ratings from <strong>Rating: X/5</strong> patterns
-  var ratingRegex = /Rating:\s*([\d.]+)\s*\/\s*5/gi;
-  var rIdx = 0;
-  var rMatch;
-  while ((rMatch = ratingRegex.exec(html)) !== null && rIdx < products.length) {
-    var val = parseFloat(rMatch[1]);
-    if (!isNaN(val) && val >= 1 && val <= 5) {
-      products[rIdx].rating = val;
-      rIdx++;
     }
   }
 
   return products.slice(0, 10);
 }
 
+function extractFaq(html: string): { q: string; a: string }[] {
+  // FAQ section titles vary widely. Find the FIRST plausible FAQ heading (h2 or h3).
+  const kwRegex = /<h[23][^>]*>\s*(?:Frequently Asked Questions?(?:\s*\(FAQ\))?|FAQs?\s*:?|(?:FAQ|Common|Top|Your)\s*:?[^<]{0,40}|[A-Z][A-Za-z -]{2,35}?\sFAQ)[^<]*<\/h[23]>/i;
+  const kwMatch = html.search(kwRegex);
+  if (kwMatch < 0) return [];
+  // Find the end of this heading (allow embedded tags like images inside the h2/h3)
+  const closeIdx = html.indexOf('</h' + (html.slice(kwMatch).match(/<h([23])/) || ['', '2'])[1] + '>', kwMatch);
+  if (closeIdx < 0) return [];
+  // Normalize literal \n / \t sequences (cron escaping artifact) before parsing
+  let section = html.slice(closeIdx + 5).replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+  const faqs: { q: string; a: string }[] = [];
+  // Questions are h3 ("Q: ..." or plain), h4, or <p><strong>Q</strong></p>; answers follow in <p>
+  const qPattern = /(?:<h[34][^>]*>([\s\S]*?)<\/h[34]>|<p[^>]*><strong>([\s\S]*?)<\/strong><\/p>)\s*<p[^>]*>([\s\S]*?)<\/p>/gi;
+  let m: RegExpExecArray | null;
+  while ((m = qPattern.exec(section)) !== null && faqs.length < 8) {
+    let q = (m[1] || m[2] || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').trim();
+    // Strip a leading "Q:" prefix if present
+    q = q.replace(/^Q[:.]\s*/i, '').trim();
+    const a = (m[3] || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').trim();
+    if (q && a && q.length > 5 && a.length > 10) {
+      faqs.push({ q, a });
+    }
+  }
+  return faqs;
+}
+
 function ArticlePageContent({ post }: { post: Post }) {
   const catSlug = post.category.toLowerCase().replace(/\s+/g, '-');
 
   const reviewedProducts = extractProductReviews(post.content);
+  // Only emit Review/AggregateRating schema when we have real ratings (Google penalizes fake review markup)
+  const ratedProducts = reviewedProducts.filter(p => p.rating > 0 && p.rating <= 5);
+  const hasRealRatings = ratedProducts.length >= 3;
+  const faq = extractFaq(post.content);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -263,6 +307,17 @@ function ArticlePageContent({ post }: { post: Post }) {
     },
   };
 
+  // Breadcrumb JSON-LD (matches the visible breadcrumb UI)
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://pawcritic.com/' },
+      { '@type': 'ListItem', position: 2, name: post.category, item: `https://pawcritic.com/${catSlug}` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://pawcritic.com/${post.slug}` },
+    ],
+  };
+
   return (
     <article className="article-page">
       <script
@@ -270,7 +325,33 @@ function ArticlePageContent({ post }: { post: Post }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Product + Review JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
+      {/* FAQPage JSON-LD — emitted when the article has a real FAQ section */}
+      {faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faq.map(f => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: f.a,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
+
+      {/* Product + Review JSON-LD — only when real ratings exist; offers use real ASINs */}
       {reviewedProducts.length > 0 && (
         <script
           type="application/ld+json"
@@ -280,32 +361,49 @@ function ArticlePageContent({ post }: { post: Post }) {
               '@type': 'Product',
               name: post.title,
               description: post.description,
-              review: reviewedProducts.map(p => ({
-                '@type': 'Review',
-                reviewRating: {
-                  '@type': 'Rating',
-                  ratingValue: p.rating > 0 ? p.rating : 4.5,
+              ...(hasRealRatings && {
+                review: ratedProducts.map(p => ({
+                  '@type': 'Review',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: p.rating,
+                    bestRating: 5,
+                  },
+                  author: post.author ? {
+                    '@type': 'Person',
+                    name: post.author,
+                  } : {
+                    '@type': 'Organization',
+                    name: 'PawCritic',
+                  },
+                  name: p.name,
+                })),
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: (ratedProducts.reduce((s, p) => s + p.rating, 0) / ratedProducts.length).toFixed(1),
                   bestRating: 5,
+                  ratingCount: ratedProducts.length,
+                  reviewCount: ratedProducts.length,
                 },
-                author: {
-                  '@type': 'Organization',
-                  name: 'PawCritic',
-                },
-                name: p.name,
-              })),
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: (reviewedProducts.reduce((s, p) => s + (p.rating > 0 ? p.rating : 4.5), 0) / reviewedProducts.length).toFixed(1),
-                bestRating: 5,
-                ratingCount: reviewedProducts.length,
-                reviewCount: reviewedProducts.length,
-              },
-              offers: reviewedProducts.map(p => ({
-                '@type': 'Offer',
-                name: p.name,
-                url: `https://www.amazon.com/dp/PLACEHOLDER?tag=paw070-20`,
-                availability: 'https://schema.org/InStock',
-              })),
+              }),
+              offers: (() => {
+                // Deduplicate by ASIN and cap at 6 offers (articles may have multiple buttons for the same product)
+                const seenAsins = new Set<string>();
+                const offers: { '@type': string; name: string; url: string; availability: string }[] = [];
+                for (const p of reviewedProducts) {
+                  if (p.asin && !seenAsins.has(p.asin)) {
+                    seenAsins.add(p.asin);
+                    offers.push({
+                      '@type': 'Offer',
+                      name: p.name,
+                      url: `https://www.amazon.com/dp/${p.asin}?tag=paw070-20`,
+                      availability: 'https://schema.org/InStock',
+                    });
+                    if (offers.length >= 6) break;
+                  }
+                }
+                return offers;
+              })(),
             })}
           }
         />
