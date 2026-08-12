@@ -128,13 +128,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: `https://pawcritic.com/${slug}`,
       publishedTime: resolved.post.date,
-      images: [{ url: 'https://pawcritic.com/og-image.png', width: 1200, height: 630 }],
+      images: [{ url: `https://pawcritic.com/og/${slug}.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: resolved.post.title,
       description: resolved.post.description,
-      images: ['https://pawcritic.com/og-image.png'],
+      images: [`https://pawcritic.com/og/${slug}.png`],
     },
   };
 }
