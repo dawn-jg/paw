@@ -1086,6 +1086,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Household Items That Are Toxic to Dogs: The Complete Poison Danger List",
+        "slug": "household-toxins-dangerous-for-dogs-safety-guide",
+        "date": "2026-08-13",
+        "description": "Xylitol, grapes, human meds, antifreeze, sago palm and more. The full list of household poisons for dogs, symptoms, and what to do in the first 10 minutes."
+      },
+      {
         "title": "How to Stop Your Dog From Pulling on Leash: A Step-by-Step Guide",
         "slug": "how-to-stop-dog-leash-pulling-step-by-step",
         "date": "2026-08-10",
@@ -1432,6 +1438,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Why Does My Cat Do That? 15 Cat Behavior Questions, Answered Honestly",
+        "slug": "why-does-my-cat-do-that-15-behaviors-answered",
+        "date": "2026-08-13",
+        "description": "Kneading, zoomies, 4 AM screaming, petting aggression, staring at walls. 15 cat behaviors explained by instinct — plus when a behavior means a vet visit."
+      },
       {
         "title": "Cat Food Recall Alerts: What to Do When Your Brand Gets Pulled",
         "slug": "cat-food-recall-alerts-safety-guide",
@@ -1785,6 +1797,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Litter Train a Rabbit: The Step-by-Step Guide That Actually Works",
+        "slug": "how-to-litter-train-rabbit-step-by-step",
+        "date": "2026-08-13",
+        "description": "Rabbits are 90% litter trained already — you just have to set up the box right. Box size, safe litter, the hay rack trick, and a 7-step training plan."
+      },
       {
         "title": "Guinea Pig vs Hamster: Which Pet Is Right for You?",
         "slug": "guinea-pig-vs-hamster-which-pet-choose",
