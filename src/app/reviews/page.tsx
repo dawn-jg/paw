@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import allPosts from '@/data/latest.json'
 
 export const metadata: Metadata = {
-  title: 'All Reviews | PawCritic',
+  title: 'All Reviews',
   description: 'Browse our complete collection of honest, research-backed pet product reviews.',
 }
 

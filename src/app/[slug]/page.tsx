@@ -111,7 +111,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (resolved.type === 'category') {
     return {
-      title: `Best ${resolved.key} Products & Reviews | PawCritic`,
+      title: `Best ${resolved.key} Products & Reviews`,
       description: `Honest, expert reviews of the best ${resolved.key.toLowerCase()} products. Find top-rated food, toys, accessories and more for your pet.`,
       alternates: { canonical: `https://pawcritic.com/${slug}` },
     };
@@ -119,7 +119,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (resolved.type === 'info') return { ...(PAGE_META[slug] ?? { title: slug }), alternates: { canonical: `https://pawcritic.com/${slug}` } };
   if (resolved.type === 'listing') return { ...(PAGE_META[slug] ?? { title: slug }), alternates: { canonical: `https://pawcritic.com/${slug}` } };
   return {
-    title: `${resolved.post.title} | PawCritic`,
+    title: resolved.post.title,
     description: resolved.post.description,
     alternates: { canonical: `https://pawcritic.com/${slug}` },
     openGraph: {
@@ -491,7 +491,7 @@ const PAGE_META: Record<string, Metadata> = {
     description: 'Learn about PawCritic — our mission to provide honest, research-backed pet product reviews for every pet owner.',
   },
   'how-we-test': {
-    title: 'How We Test Pet Products | PawCritic',
+    title: 'How We Test Pet Products',
     description: 'Transparent methodology: how we research, test, and rate every pet product we review. No sponsored reviews, ever.',
   },
   contact: {
@@ -499,11 +499,11 @@ const PAGE_META: Record<string, Metadata> = {
     description: 'Have a question, suggestion, or want us to review a product? Reach out to the PawCritic team.',
   },
   'editorial-policy': {
-    title: 'Editorial Policy | PawCritic',
+    title: 'Editorial Policy',
     description: 'Our editorial standards — how we ensure accuracy, objectivity, and transparency in every review.',
   },
   newsletter: {
-    title: 'Join Our Newsletter | PawCritic',
+    title: 'Join Our Newsletter',
     description: 'Get the latest pet product reviews, buying guides, and expert tips delivered to your inbox.',
   },
   blog: {
@@ -511,11 +511,11 @@ const PAGE_META: Record<string, Metadata> = {
     description: 'Read our latest blog posts about pet care, product guides, and expert advice for all types of pets.',
   },
   'buying-guides': {
-    title: 'Pet Product Buying Guides | PawCritic',
+    title: 'Pet Product Buying Guides',
     description: 'Comprehensive buying guides to help you choose the best products for your pet.',
   },
   comparisons: {
-    title: 'Product Comparisons | PawCritic',
+    title: 'Product Comparisons',
     description: 'Side-by-side comparisons of top pet products to help you make informed decisions.',
   },
 };

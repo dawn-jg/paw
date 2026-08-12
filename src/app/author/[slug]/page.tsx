@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const author = AUTHORS[slug];
   if (!author) return { title: 'Author Not Found' };
   return {
-    title: `${author.name} — PawCritic`,
+    title: author.name,
     description: author.bio,
   };
 }
