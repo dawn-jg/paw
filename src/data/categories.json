@@ -1104,6 +1104,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Bloat (GDV): The Fastest-Killing Emergency Most Owners Misread",
+        "slug": "dog-bloat-gdv-symptoms-prevention-guide",
+        "date": "2026-08-15",
+        "description": "Gastric dilatation-volvulus kills large-breed dogs in hours. Learn the early signs, breed risk factors, and what to do in the first hour of a bloat emergency."
+      },
+      {
         "title": "Household Items That Are Toxic to Dogs: The Complete Poison Danger List",
         "slug": "household-toxins-dangerous-for-dogs-safety-guide",
         "date": "2026-08-13",
@@ -1456,6 +1462,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Socialize a Kitten: The 12-Week Window That Shapes Their Whole Life",
+        "slug": "how-to-socialize-kitten-12-week-window",
+        "date": "2026-08-15",
+        "description": "The first 12 weeks decide whether your kitten grows into a confident cat or a nervous one. A step-by-step socialization schedule and the mistakes to skip."
+      },
       {
         "title": "Why Does My Cat Do That? 15 Cat Behavior Questions, Answered Honestly",
         "slug": "why-does-my-cat-do-that-15-behaviors-answered",
@@ -1815,6 +1827,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Rabbit Myths Debunked: 15 Common Beliefs About Bunnies That Are Wrong",
+        "slug": "rabbit-myths-debunked-15-common-beliefs",
+        "date": "2026-08-15",
+        "description": "Rabbits don't eat carrots as a staple, they can't live on pellets alone, and no, they don't 'love being picked up.' 15 rabbit myths busted with the evidence."
+      },
       {
         "title": "How to Litter Train a Rabbit: The Step-by-Step Guide That Actually Works",
         "slug": "how-to-litter-train-rabbit-step-by-step",
