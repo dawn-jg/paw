@@ -3,6 +3,18 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Best Fish Food for Tropical Fish 2026: Complete Guide",
+        "slug": "best-fish-food-tropical-fish",
+        "date": "2026-08-16",
+        "description": "Tropical fish require varied diets to maintain vibrant colors and good health. Different species have different needs - some are herbivores, others carnivore…"
+      },
+      {
+        "title": "Best Fish Tanks for Beginners 2026: Easy Setup Aquariums",
+        "slug": "best-fish-tanks-beginners",
+        "date": "2026-08-16",
+        "description": "Getting your first fish tank is exciting, but it can also be overwhelming. The right tank makes all the difference between a thriving aquarium and constant..."
+      },
+      {
         "title": "Aquarium Myths Debunked: 15 Fish-Keeping Beliefs That Are Just Wrong",
         "slug": "aquarium-myths-debunked-15-fish-keeping-beliefs",
         "date": "2026-08-16",
@@ -355,18 +367,6 @@
         "slug": "the-5-best-aquarium-filters-for-beginners-and-planted-tanks-in-2026",
         "date": "2026-04-06",
         "description": "The filter is the heart of any aquarium. It's what keeps your fish alive between water changes, processes the toxic ammonia their waste produces, and maintai…"
-      },
-      {
-        "title": "Best Fish Food for Tropical Fish 2026: Complete Guide",
-        "slug": "best-fish-food-tropical-fish",
-        "date": "2026-04-02",
-        "description": "Tropical fish require varied diets to maintain vibrant colors and good health. Different species have different needs - some are herbivores, others carnivore…"
-      },
-      {
-        "title": "Best Fish Tanks for Beginners 2026: Easy Setup Aquariums",
-        "slug": "best-fish-tanks-beginners",
-        "date": "2026-03-31",
-        "description": "Getting your first fish tank is exciting, but it can also be overwhelming. The right tank makes all the difference between a thriving aquarium and constant..."
       }
     ]
   },
@@ -1122,6 +1122,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Best Dog Toys for Aggressive Chewers 2026",
+        "slug": "best-dog-toys-aggressive-chewers",
+        "date": "2026-08-16",
+        "description": "Some dogs can destroy any toy in minutes. If you have a German Shepherd, Pit Bull, Golden Retriever, or any powerful chewer, you know the frustration of buyi…"
+      },
+      {
         "title": "Dog Bloat (GDV): The Fastest-Killing Emergency Most Owners Misread",
         "slug": "dog-bloat-gdv-symptoms-prevention-guide",
         "date": "2026-08-15",
@@ -1468,18 +1474,18 @@
         "slug": "best-dog-food-for-large-breeds-in-2026-top-5-picks-reviewed",
         "date": "2026-04-03",
         "description": "If you share your home with a Great Dane, German Shepherd, Labrador Retriever, or any other large breed dog, you already know that these magnificent animals…"
-      },
-      {
-        "title": "Best Dog Toys for Aggressive Chewers 2026",
-        "slug": "best-dog-toys-aggressive-chewers",
-        "date": "2026-03-31",
-        "description": "Some dogs can destroy any toy in minutes. If you have a German Shepherd, Pit Bull, Golden Retriever, or any powerful chewer, you know the frustration of buyi…"
       }
     ]
   },
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Best Cat Litter Boxes 2026: Top Picks for Every Cat",
+        "slug": "best-cat-litter-boxes",
+        "date": "2026-08-16",
+        "description": "A good litter box keeps your home clean and your cat happy. The wrong one can lead to messes, odors, and even behavioral issues where your cat refuses to use..."
+      },
       {
         "title": "How to Socialize a Kitten: The 12-Week Window That Shapes Their Whole Life",
         "slug": "how-to-socialize-kitten-12-week-window",
@@ -1833,18 +1839,24 @@
         "slug": "best-cat-trees-for-small-apartments-2026",
         "date": "2026-04-04",
         "description": "Cats are natural climbers and scratchers. Without proper outlets, they'll find alternatives-usually your furniture. Even in a small apartment, a compact cat..."
-      },
-      {
-        "title": "Best Cat Litter Boxes 2026: Top Picks for Every Cat",
-        "slug": "best-cat-litter-boxes",
-        "date": "2026-04-02",
-        "description": "A good litter box keeps your home clean and your cat happy. The wrong one can lead to messes, odors, and even behavioral issues where your cat refuses to use..."
       }
     ]
   },
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Best Hamster Cages 2026",
+        "slug": "best-hamster-cages",
+        "date": "2026-08-16",
+        "description": "Most store-bought hamster cages are too small. Hamsters are active animals that need space to run, burrow, and explore. A cage that's too small leads to..."
+      },
+      {
+        "title": "Best Rabbit Food 2026",
+        "slug": "best-rabbit-food",
+        "date": "2026-08-16",
+        "description": "Rabbits have unique dietary needs: unlimited hay, the right pellets, and fresh greens. This guide covers the best rabbit foods and how to build a complete diet."
+      },
       {
         "title": "Rabbit Myths Debunked: 15 Common Beliefs About Bunnies That Are Wrong",
         "slug": "rabbit-myths-debunked-15-common-beliefs",
@@ -2156,18 +2168,6 @@
         "slug": "best-guinea-pig-food",
         "date": "2026-04-02",
         "description": "Guinea pigs have specific dietary needs that must be met for optimal health. Unlike many animals, they cannot produce their own Vitamin C, making diet choice…"
-      },
-      {
-        "title": "Best Hamster Cages 2026",
-        "slug": "best-hamster-cages",
-        "date": "2026-03-31",
-        "description": "Most store-bought hamster cages are too small. Hamsters are active animals that need space to run, burrow, and explore. A cage that's too small leads to..."
-      },
-      {
-        "title": "Best Rabbit Food 2026",
-        "slug": "best-rabbit-food",
-        "date": "2026-03-31",
-        "description": "Rabbits have unique dietary needs: unlimited hay, the right pellets, and fresh greens. This guide covers the best rabbit foods and how to build a complete diet."
       }
     ]
   }
