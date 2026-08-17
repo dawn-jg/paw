@@ -3,6 +3,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "How Often Should You Change Aquarium Water? The Real Schedule",
+        "slug": "how-often-change-aquarium-water-schedule-guide",
+        "date": "2026-08-18",
+        "description": "The honest water change schedule for every tank type: how much, how often, and the five mistakes that turn water changes into fish killers."
+      },
+      {
         "title": "Best Fish Food for Tropical Fish 2026: Complete Guide",
         "slug": "best-fish-food-tropical-fish",
         "date": "2026-08-16",
@@ -374,6 +380,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Leopard Gecko Health Problems: What to Watch For and How to Prevent Them",
+        "slug": "leopard-gecko-health-problems-prevention-guide",
+        "date": "2026-08-18",
+        "description": "MBD, impaction, stuck shed, parasites and more. How to spot leopard gecko health problems early and the setup choices that prevent them."
+      },
+      {
         "title": "Bearded Dragon vs Leopard Gecko: Which Lizard Actually Fits Your Life?",
         "slug": "bearded-dragon-vs-leopard-gecko-which-lizard-fits-your-life",
         "date": "2026-08-16",
@@ -732,6 +744,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "15 Bird Myths Debunked: What New Owners Get Wrong",
+        "slug": "bird-myths-debunked-15-common-beliefs",
+        "date": "2026-08-18",
+        "description": "Seed diets, mirrors, Teflon, wing clipping and more — 15 bird myths avian vets wish every owner would stop believing, debunked."
+      },
       {
         "title": "How to Teach Your Parrot to Step Up: A Step-by-Step Training Guide",
         "slug": "how-to-teach-your-parrot-to-step-up-guide",
