@@ -1122,6 +1122,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Crate Train Your Dog: The Step-by-Step Method That Actually Works",
+        "slug": "how-to-crate-train-a-dog",
+        "date": "2026-08-17",
+        "description": "Crate training done right turns a crate from a punishment box into your dog's favorite safe space. Step-by-step method, timing, and mistakes to avoid."
+      },
+      {
         "title": "Best Dog Toys for Aggressive Chewers 2026",
         "slug": "best-dog-toys-aggressive-chewers",
         "date": "2026-08-16",
@@ -1480,6 +1486,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Cat Hairballs: Why They Happen and How to Actually Prevent Them",
+        "slug": "cat-hairball-prevention-guide",
+        "date": "2026-08-17",
+        "description": "Hairballs aren't normal — they're a symptom of excess shedding. Here's how grooming, diet, and a few products can cut them down to almost zero."
+      },
       {
         "title": "Best Cat Litter Boxes 2026: Top Picks for Every Cat",
         "slug": "best-cat-litter-boxes",
@@ -1845,6 +1857,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "What Can Guinea Pigs Eat? The Complete Diet Guide (With a Safe Foods List)",
+        "slug": "what-can-guinea-pigs-eat",
+        "date": "2026-08-17",
+        "description": "Guinea pigs can't make their own vitamin C, so diet mistakes turn into illness fast. The complete safe foods list, what to avoid, and how much to feed."
+      },
       {
         "title": "Best Hamster Cages 2026",
         "slug": "best-hamster-cages",
