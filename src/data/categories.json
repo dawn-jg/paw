@@ -1092,6 +1092,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Betta Fish Care: Tank Setup, Feeding, and Maintenance That Actually Keeps Them Alive",
+        "slug": "betta-fish-care-guide",
+        "date": "2026-08-20",
+        "description": "Bettas in bowls die years early. Here's the full care routine that keeps them alive and thriving: tank size, heating, filtration, feeding, and weekly maintenance."
+      },
+      {
         "title": "How Often Should You Change Aquarium Water? The Real Schedule",
         "slug": "how-often-change-aquarium-water-schedule-guide",
         "date": "2026-08-18",
@@ -1469,6 +1475,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Metabolic Bone Disease in Reptiles: The Calcium Failure You Can Prevent",
+        "slug": "reptile-mbd-prevention-guide",
+        "date": "2026-08-20",
+        "description": "MBD is the most common disease in captive reptiles — and almost entirely preventable. UVB, calcium, and diet: what each does, warning signs, and the prevention checklist."
+      },
+      {
         "title": "Leopard Gecko Health Problems: What to Watch For and How to Prevent Them",
         "slug": "leopard-gecko-health-problems-prevention-guide",
         "date": "2026-08-18",
@@ -1833,6 +1845,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Pellets vs Seeds: What Should You Actually Feed Your Pet Bird?",
+        "slug": "pellets-vs-seeds-bird-food-comparison",
+        "date": "2026-08-20",
+        "description": "Seeds are what birds crave; pellets are what they need. Head-to-head nutrition breakdown, conversion guide for seed-junkie parrots, and the balanced diet vets recommend."
+      },
       {
         "title": "15 Bird Myths Debunked: What New Owners Get Wrong",
         "slug": "bird-myths-debunked-15-common-beliefs",
