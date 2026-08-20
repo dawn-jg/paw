@@ -1,54 +1,15 @@
 import { MetadataRoute } from 'next';
-import posts from '@/data/posts.json';
 
 export const dynamic = 'force-static';
 
 const BASE_URL = 'https://pawcritic.com';
 
-const categories = [
-  { slug: 'dogs', name: 'Dogs' },
-  { slug: 'cats', name: 'Cats' },
-  { slug: 'birds', name: 'Birds' },
-  { slug: 'fish', name: 'Fish' },
-  { slug: 'small-pets', name: 'Small Pets' },
-  { slug: 'reptiles', name: 'Reptiles' },
-];
-
+// 主 sitemap.xml = sitemap index，指向 4 个分区 sitemap
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: BASE_URL,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    {
-      url: `${BASE_URL}/reviews`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
+  return [
+    { url: `${BASE_URL}/sitemaps/static/sitemap.xml` },
+    { url: `${BASE_URL}/sitemaps/categories/sitemap.xml` },
+    { url: `${BASE_URL}/sitemaps/articles/sitemap.xml` },
+    { url: `${BASE_URL}/sitemaps/info/sitemap.xml` },
   ];
-
-  const categoryRoutes: MetadataRoute.Sitemap = categories.map((cat) => ({
-    url: `${BASE_URL}/${cat.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
-
-  const articleRoutes: MetadataRoute.Sitemap = posts.map((post: any) => ({
-    url: `${BASE_URL}/${post.slug}`,
-    lastModified: new Date(post.date || Date.now()),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
-  return [...staticRoutes, ...categoryRoutes, ...articleRoutes];
 }
