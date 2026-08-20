@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Myths Debunked: 15 Common Beliefs About Dogs That Are Wrong",
+        "slug": "dog-myths-debunked-15-common-beliefs",
+        "date": "2026-08-21",
+        "description": "Dogs see in black and white. One dog year equals seven human years. Grain-free is healthier. We debunk 15 of the most common dog myths with the actual evidence."
+      },
+      {
         "title": "How to Choose Dog Food: A Buying Guide That Skips the Marketing Hype",
         "slug": "how-to-choose-dog-food-buying-guide",
         "date": "2026-08-19",
@@ -373,6 +379,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Male vs Female Cats: Which One Should You Adopt?",
+        "slug": "male-vs-female-cats-which-is-better",
+        "date": "2026-08-21",
+        "description": "Male cats vs female cats: what actually differs — size, spraying, affection, health — and which one suits your home. The honest breakdown, myths included."
+      },
       {
         "title": "Indoor vs Outdoor Cats: The Honest Trade-off Every Owner Faces",
         "slug": "indoor-vs-outdoor-cats-which-is-safer",
@@ -750,6 +762,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Set Up a Guinea Pig Cage: Step-by-Step for a Healthy, Happy Home",
+        "slug": "how-to-set-up-guinea-pig-cage-step-by-step",
+        "date": "2026-08-21",
+        "description": "Most pet store guinea pig cages are too small. Here’s the right setup: size rules, bedding, hideouts, feeding stations, and the mistakes new owners make."
+      },
       {
         "title": "Hamster Health Problems: What to Watch For and How to Prevent the Most Common Issues",
         "slug": "hamster-health-problems-prevention-guide",
