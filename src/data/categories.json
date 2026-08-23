@@ -9,6 +9,24 @@
         "description": "Collar or harness? We break down the real differences — neck safety, control, training, and which dogs shouldn't wear one or the other. Choose with confidence."
       },
       {
+        "title": "Best Dog Food for Puppies 2026: Complete Nutrition Guide",
+        "slug": "best-dog-food-for-puppies-2026-complete-nutrition-guide",
+        "date": "2026-08-23",
+        "description": "Puppies need growth formulas with controlled calcium and DHA — adult food won't cut it. The best puppy foods of 2026, with feeding schedules and tips."
+      },
+      {
+        "title": "Best Dog Shampoos 2026: Gentle Care for Every Coat",
+        "slug": "best-dog-shampoos-2026-gentle-care-for-every-coat",
+        "date": "2026-08-23",
+        "description": "Human shampoo strips a dog's coat — here's what works. The best dog shampoos of 2026 for sensitive skin, itchy coats, puppies, and flea season."
+      },
+      {
+        "title": "Best Dog Food for Large Breeds in 2026: Top 5 Picks Reviewed",
+        "slug": "best-dog-food-for-large-breeds-in-2026-top-5-picks-reviewed",
+        "date": "2026-08-23",
+        "description": "Large breed dogs need food built for their joints and growth. The five best large breed dog foods of 2026, ranked on calcium, joint support, and trials."
+      },
+      {
         "title": "Dog Myths Debunked: 15 Common Beliefs About Dogs That Are Wrong",
         "slug": "dog-myths-debunked-15-common-beliefs",
         "date": "2026-08-21",
@@ -361,24 +379,6 @@
         "slug": "the-7-best-dog-foods-for-active-dogs-and-high-energy-breeds-in-2026",
         "date": "2026-04-06",
         "description": "Is your dog constantly on the move? Whether you have a Border Collie who needs to chase every ball, a Belgian Malinois who lives for working jobs, or a..."
-      },
-      {
-        "title": "Best Dog Food for Puppies 2026: Complete Nutrition Guide",
-        "slug": "best-dog-food-for-puppies-2026-complete-nutrition-guide",
-        "date": "2026-04-04",
-        "description": "Puppies grow at an incredible rate-sometimes doubling their weight in just weeks. This rapid development requires specific nutrients that adult dog food simp…"
-      },
-      {
-        "title": "Best Dog Shampoos 2026: Gentle Care for Every Coat",
-        "slug": "best-dog-shampoos-2026-gentle-care-for-every-coat",
-        "date": "2026-04-04",
-        "description": "Human shampoo has a different pH balance than what dogs need. Using the wrong product can strip your dog's coat of natural oils, causing dryness, itching, an…"
-      },
-      {
-        "title": "Best Dog Food for Large Breeds in 2026: Top 5 Picks Reviewed",
-        "slug": "best-dog-food-for-large-breeds-in-2026-top-5-picks-reviewed",
-        "date": "2026-04-03",
-        "description": "If you share your home with a Great Dane, German Shepherd, Labrador Retriever, or any other large breed dog, you already know that these magnificent animals…"
       }
     ]
   },
@@ -390,6 +390,12 @@
         "slug": "toxic-plants-for-cats-safety-guide",
         "date": "2026-08-23",
         "description": "Lilies, sago palm, and more: the houseplants that can kill cats, the symptoms to watch, and the greenery that's actually safe to keep around a feline."
+      },
+      {
+        "title": "Best Cat Trees for Small Apartments 2026",
+        "slug": "best-cat-trees-for-small-apartments-2026",
+        "date": "2026-08-23",
+        "description": "Small apartment, happy climber: the best compact cat trees of 2026, ranked on stability, footprint, and scratching value — plus wall-mounted space savers."
       },
       {
         "title": "Male vs Female Cats: Which One Should You Adopt?",
@@ -762,12 +768,6 @@
         "slug": "the-5-best-cat-trees-for-large-cats-sturdy-condos-for-maine-coons-ragdolls-big-boys-in-2026",
         "date": "2026-04-06",
         "description": "Your standard cat tree was not designed for a 20-pound Maine Coon. We've all seen it: the wobbly tower that sways when a large cat hops on it, the carpeted..."
-      },
-      {
-        "title": "Best Cat Trees for Small Apartments 2026",
-        "slug": "best-cat-trees-for-small-apartments-2026",
-        "date": "2026-04-04",
-        "description": "Cats are natural climbers and scratchers. Without proper outlets, they'll find alternatives-usually your furniture. Even in a small apartment, a compact cat..."
       }
     ]
   },
@@ -779,6 +779,12 @@
         "slug": "how-to-choose-first-small-pet-buying-guide",
         "date": "2026-08-23",
         "description": "Hamsters, guinea pigs, rabbits, rats — which small pet fits your life? Time, space, budget, and vet costs compared honestly, plus the mistakes to avoid."
+      },
+      {
+        "title": "Best Guinea Pig Food 2026: Complete Nutrition Guide",
+        "slug": "best-guinea-pig-food",
+        "date": "2026-08-23",
+        "description": "Guinea pigs can't make their own vitamin C — that's where most diets go wrong. The five best guinea pig foods of 2026, plus what to feed daily and skip."
       },
       {
         "title": "How to Set Up a Guinea Pig Cage: Step-by-Step for a Healthy, Happy Home",
@@ -1115,18 +1121,24 @@
         "slug": "the-5-best-hamster-cages-for-2026-from-budget-bin-setups-to-premium-habitats",
         "date": "2026-04-06",
         "description": "Choosing the right hamster cage is one of the most consequential decisions you'll make as a hamster owner. These nocturnal burrowers are incredibly..."
-      },
-      {
-        "title": "Best Guinea Pig Food 2026: Complete Nutrition Guide",
-        "slug": "best-guinea-pig-food",
-        "date": "2026-04-02",
-        "description": "Guinea pigs have specific dietary needs that must be met for optimal health. Unlike many animals, they cannot produce their own Vitamin C, making diet choice…"
       }
     ]
   },
   "Fish": {
     "name": "Fish",
     "posts": [
+      {
+        "title": "Goldfish Myths Debunked: 12 Beliefs That Are Killing Your Fish",
+        "slug": "goldfish-myths-debunked-12-common-beliefs",
+        "date": "2026-08-24",
+        "description": "Goldfish don't have 3-second memories and bowls aren't homes. We debunk 12 common goldfish myths that shorten fish lives — with the science to back it up."
+      },
+      {
+        "title": "The 5 Best Aquarium Filters for Beginners and Planted Tanks",
+        "slug": "the-5-best-aquarium-filters-for-beginners-and-planted-tanks-in-2026",
+        "date": "2026-08-23",
+        "description": "The filter is the heart of a healthy tank. The five best aquarium filters of 2026 for beginners and planted tanks, from HOBs to canisters — plus sizing tips."
+      },
       {
         "title": "How to Set Up a Planted Aquarium: Step-by-Step for a Tank That Thrives",
         "slug": "how-to-set-up-planted-aquarium-step-by-step",
@@ -1504,18 +1516,18 @@
         "slug": "best-aquarium-filters-2026-complete-guide-to-crystal-clear-water",
         "date": "2026-04-07",
         "description": "A quality filter is the heart of any successful aquarium. It keeps water clear, removes harmful toxins, and creates a healthy environment for your..."
-      },
-      {
-        "title": "The 5 Best Aquarium Filters for Beginners and Planted Tanks",
-        "slug": "the-5-best-aquarium-filters-for-beginners-and-planted-tanks-in-2026",
-        "date": "2026-04-06",
-        "description": "The filter is the heart of any aquarium. It's what keeps your fish alive between water changes, processes the toxic ammonia their waste produces, and maintai…"
       }
     ]
   },
   "Reptiles": {
     "name": "Reptiles",
     "posts": [
+      {
+        "title": "Crested Gecko Care for Beginners: Setup, Feeding & Handling",
+        "slug": "crested-gecko-care-for-beginners-guide",
+        "date": "2026-08-24",
+        "description": "Crested geckos are forgiving, but not zero-maintenance. Here's the full beginner setup: tank, temperature, humidity, feeding, and the mistakes that kill them."
+      },
       {
         "title": "Leopard Gecko Shedding Problems: Causes, Prevention & When to Intervene",
         "slug": "leopard-gecko-shedding-problems-prevention-guide",
@@ -1893,6 +1905,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Toxic Foods for Birds: What Parrots, Budgies & Cockatiels Can't Eat",
+        "slug": "toxic-foods-for-birds-parrots-budgies-safety-guide",
+        "date": "2026-08-24",
+        "description": "Avocado, chocolate, apple seeds, alcohol — the foods that can kill a bird are more common than you think. Here's what to avoid and what to do in an emergency."
+      },
       {
         "title": "How to Choose a Parrot Cage: Sizing, Bar Spacing & Setup That Keeps Birds Safe",
         "slug": "how-to-choose-parrot-cage-buying-guide",
