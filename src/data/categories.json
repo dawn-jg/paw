@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Brush Your Dog's Teeth: A Step-by-Step Guide That Actually Works",
+        "slug": "how-to-brush-your-dogs-teeth-step-by-step-guide",
+        "date": "2026-08-25",
+        "description": "Brushing your dog's teeth doesn't have to be a wrestling match. Here's the exact step-by-step method, the tools you need, and the mistakes owners make."
+      },
+      {
         "title": "Harness vs Collar: Which Is Safer and Better for Your Dog?",
         "slug": "dog-harness-vs-collar-comparison",
         "date": "2026-08-23",
@@ -385,6 +391,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Cat Obesity: Health Risks, Realistic Weight Loss, and How to Prevent It",
+        "slug": "cat-obesity-health-risks-weight-loss-guide",
+        "date": "2026-08-25",
+        "description": "Roughly 60% of U.S. cats are overweight. Here's what extra pounds do to a cat's body, how to tell if yours is obese, and a weight-loss plan that works."
+      },
       {
         "title": "Toxic Plants for Cats: 20 Dangerous Houseplants & Safe Alternatives",
         "slug": "toxic-plants-for-cats-safety-guide",
@@ -774,6 +786,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Choose a Rabbit Cage: Size, Style, and Setup That Won't Cage Your Bunny",
+        "slug": "how-to-choose-rabbit-cage-buying-guide",
+        "date": "2026-08-25",
+        "description": "Most rabbit cages sold in pet stores are too small. Here's how to pick the right size, compare cage styles, and budget for everything inside the enclosure."
+      },
       {
         "title": "How to Choose Your First Small Pet: Hamster, Guinea Pig, Rabbit, or Rat",
         "slug": "how-to-choose-first-small-pet-buying-guide",
