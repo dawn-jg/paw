@@ -1,0 +1,12 @@
+var fs = require('fs');
+var p = JSON.parse(fs.readFileSync('D:/pawcritic-next/src/data/posts.json', 'utf8'));
+var a = p.find(function (x) { return x.slug === 'best-dog-food-for-large-breeds-in-2026-top-5-picks-reviewed'; });
+var c = a.content;
+var i = c.indexOf('Purina Pro Plan');
+console.log('--- Purina section continued (from Nutritional Highlights): ---');
+var j = c.indexOf('Nutritional Highlights', i);
+console.log(c.slice(j, j + 1800));
+console.log('\n\n--- Taste of the Wild search: ---');
+var t = c.indexOf('Taste of the Wild');
+console.log('Taste index:', t);
+if (t !== -1) console.log(c.slice(t - 200, t + 800));
