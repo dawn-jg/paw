@@ -1146,6 +1146,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "How to Quarantine New Fish: A Step-by-Step Guide That Actually Saves Your Tank",
+        "slug": "how-to-quarantine-new-fish-step-by-step-guide",
+        "date": "2026-08-26",
+        "description": "New fish don't belong straight in your display tank. Here's the quarantine setup, schedule, and warning signs that separate healthy tanks from disasters."
+      },
+      {
         "title": "Goldfish Myths Debunked: 12 Beliefs That Are Killing Your Fish",
         "slug": "goldfish-myths-debunked-12-common-beliefs",
         "date": "2026-08-24",
@@ -1541,6 +1547,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Live vs Frozen Feeder Insects: Which Is Actually Better for Your Reptile?",
+        "slug": "live-vs-frozen-feeder-insects-comparison",
+        "date": "2026-08-26",
+        "description": "Live crickets, frozen roaches, freeze-dried mealworms — reptile feeding has more options than ever. Here's how they compare on nutrition, cost, and safety."
+      },
+      {
         "title": "Crested Gecko Care for Beginners: Setup, Feeding & Handling",
         "slug": "crested-gecko-care-for-beginners-guide",
         "date": "2026-08-24",
@@ -1923,6 +1935,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Feather Plucking in Parrots: Causes, Treatment & What Actually Works",
+        "slug": "feather-plucking-in-parrots-causes-treatment-guide",
+        "date": "2026-08-26",
+        "description": "Feather plucking isn't just a bad habit — it's a medical red flag first, a behavior problem second. Here's how vets work through it, step by step."
+      },
       {
         "title": "Toxic Foods for Birds: What Parrots, Budgies & Cockatiels Can't Eat",
         "slug": "toxic-foods-for-birds-parrots-budgies-safety-guide",
