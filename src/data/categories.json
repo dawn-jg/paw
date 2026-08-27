@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Introduce a New Dog to Your Resident Cat or Dog: The Step-by-Step Plan That Works",
+        "slug": "how-to-introduce-a-new-dog-to-resident-cat-or-dog",
+        "date": "2026-08-27",
+        "description": "Bringing a second dog home? This step-by-step guide shows you how to introduce a new dog to your resident dog or cat safely — without fights, fear, or setbacks."
+      },
+      {
         "title": "How to Brush Your Dog's Teeth: A Step-by-Step Guide That Actually Works",
         "slug": "how-to-brush-your-dogs-teeth-step-by-step-guide",
         "date": "2026-08-25",
@@ -391,6 +397,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Feline Hyperthyroidism Early Signs: 7 Warning Symptoms Most Owners Miss",
+        "slug": "feline-hyperthyroidism-early-signs-guide",
+        "date": "2026-08-27",
+        "description": "Feline hyperthyroidism is common in senior cats but easy to miss. Learn the subtle early signs, how vets diagnose it, and which treatment options actually work."
+      },
       {
         "title": "Cat Obesity: Health Risks, Realistic Weight Loss, and How to Prevent It",
         "slug": "cat-obesity-health-risks-weight-loss-guide",
@@ -786,6 +798,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Guinea Pig Dental Health: How to Spot Overgrown Teeth Before They Become an Emergency",
+        "slug": "guinea-pig-dental-health-overgrown-teeth-guide",
+        "date": "2026-08-27",
+        "description": "Overgrown teeth are a leading hidden health crisis in guinea pigs. Here's how to spot malocclusion early, prevent dental disease, and know when to call the vet."
+      },
       {
         "title": "How to Choose a Rabbit Cage: Size, Style, and Setup That Won't Cage Your Bunny",
         "slug": "how-to-choose-rabbit-cage-buying-guide",
