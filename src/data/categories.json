@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How Much Exercise Does Your Dog Actually Need? The Honest Answer by Breed, Age, and Personality",
+        "slug": "how-much-exercise-does-your-dog-need-guide",
+        "date": "2026-08-29",
+        "description": "Stop guessing about walk length. Here's how much exercise your dog really needs by breed, age, and energy level, plus signs you're overdoing it."
+      },
+      {
         "title": "How to Introduce a New Dog to Your Resident Cat or Dog: The Step-by-Step Plan That Works",
         "slug": "how-to-introduce-a-new-dog-to-resident-cat-or-dog",
         "date": "2026-08-27",
@@ -397,6 +403,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Introduce a Second Cat Without a Furry Apocalypse: A Step-by-Step Guide",
+        "slug": "how-to-introduce-second-cat-step-by-step-guide",
+        "date": "2026-08-29",
+        "description": "Bringing home cat number two? Here's the honest, room-by-room process that actually works, plus the mistakes that ruin introductions."
+      },
       {
         "title": "Feline Hyperthyroidism Early Signs: 7 Warning Symptoms Most Owners Miss",
         "slug": "feline-hyperthyroidism-early-signs-guide",
@@ -798,6 +810,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Chinchilla Care 101: Temperature, Dust Baths, and the Mistakes New Owners Make Most",
+        "slug": "chinchilla-care-beginners-guide",
+        "date": "2026-08-29",
+        "description": "Everything a first-time chinchilla owner needs: cooling, cages, dust baths, hay, chew toys, and the errors that send chins to the vet."
+      },
       {
         "title": "Guinea Pig Dental Health: How to Spot Overgrown Teeth Before They Become an Emergency",
         "slug": "guinea-pig-dental-health-overgrown-teeth-guide",
