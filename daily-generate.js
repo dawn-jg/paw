@@ -32,7 +32,13 @@ const GIT = 'C:/Git/bin/git.exe';
 const ARGS = process.argv.slice(2);
 const DRY_RUN = ARGS.includes('--dry-run');
 const dateArgIdx = ARGS.indexOf('--date');
-const DATE = dateArgIdx !== -1 ? ARGS[dateArgIdx + 1] : new Date().toISOString().slice(0, 10);
+// 用本地时区（Asia/Shanghai）日期，避免 UTC 慢一天问题
+function localToday() {
+  const d = new Date();
+  const off = d.getTimezoneOffset(); // 分钟，本地-UTC
+  return new Date(d.getTime() - off * 60000).toISOString().slice(0, 10);
+}
+const DATE = dateArgIdx !== -1 ? ARGS[dateArgIdx + 1] : localToday();
 const DAY_NUM = parseInt(DATE.slice(8, 10), 10);
 const GROUP = DAY_NUM % 2 === 0 ? 'A' : 'B';
 const CATS = GROUP === 'A' ? ['Fish', 'Reptiles', 'Birds'] : ['Dogs', 'Cats', 'Small Pets'];
@@ -89,27 +95,53 @@ const doneCats = new Set(todayPosts.map(p => p.category));
 const catsToDo = CATS.filter(c => !doneCats.has(c));
 console.log('DATE=' + DATE + ' (day ' + DAY_NUM + ') GROUP=' + GROUP + ' -> ' + catsToDo.join(', '));
 
-// ─── DeepSeek API ──────────────────────────────────
+// ─── LLM Provider 配置（优先智谱 GLM Coding Plan，DeepSeek fallback）─────
 const cfg = JSON.parse(fs.readFileSync('C:/Users/D3-AI/.qclaw/openclaw.json', 'utf8'));
-const API_KEY = cfg.models.providers.deepseek.apiKey;
-const BASE_URL = cfg.models.providers.deepseek.baseURL || 'https://api.deepseek.com';
-const MODEL = cfg.models.providers.deepseek.models && cfg.models.providers.deepseek.models[0] ? cfg.models.providers.deepseek.models[0].id : 'deepseek-v4-flash';
+
+const PROVIDERS = [
+  {
+    name: 'zai-coding',
+    baseURL: 'https://open.bigmodel.cn/api/coding/paas/v4',
+    apiKey: cfg.models.providers.zai.apiKey,
+    model: 'glm-5.3',
+    reasoning: true
+  },
+  {
+    name: 'deepseek',
+    baseURL: (cfg.models.providers.deepseek.baseURL || 'https://api.deepseek.com').replace(/\/$/, ''),
+    apiKey: cfg.models.providers.deepseek.apiKey,
+    model: 'deepseek-v4-flash',
+    reasoning: true
+  }
+];
 
 async function callLLM(messages, maxTokens = 64000) {
-  const url = BASE_URL.replace(/\/$/, '') + '/chat/completions';
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + API_KEY },
-    body: JSON.stringify({ model: MODEL, messages: messages, max_tokens: maxTokens, temperature: 0.8, thinking: { type: 'disabled' } })
-  });
-  if (!res.ok) {
-    const txt = await res.text();
-    throw new Error('API ' + res.status + ': ' + txt.slice(0, 300));
+  let lastErr = null;
+  for (const prov of PROVIDERS) {
+    try {
+      const url = prov.baseURL.replace(/\/$/, '') + '/chat/completions';
+      const body = { model: prov.model, messages, max_tokens: maxTokens, temperature: 0.8 };
+      if (prov.reasoning) body.thinking = { type: 'disabled' };
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + prov.apiKey },
+        body: JSON.stringify(body)
+      });
+      if (!res.ok) {
+        const txt = await res.text();
+        throw new Error('[' + prov.name + '] API ' + res.status + ': ' + txt.slice(0, 200));
+      }
+      const data = await res.json();
+      const content = data.choices[0].message.content;
+      if (!content || content.trim().length < 100) throw new Error('[' + prov.name + '] Empty/short response');
+      console.log('  (provider: ' + prov.name + ' / ' + prov.model + ')');
+      return content;
+    } catch (e) {
+      lastErr = e;
+      console.log('  ! provider ' + prov.name + ' failed: ' + e.message);
+    }
   }
-  const data = await res.json();
-  const content = data.choices[0].message.content;
-  if (!content || content.trim().length < 100) throw new Error('Empty/short LLM response');
-  return content;
+  throw new Error('All providers failed. Last: ' + lastErr.message);
 }
 
 function extractJSON(text) {
@@ -120,13 +152,23 @@ function extractJSON(text) {
   if (start === -1) throw new Error('No JSON in LLM output: ' + t.slice(0, 200));
   let end = t.lastIndexOf('}');
   if (end === -1) throw new Error('No closing brace: ' + t.slice(0, 200));
-  try { return JSON.parse(t.slice(start, end + 1)); }
-  catch (e) {
-    for (let i = end; i > start; i--) {
-      try { return JSON.parse(t.slice(start, i + 1)); } catch (e2) {}
-    }
-    throw new Error('JSON parse failed: ' + t.slice(0, 200));
+  const tryParse = (s) => { try { return JSON.parse(s); } catch (e) { return null; } };
+  // 1. 直接解析
+  let obj = tryParse(t.slice(start, end + 1));
+  if (obj) return obj;
+  // 2. 修复 content 字段内残留的裸双引号（防御性，正常应已由 prompt 规则避免）
+  const repaired = t.slice(start, end + 1).replace(/("content":\s*")([\s\S]*?)(",\s*"(?:author|date|category)")/g, (match, p1, p2, p3) => {
+    const fixed = p2.replace(/(?<!\\)"/g, "'");
+    return p1 + fixed + p3;
+  });
+  obj = tryParse(repaired);
+  if (obj) return obj;
+  // 3. 逐字符回退
+  for (let i = end; i > start; i--) {
+    const o = tryParse(t.slice(start, i + 1));
+    if (o) return o;
   }
+  throw new Error('JSON parse failed: ' + t.slice(0, 300));
 }
 
 function poolFor(cat) { return (GOOD_ASINS[cat] || []).slice(); }
@@ -154,10 +196,11 @@ function buildPrompt(cat) {
 1. Output JSON ONLY (no prose, no markdown fences), fields: title, slug, category, date, description, content.
 2. date="${DATE}", category="${cat}".
 3. content = HTML fragment ONLY — start with <h2>, NO <!DOCTYPE>/<html>/<head>/<body>/<main>/<meta>/<title>. Use literal & not &amp;.
+   CRITICAL: Inside content, NEVER use double quote characters (") — NOT for HTML attributes, NOT for quoted words. Use single quotes everywhere: <img src='/images/products/X.jpg' alt='description' width='600' height='400'>, and for quoted words write: He said 'sit' before the treat. This keeps the JSON valid.
 4. 2000+ words in content.
 5. AT MOST 4 Amazon affiliate links, format exactly: https://amazon.com/dp/ASIN?tag=paw070-20
    Use ONLY ASINs from this known-good pool for ${cat}: ${pool.join(', ')}
-6. EXACTLY 2 images — this is MANDATORY, your article MUST contain exactly two <img> tags in content. If any of your article's ASINs have local files, use <img src="/images/products/{ASIN}.jpg" alt="..." width="600" height="400"> for the first 2 such ASINs. Local files available: ${localImgs.join(', ')}. If you did not use any ASIN with a local image, add the fallback images: <img src="https://picsum.photos/seed/{slug}-1/600/400" alt="..." width="600" height="400"> and <img src="https://picsum.photos/seed/{slug}-2/600/400" alt="..." width="600" height="400">. NEVER loremflickr. Count your <img> tags before finishing — there must be exactly 2.
+6. EXACTLY 2 images — this is MANDATORY, your article MUST contain exactly two <img> tags in content. Use SINGLE QUOTES for HTML attributes inside content (e.g. <img src='/images/products/{ASIN}.jpg' alt='description' width='600' height='400'>) — this keeps the JSON valid. If any of your article's ASINs have local files, use the first 2 such ASINs. Local files available: ${localImgs.join(', ')}. If you did not use any ASIN with a local image, add the fallback images: <img src='https://picsum.photos/seed/{slug}-1/600/400' alt='...' width='600' height='400'> and <img src='https://picsum.photos/seed/{slug}-2/600/400' alt='...' width='600' height='400'>. NEVER loremflickr. Count your <img> tags before finishing — there must be exactly 2.
 7. DO NOT include any internal site links — the pipeline adds them automatically.
 8. At least 1-2 citations to credible external sources (ASPCA, AVMA, Humane Society, AAFP, AKC, FDA, USDA, peer-reviewed studies). Format: "According to the [Organization], ..."
 9. description: plain text, 120-160 chars.
@@ -278,16 +321,27 @@ async function main() {
   console.log('Date: ' + DATE + ' | Group ' + GROUP + ' | Categories: ' + catsToDo.join(', '));
   if (catsToDo.length === 0) { console.log('All categories already done for today. Exit.'); process.exit(0); }
 
-  // 余额预检
-  try {
-    const res = await fetch(BASE_URL.replace(/\/$/, '') + '/user/balance', {
-      headers: { 'Authorization': 'Bearer ' + API_KEY }
-    });
-    const bal = await res.json();
-    const avail = bal.balance_infos && bal.balance_infos[0];
-    console.log('DeepSeek balance: ' + (avail ? avail.total_balance + ' ' + avail.currency : 'unknown'));
-    if (bal.is_available === false) { console.error('FATAL: API account not available'); process.exit(1); }
-  } catch (e) { console.log('WARN: balance check failed (' + e.message + ') — continuing'); }
+  // 余额预检（逐个 provider，任一可用即可继续）
+  let anyOk = false;
+  for (const prov of PROVIDERS) {
+    try {
+      const url = prov.baseURL.replace(/\/$/, '') + '/user/balance';
+      const res = await fetch(url, { headers: { 'Authorization': 'Bearer ' + prov.apiKey } });
+      if (res.ok) {
+        const bal = await res.json();
+        const avail = bal.balance_infos && bal.balance_infos[0];
+        console.log(prov.name + ' balance: ' + (avail ? avail.total_balance + ' ' + avail.currency : 'n/a'));
+        if (bal.is_available !== false) anyOk = true;
+      } else {
+        console.log(prov.name + ' balance check HTTP ' + res.status + ' (可能不支持balance接口，忽略)');
+        anyOk = true; // coding 端点可能无 balance 接口，不阻塞
+      }
+    } catch (e) {
+      console.log('WARN: ' + prov.name + ' balance check failed (' + e.message + ')');
+      anyOk = true;
+    }
+  }
+  if (!anyOk) { console.error('FATAL: no provider available'); process.exit(1); }
 
   // 串行生成
   const results = [];
