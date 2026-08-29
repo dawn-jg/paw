@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "The 7 Best Dog Foods for Active Dogs and High-Energy Breeds",
+        "slug": "the-7-best-dog-foods-for-active-dogs-and-high-energy-breeds-in-2026",
+        "date": "2026-08-30",
+        "description": "High-protein, fat-dense fuel for canine athletes — the performance dog foods that keep Border Collies, Malinois, and hunting breeds going all day."
+      },
+      {
         "title": "How Much Exercise Does Your Dog Actually Need? The Honest Answer by Breed, Age, and Personality",
         "slug": "how-much-exercise-does-your-dog-need-guide",
         "date": "2026-08-29",
@@ -391,18 +397,18 @@
         "slug": "the-10-best-dog-beds-for-large-breeds-in-2026-ultimate-comfort-for-big-dogs",
         "date": "2026-04-07",
         "description": "Finding the perfect bed for your large breed dog is crucial for their health and happiness. Large dogs have unique needs that standard pet beds cannot meet…"
-      },
-      {
-        "title": "The 7 Best Dog Foods for Active Dogs and High-Energy Breeds",
-        "slug": "the-7-best-dog-foods-for-active-dogs-and-high-energy-breeds-in-2026",
-        "date": "2026-04-06",
-        "description": "Is your dog constantly on the move? Whether you have a Border Collie who needs to chase every ball, a Belgian Malinois who lives for working jobs, or a..."
       }
     ]
   },
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "The 5 Best Cat Trees for Large Cats: Sturdy Condos for",
+        "slug": "the-5-best-cat-trees-for-large-cats-sturdy-condos-for-maine-coons-ragdolls-big-boys-in-2026",
+        "date": "2026-08-30",
+        "description": "The sturdiest cat trees for Maine Coons, Ragdolls, and other heavy cats — wide bases, 4-inch posts, and platforms that hold when a 20-pound cat lands."
+      },
       {
         "title": "How to Introduce a Second Cat Without a Furry Apocalypse: A Step-by-Step Guide",
         "slug": "how-to-introduce-second-cat-step-by-step-guide",
@@ -798,18 +804,18 @@
         "slug": "best-cat-toys-2026-interactive-toys-puzzle-feeders-feather-wands-enrichment-toys",
         "date": "2026-04-08",
         "description": "As cat parents, we all want to provide our feline companions with the best possible entertainment and mental stimulation. In 2026, the cat toy market has..."
-      },
-      {
-        "title": "The 5 Best Cat Trees for Large Cats: Sturdy Condos for",
-        "slug": "the-5-best-cat-trees-for-large-cats-sturdy-condos-for-maine-coons-ragdolls-big-boys-in-2026",
-        "date": "2026-04-06",
-        "description": "Your standard cat tree was not designed for a 20-pound Maine Coon. We've all seen it: the wobbly tower that sways when a large cat hops on it, the carpeted..."
       }
     ]
   },
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "The 5 Best Hamster Cages for 2026",
+        "slug": "the-5-best-hamster-cages-for-2026-from-budget-bin-setups-to-premium-habitats",
+        "date": "2026-08-30",
+        "description": "Floor space, bedding depth, and bar spacing explained — the hamster cages that actually meet welfare standards, from budget bin builds to wooden habitats."
+      },
       {
         "title": "Chinchilla Care 101: Temperature, Dust Baths, and the Mistakes New Owners Make Most",
         "slug": "chinchilla-care-beginners-guide",
@@ -1169,18 +1175,18 @@
         "slug": "best-pet-water-fountains-2026-keep-your-pets-hydrated-with-fresh-water",
         "date": "2026-04-08",
         "description": "As pet owners, we all want the best for our furry companions閳ユ攣nd hydration is one of the most fundamental yet overlooked aspects of pet care. Many pets,..."
-      },
-      {
-        "title": "The 5 Best Hamster Cages for 2026",
-        "slug": "the-5-best-hamster-cages-for-2026-from-budget-bin-setups-to-premium-habitats",
-        "date": "2026-04-06",
-        "description": "Choosing the right hamster cage is one of the most consequential decisions you'll make as a hamster owner. These nocturnal burrowers are incredibly..."
       }
     ]
   },
   "Fish": {
     "name": "Fish",
     "posts": [
+      {
+        "title": "Best Aquarium Filters 2026",
+        "slug": "best-aquarium-filters-2026-complete-guide-to-crystal-clear-water",
+        "date": "2026-08-30",
+        "description": "HOB, canister, or sponge? The aquarium filters worth your money in 2026, plus sizing math and the maintenance habits that keep water clear."
+      },
       {
         "title": "Why Is My Fish Tank Cloudy? Every Cause Ranked From Harmless to Emergency",
         "slug": "why-is-my-fish-tank-cloudy-causes-fixes-guide",
@@ -1576,12 +1582,6 @@
         "slug": "best-aquarium-backgrounds-2026-stunning-visual-effects",
         "date": "2026-04-30",
         "description": "After extensive research and testing, we've compiled our top picks for Best Aquarium Backgrounds 2026: Stunning Visual Effects. Each product below has been..."
-      },
-      {
-        "title": "Best Aquarium Filters 2026",
-        "slug": "best-aquarium-filters-2026-complete-guide-to-crystal-clear-water",
-        "date": "2026-04-07",
-        "description": "A quality filter is the heart of any successful aquarium. It keeps water clear, removes harmful toxins, and creates a healthy environment for your..."
       }
     ]
   },
@@ -1983,6 +1983,18 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Best Bird Cages 2026",
+        "slug": "best-bird-cages-2026-top-picks-for-parrots-finches-and-all-pet-birds",
+        "date": "2026-08-30",
+        "description": "The best bird cages of 2026 compared — bar spacing by species, safe coatings, and placement tips that turn a cage into a healthy home."
+      },
+      {
+        "title": "The 6 Best Bird Cages for Parrots and Parakeets in 2026",
+        "slug": "the-6-best-bird-cages-for-parrots-and-parakeets-in-2026-size-safety-and-setup-guide",
+        "date": "2026-08-30",
+        "description": "Bar spacing charts, size minimums, and safe coatings — the bird cages worth buying in 2026, from budgie flight cages to wrought iron parrot mansions."
+      },
       {
         "title": "How Much Sleep Do Pet Birds Really Need? The Truth About 12-Hour Nights",
         "slug": "how-much-sleep-do-pet-birds-need-guide",
@@ -2390,18 +2402,6 @@
         "slug": "best-parrot-food-2026-complete-guide-to-pellets-seeds-fresh-foods-nutrition",
         "date": "2026-04-08",
         "description": "Parrots are intelligent, long-lived companions that require specialized nutrition to thrive. Unlike cats or dogs, these colorful birds have unique dietary..."
-      },
-      {
-        "title": "Best Bird Cages 2026",
-        "slug": "best-bird-cages-2026-top-picks-for-parrots-finches-and-all-pet-birds",
-        "date": "2026-04-07",
-        "description": "Choosing the right bird cage is one of the most important decisions for bird ownership. The cage is your bird&#8217;s home, and it needs to be safe..."
-      },
-      {
-        "title": "The 6 Best Bird Cages for Parrots and Parakeets in 2026",
-        "slug": "the-6-best-bird-cages-for-parrots-and-parakeets-in-2026-size-safety-and-setup-guide",
-        "date": "2026-04-06",
-        "description": "A bird's cage isn't just where they sleep 閳?it's their entire world. Unlike dogs and cats who roam freely, most pet birds spend the majority of their lives..."
       }
     ]
   }
