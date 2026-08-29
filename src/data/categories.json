@@ -1182,6 +1182,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Why Is My Fish Tank Cloudy? Every Cause Ranked From Harmless to Emergency",
+        "slug": "why-is-my-fish-tank-cloudy-causes-fixes-guide",
+        "date": "2026-08-28",
+        "description": "Cloudy fish tank water has five real causes, from bacterial blooms to gravel dust. Here is how to diagnose yours and fix it without nuking your filter."
+      },
+      {
         "title": "How to Quarantine New Fish: A Step-by-Step Guide That Actually Saves Your Tank",
         "slug": "how-to-quarantine-new-fish-step-by-step-guide",
         "date": "2026-08-26",
@@ -1583,6 +1589,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Bearded Dragon Brumation: What's Happening, What to Do, and When to Worry",
+        "slug": "bearded-dragon-brumation-guide",
+        "date": "2026-08-28",
+        "description": "Is your bearded dragon sleeping for weeks? Learn what brumation really is, how to prep for it, and the red flags that mean a vet visit now."
+      },
+      {
         "title": "Live vs Frozen Feeder Insects: Which Is Actually Better for Your Reptile?",
         "slug": "live-vs-frozen-feeder-insects-comparison",
         "date": "2026-08-26",
@@ -1971,6 +1983,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "How Much Sleep Do Pet Birds Really Need? The Truth About 12-Hour Nights",
+        "slug": "how-much-sleep-do-pet-birds-need-guide",
+        "date": "2026-08-28",
+        "description": "Most pet birds are chronically sleep-deprived. Here's how many hours parrots, budgies and cockatiels actually need, and how to fix their sleep setup."
+      },
       {
         "title": "Feather Plucking in Parrots: Causes, Treatment & What Actually Works",
         "slug": "feather-plucking-in-parrots-causes-treatment-guide",
