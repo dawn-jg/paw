@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Separation Anxiety: The Real Fix, Step by Step (No Quick Tricks)",
+        "slug": "dog-separation-anxiety-fix-step-by-step-guide",
+        "date": "2026-08-31",
+        "description": "A practical, step-by-step plan for dog separation anxiety: what actually causes it, how to train it away, and the gear that genuinely helps."
+      },
+      {
         "title": "The 7 Best Dog Foods for Active Dogs and High-Energy Breeds",
         "slug": "the-7-best-dog-foods-for-active-dogs-and-high-energy-breeds-in-2026",
         "date": "2026-08-30",
@@ -403,6 +409,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Trim Your Cat's Nails Without Losing Blood (Yours or Theirs): A Step-by-Step Guide",
+        "slug": "how-to-trim-cat-nails-step-by-step",
+        "date": "2026-08-31",
+        "description": "Learn to trim your cat's nails at home in 10 minutes. My exact technique, the tools that work, and how to handle cats who fight back."
+      },
       {
         "title": "The 5 Best Cat Trees for Large Cats: Sturdy Condos for",
         "slug": "the-5-best-cat-trees-for-large-cats-sturdy-condos-for-maine-coons-ragdolls-big-boys-in-2026",
@@ -810,6 +822,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Rabbit GI Stasis: The Silent Killer Every Bunny Owner Needs to Recognize Before It's Too Late",
+        "slug": "rabbit-gi-stasis-symptoms-emergency-guide",
+        "date": "2026-08-31",
+        "description": "Learn to spot rabbit GI stasis early, why bunnies stop eating, and the exact emergency steps that save lives before it becomes fatal."
+      },
       {
         "title": "The 5 Best Hamster Cages for 2026",
         "slug": "the-5-best-hamster-cages-for-2026-from-budget-bin-setups-to-premium-habitats",
