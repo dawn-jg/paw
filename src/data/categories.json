@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Your Dog Is Getting Older: The Senior Dog Care Guide Nobody Hands You at the Vet",
+        "slug": "senior-dog-care-guide-aging-signs",
+        "date": "2026-09-01",
+        "description": "Dogs age faster than we want to admit. Here is how to spot the real signs of aging and keep your senior dog comfortable, mobile, and happy."
+      },
+      {
         "title": "Dog Separation Anxiety: The Real Fix, Step by Step (No Quick Tricks)",
         "slug": "dog-separation-anxiety-fix-step-by-step-guide",
         "date": "2026-08-31",
@@ -409,6 +415,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "My Cat Won't Eat: 9 Reasons Cats Stop Eating and When to Panic",
+        "slug": "cat-not-eating-loss-of-appetite-causes-guide",
+        "date": "2026-09-01",
+        "description": "A cat refusing food is a genuine emergency in disguise. Learn the real reasons cats stop eating, what vets check first, and how long you can safely wait."
+      },
       {
         "title": "How to Trim Your Cat's Nails Without Losing Blood (Yours or Theirs): A Step-by-Step Guide",
         "slug": "how-to-trim-cat-nails-step-by-step",
@@ -822,6 +834,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Guinea Pig Respiratory Infections: The Sniffles You Should Never Ignore",
+        "slug": "guinea-pig-respiratory-infection-symptoms-guide",
+        "date": "2026-09-01",
+        "description": "Learn to spot guinea pig respiratory infections early, from sneezing to crackly breathing, plus vet-approved prevention and habitat tips."
+      },
       {
         "title": "Rabbit GI Stasis: The Silent Killer Every Bunny Owner Needs to Recognize Before It's Too Late",
         "slug": "rabbit-gi-stasis-symptoms-emergency-guide",
