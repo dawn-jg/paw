@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Cracked, Burned, Torn: The Complete Dog Paw Pad Care Guide Most Owners Learn Too Late",
+        "slug": "dog-paw-pad-care-cracked-burned-pads-guide",
+        "date": "2026-09-03",
+        "description": "How to spot, treat, and prevent cracked, burned, and torn dog paw pads, with vet-backed first aid steps and the gear that actually helps."
+      },
+      {
         "title": "Your Dog Is Getting Older: The Senior Dog Care Guide Nobody Hands You at the Vet",
         "slug": "senior-dog-care-guide-aging-signs",
         "date": "2026-09-01",
@@ -415,6 +421,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Give a Cat a Pill: The Realistic Step-by-Step Guide (From Someone Who Has the Scars)",
+        "slug": "how-to-give-a-cat-a-pill-step-by-step",
+        "date": "2026-09-03",
+        "description": "Learn how to pill a cat without a fight: burrito technique, pill guns, treats that hide meds, and what to do if your cat spits everything back out."
+      },
       {
         "title": "My Cat Won't Eat: 9 Reasons Cats Stop Eating and When to Panic",
         "slug": "cat-not-eating-loss-of-appetite-causes-guide",
@@ -834,6 +846,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Bond Two Rabbits: A Step-by-Step Guide That Actually Works",
+        "slug": "how-to-bond-two-rabbits-step-by-step-guide",
+        "date": "2026-09-03",
+        "description": "Bonding rabbits takes patience, neutral territory, and knowing when to step in. Here's the exact process I use, from first date to cuddle pile."
+      },
       {
         "title": "Guinea Pig Respiratory Infections: The Sniffles You Should Never Ignore",
         "slug": "guinea-pig-respiratory-infection-symptoms-guide",
