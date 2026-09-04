@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Diarrhea: When to Panic, When to Wait, and What Actually Helps",
+        "slug": "dog-diarrhea-when-to-worry-causes-treatment-guide",
+        "date": "2026-09-05",
+        "description": "Dog diarrhea happens to every owner. Here is how to read the stool, spot true emergencies, and treat mild cases at home safely."
+      },
+      {
         "title": "Cracked, Burned, Torn: The Complete Dog Paw Pad Care Guide Most Owners Learn Too Late",
         "slug": "dog-paw-pad-care-cracked-burned-pads-guide",
         "date": "2026-09-03",
@@ -421,6 +427,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Moving House With a Cat: The Step-by-Step Guide That Keeps Cats Calm (and Found)",
+        "slug": "how-to-move-with-a-cat-step-by-step-guide",
+        "date": "2026-09-05",
+        "description": "Moving with a cat? Here is the realistic step-by-step plan I use to keep cats calm, safe, and escape-proof on moving day and beyond."
+      },
       {
         "title": "How to Give a Cat a Pill: The Realistic Step-by-Step Guide (From Someone Who Has the Scars)",
         "slug": "how-to-give-a-cat-a-pill-step-by-step",
@@ -846,6 +858,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Tame a Hamster: The Step-by-Step Bonding Plan That Actually Works",
+        "slug": "how-to-tame-a-hamster-step-by-step-bonding-guide",
+        "date": "2026-09-05",
+        "description": "A step-by-step guide to taming a nervous hamster, from hand-feeding to full handling, with timelines, mistakes to avoid, and gear that helps."
+      },
       {
         "title": "How to Bond Two Rabbits: A Step-by-Step Guide That Actually Works",
         "slug": "how-to-bond-two-rabbits-step-by-step-guide",
