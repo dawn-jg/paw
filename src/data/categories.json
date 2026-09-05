@@ -3,6 +3,24 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Best Dog Dental Care Products 2026",
+        "slug": "best-dog-dental-care-products-2026",
+        "date": "2026-09-06",
+        "description": "As a responsible dog owner, you want your furry companion to live a long, healthy, and happy life. But here's a fact that many pet parents overlook: dental..."
+      },
+      {
+        "title": "Best Dog Training Treats 2026",
+        "slug": "best-dog-training-treats-2026-high-value-treats-for-effective-training",
+        "date": "2026-09-06",
+        "description": "Best Dog Training Treats 2026: High-Value Treats for Effective Training Training your dog is one of the most rewarding experiences you can have as a..."
+      },
+      {
+        "title": "The 10 Best Dog Beds for Large Breeds in 2026",
+        "slug": "the-10-best-dog-beds-for-large-breeds-in-2026-ultimate-comfort-for-big-dogs",
+        "date": "2026-09-06",
+        "description": "The 10 best dog beds for large breeds in 2026 - orthopedic memory foam, cooling gel options, and tough covers that survive 100-pound dogs. Tested picks."
+      },
+      {
         "title": "Dog Diarrhea: When to Panic, When to Wait, and What Actually Helps",
         "slug": "dog-diarrhea-when-to-worry-causes-treatment-guide",
         "date": "2026-09-05",
@@ -403,30 +421,30 @@
         "slug": "best-dog-leashes-2026-from-standard-to-retractable-options",
         "date": "2026-04-09",
         "description": "Finding the right dog leash can feel overwhelming 鈥?after all, this is one of the most important tools in your daily routine with your pup. Whether you're..."
-      },
-      {
-        "title": "Best Dog Dental Care Products 2026",
-        "slug": "best-dog-dental-care-products-2026",
-        "date": "2026-04-08",
-        "description": "As a responsible dog owner, you want your furry companion to live a long, healthy, and happy life. But here's a fact that many pet parents overlook: dental..."
-      },
-      {
-        "title": "Best Dog Training Treats 2026",
-        "slug": "best-dog-training-treats-2026-high-value-treats-for-effective-training",
-        "date": "2026-04-08",
-        "description": "Best Dog Training Treats 2026: High-Value Treats for Effective Training Training your dog is one of the most rewarding experiences you can have as a..."
-      },
-      {
-        "title": "The 10 Best Dog Beds for Large Breeds in 2026",
-        "slug": "the-10-best-dog-beds-for-large-breeds-in-2026-ultimate-comfort-for-big-dogs",
-        "date": "2026-04-07",
-        "description": "Finding the perfect bed for your large breed dog is crucial for their health and happiness. Large dogs have unique needs that standard pet beds cannot meet…"
       }
     ]
   },
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Best Cat Grooming Tools 2026",
+        "slug": "best-cat-grooming-tools-2026-brushes-clippers-nail-trimmers",
+        "date": "2026-09-06",
+        "description": "Regular grooming is one of the most important aspects of cat care 閳?and yet, it is all too often overlooked by pet parents. Whether you have a long-haired..."
+      },
+      {
+        "title": "Best Cat Scratching Posts 2026",
+        "slug": "best-cat-scratching-posts-2026-top-5-reviews-ultimate-buying-guide",
+        "date": "2026-09-06",
+        "description": "Is your sofa starting to look like a feline attack victim? Does your cat prefer your expensive curtains as a climbing apparatus? If you've answered yes to..."
+      },
+      {
+        "title": "Best Cat Toys 2026",
+        "slug": "best-cat-toys-2026-interactive-toys-puzzle-feeders-feather-wands-enrichment-toys",
+        "date": "2026-09-06",
+        "description": "As cat parents, we all want to provide our feline companions with the best possible entertainment and mental stimulation. In 2026, the cat toy market has..."
+      },
       {
         "title": "Moving House With a Cat: The Step-by-Step Guide That Keeps Cats Calm (and Found)",
         "slug": "how-to-move-with-a-cat-step-by-step-guide",
@@ -834,24 +852,6 @@
         "slug": "best-cat-food-for-kittens-2026-essential-nutrition-for-growing-cats",
         "date": "2026-04-09",
         "description": "Bringing a kitten into your home is one of the most joyful experiences a pet parent can have 鈥?but with that joy comes serious responsibility…"
-      },
-      {
-        "title": "Best Cat Grooming Tools 2026",
-        "slug": "best-cat-grooming-tools-2026-brushes-clippers-nail-trimmers",
-        "date": "2026-04-08",
-        "description": "Regular grooming is one of the most important aspects of cat care 閳?and yet, it is all too often overlooked by pet parents. Whether you have a long-haired..."
-      },
-      {
-        "title": "Best Cat Scratching Posts 2026",
-        "slug": "best-cat-scratching-posts-2026-top-5-reviews-ultimate-buying-guide",
-        "date": "2026-04-08",
-        "description": "Is your sofa starting to look like a feline attack victim? Does your cat prefer your expensive curtains as a climbing apparatus? If you've answered yes to..."
-      },
-      {
-        "title": "Best Cat Toys 2026",
-        "slug": "best-cat-toys-2026-interactive-toys-puzzle-feeders-feather-wands-enrichment-toys",
-        "date": "2026-04-08",
-        "description": "As cat parents, we all want to provide our feline companions with the best possible entertainment and mental stimulation. In 2026, the cat toy market has..."
       }
     ]
   },
