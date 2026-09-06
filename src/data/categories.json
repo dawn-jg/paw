@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Clean Your Dog's Ears: The Step-by-Step Guide Vets Wish Every Owner Followed",
+        "slug": "how-to-clean-dog-ears-step-by-step-guide",
+        "date": "2026-09-07",
+        "description": "Learn exactly how to clean your dog's ears safely at home, which products actually work, and the warning signs that mean you need a vet instead."
+      },
+      {
         "title": "Best Dog Dental Care Products 2026",
         "slug": "best-dog-dental-care-products-2026",
         "date": "2026-09-06",
@@ -427,6 +433,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Why Your Cat Wakes You Up at 5 AM (and How to Actually Fix It)",
+        "slug": "stop-cat-waking-you-up-night-early-morning-guide",
+        "date": "2026-09-07",
+        "description": "A realistic, step-by-step plan to stop early-morning cat wake-up calls — feeding schedules, play routines, and the mistakes that make it worse."
+      },
       {
         "title": "Best Cat Grooming Tools 2026",
         "slug": "best-cat-grooming-tools-2026-brushes-clippers-nail-trimmers",
@@ -858,6 +870,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Bond Two Guinea Pigs: Introductions Without the Bloodshed",
+        "slug": "how-to-bond-two-guinea-pigs-step-by-step-guide",
+        "date": "2026-09-07",
+        "description": "A practical, step-by-step plan for introducing two guinea pigs safely, reading body language, and fixing a bond that's gone sour."
+      },
       {
         "title": "How to Tame a Hamster: The Step-by-Step Bonding Plan That Actually Works",
         "slug": "how-to-tame-a-hamster-step-by-step-bonding-guide",
