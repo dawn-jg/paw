@@ -1272,6 +1272,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "How to Breed Guppies: A Step-by-Step Guide That Actually Produces Fry",
+        "slug": "how-to-breed-guppies-step-by-step-guide",
+        "date": "2026-09-08",
+        "description": "Learn how to breed guppies the right way: sexing, conditioning, breeding traps, fry care, and what to do with 50 babies a month."
+      },
+      {
         "title": "Betta Tank Mates: Which Fish Can Actually Live With Your Betta (and Which Will End Badly)",
         "slug": "betta-tank-mates-compatibility-guide",
         "date": "2026-09-04",
@@ -1691,6 +1697,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "How to Clean and Disinfect a Reptile Enclosure: The Step-by-Step Routine That Actually Keeps Animals Healthy",
+        "slug": "how-to-clean-disinfect-reptile-enclosure-step-by-step-guide",
+        "date": "2026-09-08",
+        "description": "A practical, tested routine for cleaning and disinfecting reptile enclosures safely, including product picks, schedules, and salmonella precautions."
+      },
+      {
         "title": "How to Pick a Healthy Reptile at a Pet Store or Expo: Red Flags, Green Flags, and What I've Learned the Hard Way",
         "slug": "how-to-pick-healthy-reptile-pet-store-expo-guide",
         "date": "2026-09-04",
@@ -2097,6 +2109,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Building a Bird First Aid Kit: What Every Parrot Owner Needs Before an Emergency Happens",
+        "slug": "bird-first-aid-kit-emergency-preparedness-guide",
+        "date": "2026-09-08",
+        "description": "Learn exactly what belongs in a pet bird first aid kit, from styptic powder to hospital cages, plus how to handle bleeding, breaks, and emergencies fast."
+      },
       {
         "title": "Flighted or Clipped: The Wing Trimming Debate Every Bird Owner Has to Settle",
         "slug": "wing-clipping-vs-flighted-birds-comparison",
