@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Stop Your Dog From Chewing Everything: The Complete Fix, From Puppies to Power Chewers",
+        "slug": "how-to-stop-dog-chewing-everything-guide",
+        "date": "2026-09-09",
+        "description": "Destructive chewing has a cause and a fix. This guide covers teething timelines, boredom, anxiety, and the exact products and training steps that work."
+      },
+      {
         "title": "How to Clean Your Dog's Ears: The Step-by-Step Guide Vets Wish Every Owner Followed",
         "slug": "how-to-clean-dog-ears-step-by-step-guide",
         "date": "2026-09-07",
@@ -433,6 +439,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Bathe a Cat Without Getting Murdered: A Realistic Step-by-Step Guide",
+        "slug": "how-to-bathe-a-cat-step-by-step-guide",
+        "date": "2026-09-09",
+        "description": "Most cats never need baths, but when they do, you need a plan. A vet-informed, battle-tested routine for bathing a cat safely."
+      },
       {
         "title": "Why Your Cat Wakes You Up at 5 AM (and How to Actually Fix It)",
         "slug": "stop-cat-waking-you-up-night-early-morning-guide",
@@ -870,6 +882,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Why Is My Hamster Biting Me? Causes and Fixes That Actually Work",
+        "slug": "why-is-my-hamster-biting-me-causes-fixes-guide",
+        "date": "2026-09-09",
+        "description": "Hamster bites hurt and they usually mean something. Here are the real reasons hamsters bite and how to fix each one without ruining the bond."
+      },
       {
         "title": "How to Bond Two Guinea Pigs: Introductions Without the Bloodshed",
         "slug": "how-to-bond-two-guinea-pigs-step-by-step-guide",
