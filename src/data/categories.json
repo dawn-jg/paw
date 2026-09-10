@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Trim Your Dog's Nails Without the Drama: A Step-by-Step Guide That Actually Works",
+        "slug": "how-to-trim-dog-nails-step-by-step-guide",
+        "date": "2026-09-11",
+        "description": "Learn to trim dog nails at home without stress, bleeding, or a wrestling match. Exact angles, quick depth, and what to do if you cut too short."
+      },
+      {
         "title": "How to Stop Your Dog From Chewing Everything: The Complete Fix, From Puppies to Power Chewers",
         "slug": "how-to-stop-dog-chewing-everything-guide",
         "date": "2026-09-09",
@@ -439,6 +445,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Why Is My Cat Hiding? 9 Reasons Cats Disappear and When You Should Actually Worry",
+        "slug": "cat-hiding-behavior-when-to-worry-guide",
+        "date": "2026-09-11",
+        "description": "Cats hide for lots of reasons, most of them harmless. Here is how to tell normal hiding from a real warning sign, and what to do about each."
+      },
       {
         "title": "How to Bathe a Cat Without Getting Murdered: A Realistic Step-by-Step Guide",
         "slug": "how-to-bathe-a-cat-step-by-step-guide",
@@ -882,6 +894,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Why Does My Guinea Pig Squeak? Guinea Pig Sounds Decoded",
+        "slug": "guinea-pig-sounds-meanings-decoded",
+        "date": "2026-09-11",
+        "description": "Your guinea pig is wheeking, rumbling, or chutting at you. Here is what each sound actually means and how to respond to it."
+      },
       {
         "title": "Why Is My Hamster Biting Me? Causes and Fixes That Actually Work",
         "slug": "why-is-my-hamster-biting-me-causes-fixes-guide",
