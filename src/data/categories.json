@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Why Is My Dog Itching So Much? The Honest Guide to Scratching, Licking, and Allergies",
+        "slug": "dog-itching-scratching-causes-relief-guide",
+        "date": "2026-09-15",
+        "description": "Constant scratching, licking paws, ear infections? Here is what causes dog itching, how to spot allergies, and what actually brings relief."
+      },
+      {
         "title": "Best Dog Leashes 2026: From Standard to Retractable Options",
         "slug": "best-dog-leashes-2026-from-standard-to-retractable-options",
         "date": "2026-09-13",
@@ -445,6 +451,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Switch Your Cat's Food Without Wrecking Their Digestion: The 7-Day Method That Actually Works",
+        "slug": "how-to-switch-cat-food-step-by-step-guide",
+        "date": "2026-09-15",
+        "description": "A vet-informed, step-by-step plan for transitioning your cat to new food without vomiting, diarrhea, or hunger strikes. Includes a 7-day schedule."
+      },
       {
         "title": "Best Automatic Cat Feeder 2026: Smart Feeding Solutions",
         "slug": "best-automatic-cat-feeder-2026-smart-feeding-solutions",
@@ -894,6 +906,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Guinea Pig Ringworm: The Itchy Scabby Truth and How to Kick It for Good",
+        "slug": "guinea-pig-ringworm-signs-treatment-guide",
+        "date": "2026-09-15",
+        "description": "Guinea pig ringworm is zoonotic, stubborn, and often misdiagnosed as mites. Here's how to spot it, treat it, and avoid catching it yourself."
+      },
       {
         "title": "Best Hamster Bedding 2026",
         "slug": "best-hamster-bedding-2026-safe-and-comfortable-litter-options",
