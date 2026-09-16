@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Why Does My Dog Eat Grass? Vets Weigh In and Owners Panic for Nothing",
+        "slug": "why-do-dogs-eat-grass-causes-myths-guide",
+        "date": "2026-09-17",
+        "description": "Dogs eat grass for lots of reasons, and most are harmless. Here is what the science says, the myths to ignore, and the warning signs that matter."
+      },
+      {
         "title": "Why Is My Dog Itching So Much? The Honest Guide to Scratching, Licking, and Allergies",
         "slug": "dog-itching-scratching-causes-relief-guide",
         "date": "2026-09-15",
@@ -451,6 +457,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Tell If Your Cat Is in Pain: 14 Subtle Signs Most Owners Miss",
+        "slug": "how-to-tell-if-cat-in-pain-subtle-signs-guide",
+        "date": "2026-09-17",
+        "description": "Cats hide pain brilliantly. Learn the 14 subtle signs of a hurting cat, from litter box clues to posture shifts, and when to call the vet fast."
+      },
       {
         "title": "How to Switch Your Cat's Food Without Wrecking Their Digestion: The 7-Day Method That Actually Works",
         "slug": "how-to-switch-cat-food-step-by-step-guide",
@@ -906,6 +918,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Why Is My Hamster Sleeping So Much? Torpor, Hibernation, and When to Actually Panic",
+        "slug": "why-is-my-hamster-sleeping-so-much-torpor-guide",
+        "date": "2026-09-17",
+        "description": "Your hamster sleeps all day and barely moves? Learn the difference between normal hamster sleep, dangerous torpor, and when a limp hamster needs help now."
+      },
       {
         "title": "Guinea Pig Ringworm: The Itchy Scabby Truth and How to Kick It for Good",
         "slug": "guinea-pig-ringworm-signs-treatment-guide",
