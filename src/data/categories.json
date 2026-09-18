@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Read Your Dog's Body Language: The Signals Most Owners Completely Miss",
+        "slug": "how-to-read-dog-body-language-signals-guide",
+        "date": "2026-09-19",
+        "description": "Dogs talk constantly with tails, ears, and eyes. Learn to read canine body language and catch stress signals before they become bites."
+      },
+      {
         "title": "Why Does My Dog Eat Grass? Vets Weigh In and Owners Panic for Nothing",
         "slug": "why-do-dogs-eat-grass-causes-myths-guide",
         "date": "2026-09-17",
@@ -457,6 +463,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Introduce Your Cat to a New Baby: The Realistic Timeline That Keeps Everyone Calm",
+        "slug": "how-to-introduce-cat-to-new-baby-guide",
+        "date": "2026-09-19",
+        "description": "Bringing a baby home with a cat in the house? Here's the realistic step-by-step timeline, safety rules, and gear that actually helps."
+      },
       {
         "title": "How to Tell If Your Cat Is in Pain: 14 Subtle Signs Most Owners Miss",
         "slug": "how-to-tell-if-cat-in-pain-subtle-signs-guide",
@@ -918,6 +930,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Trim a Rabbit's Nails Without the Drama (or the Blood)",
+        "slug": "how-to-trim-rabbit-nails-step-by-step",
+        "date": "2026-09-19",
+        "description": "A calm, practical walkthrough for trimming rabbit nails at home: tools, restraint tricks, the quick, bleeding emergencies, and a monthly schedule."
+      },
       {
         "title": "Why Is My Hamster Sleeping So Much? Torpor, Hibernation, and When to Actually Panic",
         "slug": "why-is-my-hamster-sleeping-so-much-torpor-guide",
