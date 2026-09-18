@@ -1344,6 +1344,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Fish Tank Mates: The Compatibility Mistakes That Wipe Out Community Aquariums",
+        "slug": "fish-tank-mates-compatibility-mistakes-guide",
+        "date": "2026-09-18",
+        "description": "Avoid the tank mate mistakes that destroy peaceful community aquariums, from fin nipping to silent stress that kills fish weeks later."
+      },
+      {
         "title": "Why Is My Fish Not Eating? Every Cause Ranked From No-Worry to Act-Now",
         "slug": "why-is-my-fish-not-eating-causes-fixes-guide",
         "date": "2026-09-16",
@@ -1793,6 +1799,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Reptile Humidity Problems: How to Raise It, Lower It, and Stop Guessing Forever",
+        "slug": "reptile-humidity-control-guide-raise-lower",
+        "date": "2026-09-18",
+        "description": "Stop chasing humidity numbers with a spray bottle. Learn how to actually raise or lower terrarium moisture the right way for geckos, dragons, and snakes."
+      },
+      {
         "title": "Reptiles and Salmonella: The Safety Talk Every Lizard and Snake Owner Needs to Hear",
         "slug": "reptile-salmonella-safety-family-guide",
         "date": "2026-09-16",
@@ -2229,6 +2241,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "How to Introduce a Second Bird: A Step-by-Step Guide That Won't Blow Up in Your Face",
+        "slug": "how-to-introduce-second-bird-step-by-step-guide",
+        "date": "2026-09-18",
+        "description": "Thinking about adding a second bird? Here is the quarantine, slow-intro method that actually works, plus the mistakes that cause fights and stress."
+      },
       {
         "title": "Chronic Egg Laying in Female Birds: Why Your Single Parrot Lays Eggs and What to Do About It",
         "slug": "chronic-egg-laying-female-parrots-causes-treatment-guide",
