@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Stop Your Dog From Begging at the Table: The Fix That Actually Works (and the Mistake 90% of Owners Make)",
+        "slug": "how-to-stop-dog-begging-table-step-by-step",
+        "date": "2026-09-21",
+        "description": "Stop dinner-table begging for good with this vet-backed, step-by-step plan. Why scolding backfires, and what to do instead tonight."
+      },
+      {
         "title": "Best Dog Training Clickers 2026",
         "slug": "best-dog-training-clickers-2026-precision-tools-for-positive-reinforcement-3",
         "date": "2026-09-20",
@@ -463,6 +469,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Why Is My Cat Losing Weight? 10 Causes Owners Miss and When It Gets Urgent",
+        "slug": "cat-losing-weight-causes-when-to-worry-guide",
+        "date": "2026-09-21",
+        "description": "A vet-informed guide to sudden and gradual weight loss in cats: hidden causes, red flags, and the exact timeline for calling your vet."
+      },
       {
         "title": "Best Cat Trees 2026",
         "slug": "best-cat-trees-2026-climbing-paradise-for-your-feline-friend-2",
@@ -930,6 +942,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Guinea Pig Bumblefoot: Why Those Swollen Feet Happen and How to Fix Them",
+        "slug": "guinea-pig-bumblefoot-causes-prevention-guide",
+        "date": "2026-09-21",
+        "description": "Guinea pig bumblefoot (pododermatitis) is painful and preventable. Learn the real causes, early warning signs, treatment options, and bedding fixes that work."
+      },
       {
         "title": "Best Ferret Cages 2026",
         "slug": "best-ferret-cages-2026-spacious-homes-for-your-playful-ferret-2",
