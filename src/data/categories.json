@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Why Does My Dog Lick Their Paws? The Real Reasons (and When It Actually Means Trouble)",
+        "slug": "why-dogs-lick-their-paws-causes-guide",
+        "date": "2026-09-23",
+        "description": "Dogs lick their paws for reasons ranging from boredom to allergies. Here's how to tell the harmless habits from the ones that need a vet visit."
+      },
+      {
         "title": "How to Stop Your Dog From Begging at the Table: The Fix That Actually Works (and the Mistake 90% of Owners Make)",
         "slug": "how-to-stop-dog-begging-table-step-by-step",
         "date": "2026-09-21",
@@ -469,6 +475,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Clean Your Cat's Ears Without a Fight: The Step-by-Step Method Vets Actually Recommend",
+        "slug": "how-to-clean-cat-ears-step-by-step-guide",
+        "date": "2026-09-23",
+        "description": "Learn how to clean your cat's ears safely at home, spot mites and infections early, and pick the right cleaner without stressing your cat out."
+      },
       {
         "title": "Why Is My Cat Losing Weight? 10 Causes Owners Miss and When It Gets Urgent",
         "slug": "cat-losing-weight-causes-when-to-worry-guide",
@@ -942,6 +954,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Gerbil vs Hamster: Which Little Rodent Actually Fits Your Life",
+        "slug": "gerbil-vs-hamster-which-pet-choose",
+        "date": "2026-09-23",
+        "description": "Gerbils and hamsters both look cute in the pet store, but they behave nothing alike. Here is the honest breakdown of which one fits your home."
+      },
       {
         "title": "Guinea Pig Bumblefoot: Why Those Swollen Feet Happen and How to Fix Them",
         "slug": "guinea-pig-bumblefoot-causes-prevention-guide",
