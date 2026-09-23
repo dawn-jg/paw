@@ -1398,6 +1398,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "How to Feed Aquarium Fish: The Portion Sizes and Schedules That Actually Keep Fish Alive",
+        "slug": "how-to-feed-aquarium-fish-schedule-guide",
+        "date": "2026-09-24",
+        "description": "Stop overfeeding your fish. Exact portion sizes, feeding frequencies by species, and the warning signs your tank is telling you it's getting too much food."
+      },
+      {
         "title": "Why Is My Fish Gasping at the Surface? Every Cause Ranked From Fix-Tonight to Tank-Emergency",
         "slug": "why-is-my-fish-gasping-at-surface-causes-fixes-guide",
         "date": "2026-09-22",
@@ -1859,6 +1865,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Should You House Two Reptiles Together? The Cohabitation Truth Most Owners Learn Too Late",
+        "slug": "should-you-house-two-reptiles-together-cohabitation-guide",
+        "date": "2026-09-24",
+        "description": "Can two bearded dragons or leopard geckos share a tank? Here is the honest answer on reptile cohabitation, safe pairings, and warning signs of stress."
+      },
+      {
         "title": "How to Find a Reptile Vet Before You Need One: The Guide Most Owners Start Too Late",
         "slug": "how-to-find-reptile-vet-exotic-guide",
         "date": "2026-09-22",
@@ -2307,6 +2319,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Why Is My Parrot Biting Me? The Real Reasons Behind the Bite and How to Fix It",
+        "slug": "why-is-my-parrot-biting-me-causes-fixes-guide",
+        "date": "2026-09-24",
+        "description": "Parrot bites hurt and they usually mean something. Learn the real reasons birds bite and the fixes that work without damaging trust."
+      },
       {
         "title": "How to Switch Your Bird From Seeds to Pellets: The Conversion Plan That Actually Works",
         "slug": "how-to-convert-bird-seeds-to-pellets-guide",
