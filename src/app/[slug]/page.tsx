@@ -56,6 +56,9 @@ const LISTING_SLUGS = new Set(['blog', 'buying-guides', 'comparisons']);
 // All valid non-article slugs
 const ALL_STATIC_SLUGS = new Set([...CAT_SLUGS, ...INFO_SLUGS, ...LISTING_SLUGS]);
 
+// AdSense 恢复期：薄内容（<1500词）暂时 noindex，扩充完成后从 noindex-slugs.json 移除恢复索引
+const NOINDEX_SLUGS = new Set<string>(JSON.parse(fs.readFileSync(path.join(process.cwd(), 'src/data/noindex-slugs.json'), 'utf8')));
+
 const EMOJI: Record<string, string> = {
   'Dogs': '\uD83D\uDC15', 'Cats': '\uD83D\uDC08', 'Small Pets': '\uD83D\uDC39',
   'Birds': '\uD83E\uDD9C', 'Fish': '\uD83D\uDC20', 'Reptiles': '\uD83E\uDD8E',
@@ -122,6 +125,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: resolved.post.title,
     description: resolved.post.description,
     alternates: { canonical: `https://pawcritic.com/${slug}` },
+    ...(NOINDEX_SLUGS.has(slug) ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: resolved.post.title,
       description: resolved.post.description,

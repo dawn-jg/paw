@@ -216,7 +216,12 @@ DO: open with a specific observation, surprising fact, strong opinion, or direct
 Recent ${cat} articles (do NOT duplicate):
 ${recent}
 
-Recent product roundups on the site (do NOT write another roundup unless it has been 7+ days since the last one; prefer Buying Guide / Care-How-To / Comparison / Health & Safety / FAQ types):
+=== TOPIC TYPE (MANDATORY — AdSense recovery period) ===
+FORBIDDEN article types: product roundups, "Best X for Y", "Top N", buying guides, gift guides, any list-of-products format.
+REQUIRED types — pick ONE: Care How-To (step-by-step guides), Health & Safety (symptoms, prevention, when to see a vet), Behavior & Training, Species/Setup FAQ, Honest Comparison (two approaches/products compared on merits, max 1 affiliate link).
+Article must teach something an owner can actually do or understand — not sell a list of products.
+
+Recent product roundups on the site (already exist; do NOT write another one in any form):
 ${recentRoundups}
 
 Pick a fresh, searchable topic not covered above. Return ONLY the JSON object.`;
@@ -244,6 +249,9 @@ function validateArticle(obj, cat) {
   if (!obj.slug || !obj.content || !obj.title || !obj.description) throw new Error('Missing fields for ' + cat);
   if (allSlugs.has(obj.slug)) throw new Error('Slug collision: ' + obj.slug);
   if (!/^[a-z0-9-]+$/.test(obj.slug)) throw new Error('Bad slug format: ' + obj.slug);
+  // AdSense 恢复期：禁止 best-X / top-N 荟萃类
+  if (/^(best|top)[-\d]/.test(obj.slug) || /^the-\d+-best/.test(obj.slug))
+    throw new Error('Roundup-type article banned during AdSense recovery: ' + obj.slug);
 
   const words = obj.content.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
   if (words < 2000) throw new Error('Too short: ' + words + ' words for ' + cat);
