@@ -2,39 +2,45 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How We Test Pet Products',
-  description: 'Our rigorous, multi-step testing methodology for pet product reviews — from initial research to final rating.',
+  title: 'How We Research & Review Pet Products',
+  description: 'Our research-based methodology: how we shortlist products, analyze verified owner feedback, cross-check expert sources, and build transparent ratings.',
 }
 
 export default function HowWeTestPage() {
   return (
     <div className="static-page">
       <div className="container-wide" style={{ maxWidth: 760, margin: '3rem auto 0' }}>
-        
+
         <h1 className="section-title" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>
-          How We Test Pet Products
+          How We Research &amp; Review Pet Products
         </h1>
         <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
-          Last updated: June 2026
+          Last updated: September 2026
         </p>
 
         <section className="static-section">
-          <h2>Our Testing Promise</h2>
+          <h2>Our Approach, Stated Plainly</h2>
           <p>
-            Every product featured on PawCritic goes through our <strong>6-step evaluation process</strong>. 
-            We don't just read the manual and write a review — we use the product, stress-test it, 
-            compare it against competitors, and measure it against objective criteria. When we say 
-            "Best Overall," we mean it.
+            PawCritic is a research-based review site. We want to be upfront about what that means:
+            <strong> we do not run a physical testing lab</strong>, and we don't claim to have personally
+            used every one of the hundreds of products we cover. Instead, every recommendation on this
+            site is built from structured research — combining manufacturer specifications, safety and
+            recall records, large-scale analysis of verified owner feedback, and cross-checking against
+            veterinary and expert sources.
+          </p>
+          <p>
+            We believe honest research, clearly explained, is more useful to pet owners than invented
+            testing claims. So this page describes exactly how our reviews are made.
           </p>
         </section>
 
         <section className="static-section">
-          <h2>The 6-Step Process</h2>
+          <h2>The 6-Step Research Process</h2>
 
           <h3>Step 1: Market Research &amp; Shortlisting</h3>
           <p>
-            We scan the market — Amazon best-sellers, specialty pet retailers, veterinary recommendations, 
-            and community forums like Reddit's r/Aquariums, r/dogs, and r/CatAdvice. From hundreds of 
+            We scan the market — Amazon best-sellers, specialty pet retailers, veterinary recommendations,
+            and community forums like Reddit's r/Aquariums, r/dogs, and r/CatAdvice. From hundreds of
             options, we narrow down to <strong>7–10 top contenders</strong> per category based on:
           </p>
           <ul style={{ paddingLeft: '1.5rem', margin: '0.5rem 0', lineHeight: 1.8 }}>
@@ -44,80 +50,80 @@ export default function HowWeTestPage() {
             <li>Price-to-value ratio</li>
           </ul>
 
-          <h3>Step 2: Hands-On Testing</h3>
+          <h3>Step 2: Specification &amp; Safety Analysis</h3>
           <p>
-            This is where the real work happens. We purchase products ourselves (no free samples from 
-            manufacturers) and test them under real conditions:
+            For each shortlisted product, we examine the manufacturer's full specifications and materials,
+            then check for red flags:
           </p>
           <ul style={{ paddingLeft: '1.5rem', margin: '0.5rem 0', lineHeight: 1.8 }}>
-            <li><strong>Dog &amp; Cat products:</strong> Tested with our own pets over 2–4 weeks. Food tested for palatability, digestibility, and ingredient quality. Toys tested for durability under enthusiastic play.</li>
-            <li><strong>Aquarium equipment:</strong> Installed in active tanks, monitored for temperature stability (for heaters), flow rate (for pumps), light output (for fixtures), and long-term reliability.</li>
-            <li><strong>Reptile products:</strong> Tested in bioactive and traditional enclosures. Heating elements measured with infrared thermometers for gradient accuracy.</li>
-            <li><strong>Bird &amp; Small Pet products:</strong> Set up in actual cages and habitats. Evaluated for safety (no sharp edges, non-toxic materials), durability, and engagement.</li>
+            <li><strong>Safety records:</strong> CPSC recalls, FDA pet food recalls, and brand-wide safety history</li>
+            <li><strong>Standards compliance:</strong> AAFCO nutritional adequacy (for foods), ASTM durability standards (for toys), electrical safety certifications (for powered equipment)</li>
+            <li><strong>Materials transparency:</strong> whether the manufacturer discloses what the product is actually made of</li>
           </ul>
 
-          <h3>Step 3: Performance Metrics</h3>
+          <h3>Step 3: Verified Owner Feedback Analysis</h3>
           <p>
-            Every product gets scored on a <strong>1–5 scale</strong> across 5 dimensions:
+            Real-world performance comes from the people who live with these products every day. We read
+            and analyze <strong>hundreds to thousands of verified-purchase reviews per product</strong>,
+            looking for patterns rather than anecdotes:
           </p>
-          <table style={{ width: '100%', borderCollapse: 'collapse', margin: '1rem 0' }}>
-            <thead>
-              <tr style={{ background: 'var(--color-surface-alt, #f4f4f4)' }}>
-                <th style={{ padding: '0.5rem', textAlign: 'left', borderBottom: '2px solid var(--color-border, #ddd)' }}>Dimension</th>
-                <th style={{ padding: '0.5rem', textAlign: 'left', borderBottom: '2px solid var(--color-border, #ddd)' }}>What We Measure</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ['Build Quality', 'Materials, durability, manufacturing defects, longevity'],
-                ['Performance', 'Does it do what it claims? Measured results vs. advertised specs'],
-                ['Safety', 'Non-toxic materials, no choking hazards, electrical safety (where applicable)'],
-                ['Ease of Use', 'Setup time, learning curve, maintenance requirements, instruction clarity'],
-                ['Value', 'Price vs. quality vs. longevity — is it worth it?'],
-              ].map(([dim, desc]) => (
-                <tr key={dim}>
-                  <td style={{ padding: '0.5rem', borderBottom: '1px solid var(--color-border, #ddd)', fontWeight: 600 }}>{dim}</td>
-                  <td style={{ padding: '0.5rem', borderBottom: '1px solid var(--color-border, #ddd)' }}>{desc}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-          <h3>Step 4: Competitive Comparison</h3>
+          <ul style={{ paddingLeft: '1.5rem', margin: '0.5rem 0', lineHeight: 1.8 }}>
+            <li>Recurring failure modes reported across many independent reviews</li>
+            <li>How the product performs for different pet sizes, breeds, and temperaments</li>
+            <li>Complaints that appear after months of use, not just first impressions</li>
+            <li>How the manufacturer responds when things go wrong</li>
+          </ul>
           <p>
-            We compare each product head-to-head against its closest competitors at similar price points. 
-            If two products score similarly, we ask: which one is easier to maintain? Which has better 
+            We weight detailed, verified reviews over one-line ratings, and we treat clusters of identical
+            reviews as a warning sign rather than social proof.
+          </p>
+
+          <h3>Step 4: Expert Source Cross-Checking</h3>
+          <p>
+            Health, nutrition, and safety claims are cross-checked against authoritative veterinary and
+            industry sources, including AAHA, AVMA, Cornell University College of Veterinary Medicine,
+            AAFCO, and species-specific expert organizations. Where a claim is contested or evidence is
+            thin, our articles say so instead of picking a side for drama.
+          </p>
+
+          <h3>Step 5: Competitive Comparison</h3>
+          <p>
+            We compare each product head-to-head against its closest competitors at similar price points.
+            If two products research similarly, we ask: which one is easier to maintain? Which has better
             customer support? Which has a longer warranty?
           </p>
 
-          <h3>Step 5: Long-Term Follow-Up</h3>
+          <h3>Step 6: Rating &amp; Review</h3>
           <p>
-            For key products, we follow up after <strong>2 and 6 months</strong> to check on long-term durability. 
-            If a product develops issues over time, we update the review and adjust the rating accordingly.
-          </p>
-
-          <h3>Step 6: Final Review &amp; Rating</h3>
-          <p>
-            Our editorial team combines all data — performance scores, competitive analysis, customer 
-            review sentiment from thousands of verified purchases — into a final rating and written review. 
-            Every review includes a clear <strong>Best For</strong> recommendation so you know exactly 
-            which product fits your specific situation.
+            Our editorial team combines all research — specification analysis, owner-feedback patterns,
+            expert-source cross-checks, and competitive positioning — into a final rating and written
+            review. Every review includes a clear <strong>Best For</strong> recommendation so you know
+            exactly which product fits your specific situation.
           </p>
         </section>
 
         <section className="static-section">
-          <h2>Why Trust PawCritic?</h2>
+          <h2>How We Make Money — And Why It Doesn't Pick Our Winners</h2>
           <ul style={{ paddingLeft: '1.5rem', margin: '0.5rem 0', lineHeight: 1.8 }}>
-            <li><strong>No free rides.</strong> We purchase every product we test. No sponsored reviews, no paid placements.</li>
+            <li><strong>Affiliate links, clearly disclosed.</strong> Some links are Amazon affiliate links — if you buy through one, we may earn a commission at no extra cost to you. Every article with affiliate links carries a disclosure.</li>
+            <li><strong>Rankings aren't for sale.</strong> No manufacturer can pay for placement. Commission rates do not influence which products we recommend — we regularly recommend products with low or no affiliate commission when the research supports them.</li>
             <li><strong>Transparent ratings.</strong> Every score is explained. If a product gets 3 stars, you'll know exactly why.</li>
             <li><strong>Regular updates.</strong> Reviews are revisited as new models launch or older products are discontinued.</li>
-            <li><strong>Veterinary consultant review.</strong> Health and safety claims are reviewed by our consulting veterinarian.</li>
+          </ul>
+        </section>
+
+        <section className="static-section">
+          <h2>Our Limitations</h2>
+          <ul style={{ paddingLeft: '1.5rem', margin: '0.5rem 0', lineHeight: 1.8 }}>
+            <li>We can't test every product variant, and manufacturing can change without notice. Always check the current product listing and manual before purchase.</li>
+            <li>Review-based research inherits the blind spots of its sources — we mitigate this with volume analysis and expert cross-checking, but it's not a substitute for hands-on experience with your specific pet.</li>
+            <li>Nothing on this site is veterinary advice. For health concerns, consult your veterinarian.</li>
           </ul>
         </section>
 
         <section className="static-section" style={{ paddingBottom: '3rem' }}>
           <p style={{ fontSize: '1.1rem' }}>
-            Want the full picture? Read our <Link href="/editorial-policy">Editorial Policy</Link> for 
+            Want the full picture? Read our <Link href="/editorial-policy">Editorial Policy</Link> for
             how we handle corrections, conflicts of interest, and reader feedback.
           </p>
         </section>
