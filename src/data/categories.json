@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "How to Stop Your Dog From Barking at Everything: The Training Plan That Actually Sticks",
+        "slug": "how-to-stop-dog-barking-at-everything-step-by-step",
+        "date": "2026-09-27",
+        "description": "Dogs bark at doorbells, squirrels, and nothing at all. Here is the honest, step-by-step plan to quiet the noise without yelling or shock collars."
+      },
+      {
         "title": "Why Does My Dog Lick Their Paws? The Real Reasons (and When It Actually Means Trouble)",
         "slug": "why-dogs-lick-their-paws-causes-guide",
         "date": "2026-09-23",
@@ -475,6 +481,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "How to Clicker Train Your Cat: The Step-by-Step Method That Actually Works",
+        "slug": "how-to-clicker-train-cat-step-by-step",
+        "date": "2026-09-27",
+        "description": "Yes, you can train a cat. Here is the realistic step-by-step clicker method, timing tips, and the mistakes that make cats quit on session two."
+      },
       {
         "title": "Why Is My Cat Peeing Outside the Litter Box? The Real Causes and Fixes That Work",
         "slug": "cat-urinating-outside-litter-box-causes-fixes-guide",
@@ -960,6 +972,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Tell If Your Rabbit Is Sick: 12 Subtle Warning Signs Most Owners Miss",
+        "slug": "how-to-tell-if-rabbit-is-sick-warning-signs",
+        "date": "2026-09-27",
+        "description": "Rabbits hide illness brutally well. Learn the early warning signs of a sick bunny, from GI stasis to dental trouble, and exactly when to call the vet."
+      },
       {
         "title": "How to Set Up a Gerbil Cage Step by Step (Deep Bedding, Burrows, and the Gear That Matters)",
         "slug": "how-to-set-up-gerbil-cage-step-by-step",
