@@ -28,7 +28,7 @@ export default function EditorialPolicyPage() {
             <li>Accept payment or gifts in exchange for positive reviews</li>
             <li>Allow manufacturers to review or approve content before publication</li>
             <li>Guarantee favorable placement or ratings to any brand</li>
-            <li>Accept free products without clear disclosure (we purchase products independently when we can)</li>
+            <li>Accept free products or compensation without disclosing it in the review</li>
           </ul>
         </section>
 

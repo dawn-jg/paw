@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About PawCritic',
-  description: 'Meet the PawCritic team — passionate pet owners and product researchers helping you choose the best for your furry, feathered, and scaly friends.',
+  description: 'How PawCritic researches and reviews pet products — our methodology, our editorial standards, and how the site is funded. Independent, unsponsored ratings.',
 }
 
 export default function AboutPage() {
@@ -26,14 +26,14 @@ export default function AboutPage() {
         <section className="static-section">
           <h2>Our Story</h2>
           <p>
-            PawCritic was born from a simple frustration: standing in a pet store aisle, scrolling through 
-            hundreds of Amazon reviews, and still not knowing which product to trust. Every listing had 
-            five-star ratings. Every brand claimed to be "the best." But real pet owners know the truth — 
-            not all products are created equal.
+            Choosing a pet product usually means choosing between hundreds of near-identical listings.
+            Nearly every one carries a five-star average. Nearly every brand calls itself "the best."
+            But an average rating tells you very little about whether a product will hold up for your
+            animal, in your home, over the years it needs to last.
           </p>
           <p>
-            We started PawCritic to bridge the gap between marketing claims and real-world performance. 
-            Since then, we've researched <strong>hundreds of pet products</strong> across six categories — Dogs, Cats, 
+            PawCritic exists to close the gap between marketing claims and how these products actually
+            perform. We've researched <strong>hundreds of pet products</strong> across six categories — Dogs, Cats, 
             Small Pets, Birds, Fish, and Reptiles — and published in-depth reviews that cut through the noise.
           </p>
         </section>
@@ -81,8 +81,9 @@ export default function AboutPage() {
           <h2>How We Make Money</h2>
           <p>
             PawCritic is reader-supported. When you buy a product through our links, we may earn an 
-            affiliate commission — at <strong>no extra cost to you</strong>. This is how we keep the site running, 
-            pay our team, and purchase products for testing.
+            affiliate commission — at <strong>no extra cost to you</strong>. This is how we keep the site running
+            and pay our editorial team. Affiliate revenue has no bearing on our ratings: a product we
+            rank last is one we still link to if it's the best of a bad set.
           </p>
           <p>
             We participate in the Amazon Associates program and other affiliate networks. Read more 
