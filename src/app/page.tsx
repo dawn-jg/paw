@@ -15,7 +15,7 @@ const featuredReviews = latestPosts.slice(0, 3).map((p: any) => ({
 }))
 
 const trustStats = [
-  { number: '300+', label: 'In-Depth Reviews Published' },
+  { number: '470+', label: 'In-Depth Reviews Published' },
   { number: '6', label: 'Pet Categories Covered' },
   { number: '3', label: 'Expert Reviewers on Staff' },
   { number: '100%', label: 'Honest Reviews' },
@@ -48,7 +48,7 @@ export default function Home() {
         <div className="container-wide hero-grid">
           <div className="hero-text">
             <span className="hero-chip animate-in">
-              {'\u{1F43E}'} The Trusted Pet Review Authority
+              {'\u{1F43E}'} Independent Pet Product Research
             </span>
             <h1 className="hero-heading animate-in" style={{ animationDelay: '0.1s' }}>
               Honest Pet Product Reviews
@@ -56,8 +56,8 @@ export default function Home() {
               <span className="hero-highlight">You Can Trust</span>
             </h1>
             <p className="hero-desc animate-in" style={{ animationDelay: '0.2s' }}>
-              We test pet products like our pets depend on it &mdash; because they do.
-              No sponsored reviews. No sugar-coating.
+              We read the specifications, safety records, and thousands of verified owner
+              reviews &mdash; so you can choose with confidence. No sponsored reviews. No sugar-coating.
             </p>
             <div className="hero-cta animate-in" style={{ animationDelay: '0.3s' }}>
               <Link href="/reviews" className="btn-primary">Browse All Reviews</Link>
@@ -79,7 +79,7 @@ export default function Home() {
         <div className="container-wide">
           <h2 className="section-title">Why Trust PawCritic?</h2>
           <p className="section-subtitle">
-            Every review is backed by thorough research, hands-on testing, and a genuine love for animals.
+            Every review is built on documented research, expert cross-checking, and a genuine love for animals.
           </p>
 
           <div className="stats-row">
@@ -97,9 +97,9 @@ export default function Home() {
 
           <div className="values-row">
             {[
-              { icon: '\u{1F52C}', title: 'Research-Backed', desc: 'Grounded in veterinary research, ingredient analysis, and real-world testing.' },
-              { icon: '\u{1F91D}', title: 'No Sponsored Reviews', desc: 'We buy every product we test. No brand can pay for a better rating.' },
-              { icon: '\u{1F3E0}', title: 'Real-World Testing', desc: 'Our team tests products in real homes with real pets.' },
+              { icon: '\u{1F52C}', title: 'Research-Backed', desc: 'Grounded in veterinary literature, published specifications, and recall data.' },
+              { icon: '\u{1F91D}', title: 'No Sponsored Reviews', desc: 'No brand can pay for a better rating. Our rankings are not for sale.' },
+              { icon: '\u{1F4CA}', title: 'Owner-Feedback Analysis', desc: 'We analyze thousands of verified-purchase reviews to find patterns, not anecdotes.' },
               { icon: '\u{1F504}', title: 'Regularly Updated', desc: 'We revisit reviews regularly to keep recommendations fresh.' },
             ].map((v, i) => (
               <div key={i} className="value-card">
@@ -172,7 +172,7 @@ export default function Home() {
           <div className="cta-box">
             <h2 className="cta-heading">Ready to find the best for your pet?</h2>
             <p className="cta-desc">
-              Browse hundreds of honest, detailed reviews by pet owners who care as much as you do.
+              Browse hundreds of honest, detailed reviews written for pet owners who care as much as you do.
             </p>
             <Link href="/reviews" className="btn-primary cta-btn">Start Browsing</Link>
           </div>

@@ -13,7 +13,7 @@ const cols: Record<string, { href: string; label: string }[]> = {
   ],
   About: [
     { href: '/about', label: 'About' },
-    { href: '/how-we-test', label: 'How We Test' },
+    { href: '/how-we-test', label: 'How We Research' },
     { href: '/contact', label: 'Contact' },
     { href: '/editorial-policy', label: 'Editorial Policy' },
     { href: '/privacy-policy', label: 'Privacy Policy' },

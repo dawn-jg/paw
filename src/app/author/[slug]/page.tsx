@@ -6,7 +6,9 @@ import path from 'path';
 
 export const dynamic = 'force-static';
 
-// ─── Author profiles (3 experts) ─────────────────────
+// ─── Author profile ──────────────────────────────────
+// 注：本站不使用虚构的个人作者人设。署名统一为编辑团队，
+// 且不声称任何专业资质、执业头衔或亲身产品实测经历。
 interface AuthorProfile {
   name: string;
   title: string;
@@ -16,26 +18,12 @@ interface AuthorProfile {
 }
 
 const AUTHORS: Record<string, AuthorProfile> = {
-  'dr-sarah-chen': {
-    name: 'Dr. Sarah Chen',
-    title: 'Veterinary Consultant & Senior Reviewer',
-    bio: 'Veterinary consultant and senior reviewer at PawCritic with 8 years of clinical experience in small animal practice. Sarah specializes in dog and cat health, nutrition, and product safety, translating clinical evidence into practical buying advice for pet parents.',
-    initials: 'SC',
-    sameAs: ['https://www.linkedin.com/in/pawcritic-sarah-chen'],
-  },
-  'emily-zhao': {
-    name: 'Emily Zhao',
-    title: 'Avian & Small Pet Specialist',
-    bio: 'Emily Zhao is a dedicated avian specialist and small pet enthusiast. With years of hands-on experience in bird care and training, she provides practical, well-researched advice for pet bird and small pet owners.',
-    initials: 'EZ',
-    sameAs: ['https://www.linkedin.com/in/pawcritic-emily-zhao'],
-  },
-  'marcus-rivera': {
-    name: 'Marcus Rivera',
-    title: 'Aquatics & Reptile Gear Specialist',
-    bio: 'Aquatics and reptile gear specialist with a passion for husbandry. Marcus has been reviewing pet products for over 7 years and focuses on fish and reptile habitat equipment, testing for safety, durability, and real-world performance.',
-    initials: 'MR',
-    sameAs: ['https://www.linkedin.com/in/pawcritic-marcus-rivera'],
+  'editorial-team': {
+    name: 'PawCritic Editorial Team',
+    title: 'Research & Editorial',
+    bio: "PawCritic's editorial team builds every guide from manufacturer specifications, published veterinary and industry guidance, and large-scale analysis of verified owner feedback. We do not operate a physical testing lab, and we do not claim to have personally used every product we cover. Read our full research methodology on the How We Research page.",
+    initials: 'PC',
+    sameAs: [],
   },
 };
 
@@ -71,15 +59,14 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
     .filter((p) => p.authorSlug === slug)
     .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  const jsonLd = {
+  const jsonLd: Record<string, unknown> = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
+    '@type': 'Organization',
     name: author.name,
     url: `https://pawcritic.com/author/${slug}`,
-    jobTitle: author.title,
     description: author.bio,
-    sameAs: author.sameAs,
   };
+  if (author.sameAs.length) jsonLd.sameAs = author.sameAs;
 
   return (
     <main className="static-page">

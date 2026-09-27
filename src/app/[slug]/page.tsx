@@ -495,8 +495,8 @@ const PAGE_META: Record<string, Metadata> = {
     description: 'Learn about PawCritic — our mission to provide honest, research-backed pet product reviews for every pet owner.',
   },
   'how-we-test': {
-    title: 'How We Test Pet Products',
-    description: 'Transparent methodology: how we research, test, and rate every pet product we review. No sponsored reviews, ever.',
+    title: 'How We Research Pet Products',
+    description: 'Transparent methodology: how we research and rate every pet product we review. No sponsored reviews, ever.',
   },
   contact: {
     title: 'Contact PawCritic | Get in Touch',
@@ -530,18 +530,18 @@ const INFO_CONTENT: Record<string, { heading: string; emoji: string; sections: A
     emoji: '🐾',
     sections: [
       { title: 'Our Mission', body: 'At PawCritic, we believe every pet deserves the best. Our mission is simple: provide honest, research-backed product reviews so pet owners can make confident decisions. No fluff. No sponsored reviews. Just real insights.' },
-      { title: 'Who We Are', body: 'We are a team of passionate pet owners, veterinarians, and researchers. Between us, we have cared for dogs, cats, birds, fish, reptiles, and small pets. We test products in real homes with real pets because that is the only way to truly know what works.' },
-      { title: 'Why Trust Us?', body: 'Every review we publish goes through a rigorous research process. We analyze ingredients, study materials, consult veterinary sources, and test products hands-on. Brands cannot pay for better ratings — our editorial integrity is non-negotiable.' },
+      { title: 'Who We Are', body: 'We are a team of passionate pet owners and product researchers. Between us, we have cared for dogs, cats, birds, fish, reptiles, and small pets. Every recommendation we publish is built from documented research, verified owner feedback, and authoritative sources rather than invented testing claims.' },
+      { title: 'Why Trust Us?', body: 'Every review we publish goes through a rigorous research process. We analyze ingredients, study materials, consult veterinary sources, and cross-check every safety claim against published guidance. Brands cannot pay for better ratings — our editorial integrity is non-negotiable.' },
       { title: 'Our Promise', body: 'We promise to always put pets first. No misleading claims. No hidden sponsorships. Just honest recommendations you can count on.' },
     ],
   },
   'how-we-test': {
-    heading: 'How We Test',
+    heading: 'How We Research Pet Products',
     emoji: '🔬',
     sections: [
-      { title: 'Our Testing Process', body: 'Every product featured on PawCritic undergoes a comprehensive three-phase evaluation: Research, Hands-On Testing, and Long-Term Assessment. We never review products we have not personally tested or thoroughly researched.' },
+      { title: 'Our Research Process', body: 'Every product featured on PawCritic goes through a research-based evaluation: structured market research, specification and safety analysis, and ongoing review of verified owner feedback. We do not run a physical testing lab, and we do not claim to have personally used every product we cover.' },
       { title: 'Phase 1 — Research', body: 'We begin by analyzing product specifications, ingredient lists, material safety data, and manufacturer claims. We consult veterinary research, industry standards, and regulatory guidelines to establish a baseline for quality and safety.' },
-      { title: 'Phase 2 — Hands-On Testing', body: 'Products are tested in real homes with real pets. We evaluate usability, durability, pet acceptance, and real-world performance over a minimum of two weeks. Each product is scored against a standardized rubric covering 10+ criteria.' },
+      { title: 'Phase 2 — Verified Owner Feedback Analysis', body: 'We analyze hundreds to thousands of verified-purchase reviews per product, looking for recurring failure modes, how a product performs across different pet sizes and temperaments, and complaints that surface after months of use rather than on day one. Clusters of identical reviews are treated as a warning sign, not as social proof.' },
       { title: 'Phase 3 — Long-Term Assessment', body: 'We revisit products after extended use — sometimes months later — to assess durability, continued effectiveness, and whether they still deliver value. Reviews are updated when products change or new information emerges.' },
       { title: 'Our Rating System', body: 'Products are rated on a 1-5 scale across categories including Quality, Value, Pet Safety, Ease of Use, and Customer Satisfaction. The final score reflects a weighted average, with safety and quality receiving the highest weight.' },
     ],
@@ -560,11 +560,11 @@ const INFO_CONTENT: Record<string, { heading: string; emoji: string; sections: A
     heading: 'Editorial Policy',
     emoji: '📋',
     sections: [
-      { title: 'Our Editorial Standards', body: 'PawCritic upholds the highest standards of editorial integrity. Every piece of content we publish is created through independent research, hands-on testing, and objective analysis. We are committed to accuracy, transparency, and fairness.' },
+      { title: 'Our Editorial Standards', body: 'PawCritic upholds the highest standards of editorial integrity. Every piece of content we publish is created through independent research, expert cross-checking, and objective analysis. We are committed to accuracy, transparency, and fairness.' },
       { title: 'Independence', body: 'PawCritic maintains full editorial independence. Brands, manufacturers, and advertisers have no influence over our review content, ratings, or recommendations. We do not accept payment for positive reviews or higher ratings.' },
       { title: 'Affiliate Disclosure', body: 'PawCritic participates in the Amazon Associates Program and other affiliate programs. When you click a link and make a purchase, we may earn a small commission — at no extra cost to you. This does not affect our reviews; we recommend products based on merit alone.' },
       { title: 'Corrections', body: 'If we discover an error in our content, we correct it promptly and note the update. Readers who identify potential errors are encouraged to contact us.' },
-      { title: 'Product Sourcing', body: 'We purchase most products we review ourselves. Occasionally, manufacturers provide samples for testing, but this is always disclosed and has no bearing on our evaluation or rating.' },
+      { title: 'Product Sourcing', body: 'We research products using manufacturer specifications, published safety and recall records, and large-scale analysis of verified owner feedback. We do not operate a testing laboratory, and where a product has not been examined firsthand we say so in the review.' },
     ],
   },
   newsletter: {

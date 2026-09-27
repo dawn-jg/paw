@@ -22,13 +22,13 @@ export default function EditorialPolicyPage() {
           <h2>1. Editorial Independence</h2>
           <p>
             PawCritic maintains <strong>complete editorial independence</strong>. Our reviews, ratings, 
-            and recommendations are based solely on our testing and research. We do not:
+            and recommendations are based solely on our research process and editorial judgment. We do not:
           </p>
           <ul style={{ paddingLeft: '1.5rem', margin: '0.5rem 0', lineHeight: 1.8 }}>
             <li>Accept payment or gifts in exchange for positive reviews</li>
             <li>Allow manufacturers to review or approve content before publication</li>
             <li>Guarantee favorable placement or ratings to any brand</li>
-            <li>Accept free products without clear disclosure (we prefer to purchase ourselves)</li>
+            <li>Accept free products without clear disclosure (we purchase products independently when we can)</li>
           </ul>
         </section>
 
@@ -69,7 +69,7 @@ export default function EditorialPolicyPage() {
           <h2>4. Rating Scale</h2>
           <p>
             Every product receives a rating from 1 to 5 stars based on weighted scores across 
-            five dimensions (see <Link href="/how-we-test">How We Test</Link> for details):
+            five dimensions (see <Link href="/how-we-test">How We Research</Link> for details):
           </p>
           <ul style={{ paddingLeft: '1.5rem', margin: '0.5rem 0', lineHeight: 1.8 }}>
             <li>★★★★★ <strong>Excellent:</strong> Best-in-class performance, exceptional value. Highly recommended.</li>
@@ -110,7 +110,7 @@ export default function EditorialPolicyPage() {
           <p>
             Your experience matters. If you've used a product we reviewed and had a different experience 
             — better or worse — we want to hear about it. Reader feedback helps us identify products 
-            that perform differently in the long run versus initial testing, and we may update our 
+            that perform differently in the long run versus initial research, and we may update our 
             reviews to reflect emerging patterns.
           </p>
         </section>
