@@ -52,13 +52,70 @@ function extractJSON(text) {
   throw new Error('JSON parse failed: ' + t.slice(0, 300));
 }
 
-const AI_TELLS = ['in today\'s fast-paced world', 'let\'s dive in', 'game-changer', 'when it comes to', 'pet parent', 'furry friend', 'look no further', 'delve into', 'navigate the world of'];
+const AI_TELLS = ['in today\'s fast-paced world', "today's digital age", 'seasoned pet owner', 'let\'s dive in', "let's explore", "let's take a closer look", "it's important to note", "it's worth mentioning", 'in conclusion', 'to sum up', "as we've seen", 'as discussed above', 'without further ado', 'that being said', 'delve into', 'navigate the world of', 'embark on a journey', 'game-changer', 'revolutionary', 'needless to say', 'goes without saying', 'moreover,', 'furthermore,', 'additionally,', 'when it comes to', 'pet parent', 'furry friend', 'look no further', 'unlock', 'elevate', 'in this guide', 'peace of mind', 'robust', 'in this article', 'leverage', 'walk you through'];
+
+// 第一人称实测声称：PawCritic 不做 hands-on 实测（见 /how-we-test），
+// 任何 "we tested / 红外测温 / N个月实测" 都是虚构，必须清除。
+const CLAIM_TELLS = [
+  /\bwe(?:'ve| have)?\s+(?:tested|measured|tried|purchased|bought|used|submerged|soaked|weighed|timed|logged|tracked)\b/i,
+  /\bour\s+(?:team|testing)\s+(?:tested|measured|tried|used|handled|protocol|methodology)\b/i,
+  /\bhow\s+we\s+(?:tested|test|evaluated|reviewed|rate)\b/i,
+  /\b(?:weeks?|months?)\s+of\s+(?:hands-?on\s+)?(?:testing|use)\b/i,
+  /\bwe\s+ran\s+(?:our\s+own\s+)?test/i,
+  /\bin\s+our\s+(?:own\s+)?(?:testing|tests|lab)\b/i,
+  /\binfrared\s+thermometer/i,
+  /\bcalibrated\s+(?:scale|meter|thermometer)\b/i,
+  /\blab(?:oratory)?\s+test(?:ing|s)?\b/i,
+];
+
+const TEMPLATE_MARKERS = [
+  /After extensive research and testing, we've compiled our top picks for/i,
+  /When shopping for [^<]{5,200}, consider these key factors to ensure you are getting the best value/i,
+  /Look for durable materials and reputable brands/i,
+  /Prices vary widely depending on brand and features\. Budget options start around/i,
+  /Focus on quality, safety, and suitability for your specific pet\./i,
+  /Check Latest Price on Amazon/i,
+];
 
 function wordCount(html) { return (html || '').replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length; }
 
+// 纯模板填空文（mad-libs 产物）需要整篇重写，扩充只会把模板骨架撑得更长
+function isTemplateArticle(post) {
+  const c = post.content || '';
+  return TEMPLATE_MARKERS.filter(re => re.test(c)).length >= 3;
+}
+
 function buildPrompt(post) {
   const c = post.content || '';
+  const imgCount = (c.match(/<img /g) || []).length;
+
+  if (isTemplateArticle(post)) {
+    return `Rewrite this page completely as a genuine, useful pet-care article of 2400+ words. What you are given is a machine-generated placeholder: every paragraph is a fill-in-the-blank skeleton with the product category substituted in, and it carries no real information. Do NOT preserve its structure, headings, or wording. Throw the skeleton away and write a real article from scratch on the same topic.
+
+Keep: the slug's topic and search intent, every existing <img> tag (exactly ${imgCount} of them), every existing amazon.com/dp/ link (do not add or remove any), and the disclosure paragraph if present.
+
+The new article must be genuinely informative and specific: what to look for and why, real trade-offs, materials and specs that matter, sizing, safety and species-specific concerns, common mistakes, maintenance, and honest limitations. Attribution must be honest — cite published guidance, manufacturer specs, and owner reports. Do NOT claim PawCritic performed hands-on testing, used instruments, or ran any test period.
+
+HARD RULES:
+1. Output JSON ONLY, fields: content (the full rewritten HTML).
+2. HTML fragment only (h2/h3/p/ul/table), no doctype/html/head/body wrapper.
+3. NEVER use double quote characters (") inside content — single quotes everywhere (HTML attributes and quoted words).
+4. Keep EVERY existing <img> tag: the article must contain exactly ${imgCount} img tags.
+5. Keep EVERY existing amazon.com/dp/ link. Do not add new affiliate links. Do not add internal links.
+6. Keep the Disclosure paragraph if present.
+7. No AI boilerplate phrases.
+8. No first-person testing claims of any kind: never write 'we tested', 'we measured', 'our team tested', 'How We Tested', 'in our testing', 'N weeks of testing', or mention infrared thermometers / calibrated instruments / lab testing. Write as a research-based publication that synthesises published information.
+9. 2400+ words.
+
+PLACEHOLDER PAGE TO REPLACE:
+${c}
+
+Return ONLY the JSON object.`;
+  }
+
   return `Expand this existing pet-care article to 2400+ words. Keep the same topic, slug, structure, headings order, all existing <img> tags (positions and attributes), all existing affiliate links and the disclosure paragraph exactly as they are. Add depth: step-by-step details, specific numbers, common mistakes, expert-cited context, practical takeaways. Add at most 1-2 NEW short paragraphs only where they genuinely help.
+
+IMPORTANT — remove any first-person testing claims: PawCritic is a research-based publication and does not perform hands-on product testing. If the original text says 'we tested', 'we measured', 'our team tested', 'How We Tested', 'in our testing', 'over N weeks of testing', or mentions infrared thermometers or calibrated instruments, rewrite those passages to attribute the information honestly to published guidance, manufacturer specifications, and verified owner reports instead.
 
 HARD RULES:
 1. Output JSON ONLY, fields: content (the full expanded HTML).
@@ -115,6 +172,13 @@ Return ONLY the JSON object.`;
         const lower = c.toLowerCase().replace(/elevated/g, ' ');
         const hits = AI_TELLS.filter(t => lower.includes(t));
         if (hits.length) throw new Error('AI tells: ' + hits.join(';'));
+        // 第一人称实测声称：与 /how-we-test 的 research-based 声明冲突，必须清零
+        const claimPlain = c.replace(/<[^>]+>/g, ' ');
+        const claimHits = CLAIM_TELLS.filter(re => re.test(claimPlain));
+        if (claimHits.length) throw new Error('fabricated testing claims: ' + claimHits.map(r => r.source).join(' | ').slice(0, 180));
+        // 模板骨架残留
+        const tplLeft = TEMPLATE_MARKERS.filter(re => re.test(c)).length;
+        if (isTemplateArticle(post) && tplLeft >= 2) throw new Error('template skeleton still present (' + tplLeft + ' markers)');
         post.content = c;
         post.date = new Date().toISOString().slice(0, 10); // 扩充即更新，sitemap lastmod 跟随
         done.push(slug + ' (' + before + '→' + wc + ' words)');
