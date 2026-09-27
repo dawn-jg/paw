@@ -1428,6 +1428,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Why Is My Fish Swimming Upside Down? Swim Bladder Disorder Causes, Fixes, and When It's Fatal",
+        "slug": "fish-swimming-upside-down-swim-bladder-guide",
+        "date": "2026-09-28",
+        "description": "A fish swimming sideways or upside down usually has a swim bladder problem. Here is what causes it, what actually fixes it, and what to do tonight."
+      },
+      {
         "title": "Best Aquarium Lights 2026: Illuminate Your Underwater World",
         "slug": "best-aquarium-lights-2026",
         "date": "2026-09-27",
@@ -1901,6 +1907,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Reptile Impaction: The Symptoms You Can Catch Early and the Husbandry Mistakes That Cause It",
+        "slug": "reptile-impaction-symptoms-prevention-guide",
+        "date": "2026-09-28",
+        "description": "Learn the early signs of impaction in lizards and snakes, the substrate and heating mistakes behind it, and how to prevent it before surgery is needed."
+      },
+      {
         "title": "How to Quarantine a New Reptile: The Step-by-Step Protocol That Saves Entire Collections",
         "slug": "how-to-quarantine-new-reptile-step-by-step-guide",
         "date": "2026-09-26",
@@ -2361,6 +2373,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "How to Teach Your Parrot to Talk: A Realistic Step-by-Step Training Plan",
+        "slug": "how-to-teach-parrot-to-talk-step-by-step-guide",
+        "date": "2026-09-28",
+        "description": "Teach your parrot to talk with a realistic training plan: which birds learn words, session length, repetition tricks, and what to do when nothing works."
+      },
       {
         "title": "How Cold Is Too Cold for a Pet Bird? Temperature Safety Every Bird Owner Gets Wrong",
         "slug": "how-cold-too-cold-pet-birds-temperature-guide",
