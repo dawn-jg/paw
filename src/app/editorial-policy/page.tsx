@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Editorial Policy',
   description: 'PawCritic editorial policy — our commitment to honest reviews, editorial independence, correction procedures, and affiliate transparency.',
+  alternates: { canonical: 'https://pawcritic.com/editorial-policy' },
 }
 
 export default function EditorialPolicyPage() {

@@ -5,6 +5,7 @@ import allPosts from '@/data/latest.json'
 export const metadata: Metadata = {
   title: 'All Reviews',
   description: 'Browse our complete collection of honest, research-backed pet product reviews.',
+  alternates: { canonical: 'https://pawcritic.com/reviews' },
 }
 
 const catEmoji: Record<string, string> = {

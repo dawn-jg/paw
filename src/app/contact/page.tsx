@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Contact PawCritic',
   description: 'Get in touch with the PawCritic team — product review requests, feedback, corrections, and partnership inquiries.',
+  alternates: { canonical: 'https://pawcritic.com/contact' },
 }
 
 export default function ContactPage() {

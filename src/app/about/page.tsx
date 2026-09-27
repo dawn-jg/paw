@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'About PawCritic',
   description: 'How PawCritic researches and reviews pet products — our methodology, our editorial standards, and how the site is funded. Independent, unsponsored ratings.',
+  alternates: { canonical: 'https://pawcritic.com/about' },
 }
 
 export default function AboutPage() {

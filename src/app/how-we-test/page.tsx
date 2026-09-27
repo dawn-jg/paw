@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'How We Research & Review Pet Products',
   description: 'Our research-based methodology: how we shortlist products, analyze verified owner feedback, cross-check expert sources, and build transparent ratings.',
+  alternates: { canonical: 'https://pawcritic.com/how-we-test' },
 }
 
 export default function HowWeTestPage() {
