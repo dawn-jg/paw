@@ -1446,6 +1446,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Aquarium Salt: The Most Misunderstood Tool in Freshwater Fishkeeping",
+        "slug": "aquarium-salt-freshwater-fishkeeping-misunderstood-tool",
+        "date": "2026-09-30",
+        "description": "Aquarium salt can cure ich, reduce stress, or kill your plants and fish. Learn when to use it, how much, and when to skip it entirely."
+      },
+      {
         "title": "Why Is My Fish Swimming Upside Down? Swim Bladder Disorder Causes, Fixes, and When It's Fatal",
         "slug": "fish-swimming-upside-down-swim-bladder-guide",
         "date": "2026-09-28",
@@ -1925,6 +1931,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Reptile Overheating: How to Spot Heat Stress Before It Kills Your Lizard or Snake",
+        "slug": "reptile-overheating-heat-stress-prevention-guide",
+        "date": "2026-09-30",
+        "description": "Learn the early signs of heat stress in reptiles, safe temperature gradients, and emergency cooling steps that can save your lizard or snake."
+      },
+      {
         "title": "Reptile Impaction: The Symptoms You Can Catch Early and the Husbandry Mistakes That Cause It",
         "slug": "reptile-impaction-symptoms-prevention-guide",
         "date": "2026-09-28",
@@ -2391,6 +2403,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Bird Molting: What's Normal, What's Not, and How to Help Your Parrot Through It",
+        "slug": "bird-molting-normal-vs-abnormal-feather-loss-guide",
+        "date": "2026-09-30",
+        "description": "Is your bird losing feathers? Learn what normal molting looks like, when feather loss signals a problem, and how to support your parrot through the process."
+      },
       {
         "title": "How to Teach Your Parrot to Talk: A Realistic Step-by-Step Training Plan",
         "slug": "how-to-teach-parrot-to-talk-step-by-step-guide",
