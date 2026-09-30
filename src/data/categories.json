@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Dental Disease: The Quiet Problem Affecting 80% of Dogs by Age Three",
+        "slug": "dog-dental-disease-prevention-guide",
+        "date": "2026-10-01",
+        "description": "Dog dental disease affects 80% of dogs by age three. Learn the stages, warning signs, and a realistic at-home prevention routine that actually works."
+      },
+      {
         "title": "Dog Vomiting: When It's Nothing, When It's an Emergency, and What to Do Right Now",
         "slug": "dog-vomiting-when-to-worry-causes-guide",
         "date": "2026-09-29",
