@@ -1452,6 +1452,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Why Is My Aquarium Water Cloudy? The 7 Causes and Exactly How to Fix Each One",
+        "slug": "why-is-my-aquarium-water-cloudy-causes-fixes-guide",
+        "date": "2026-10-02",
+        "description": "Cloudy aquarium water isn't one problem — it's seven. Learn to identify bacterial blooms, green water, and milky haze, then fix each one properly."
+      },
+      {
         "title": "Aquarium Salt: The Most Misunderstood Tool in Freshwater Fishkeeping",
         "slug": "aquarium-salt-freshwater-fishkeeping-misunderstood-tool",
         "date": "2026-09-30",
@@ -1937,6 +1943,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Reptile Brumation vs Hibernation: What's Actually Happening and How to Manage It Safely",
+        "slug": "reptile-brumation-vs-hibernation-care-guide",
+        "date": "2026-10-02",
+        "description": "Brumation isn't hibernation. Learn what's happening in your reptile's body, which species do it, and how to manage it without risking their life."
+      },
+      {
         "title": "Reptile Overheating: How to Spot Heat Stress Before It Kills Your Lizard or Snake",
         "slug": "reptile-overheating-heat-stress-prevention-guide",
         "date": "2026-09-30",
@@ -2409,6 +2421,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Why Your Bird Sits on the Cage Floor: 9 Reasons and What to Do",
+        "slug": "bird-sitting-on-cage-floor-causes-when-to-worry-guide",
+        "date": "2026-10-02",
+        "description": "A bird sitting on the cage floor is often a red flag. Learn the 9 real reasons, from illness to sleep, and exactly when to call an avian vet."
+      },
       {
         "title": "Bird Molting: What's Normal, What's Not, and How to Help Your Parrot Through It",
         "slug": "bird-molting-normal-vs-abnormal-feather-loss-guide",
