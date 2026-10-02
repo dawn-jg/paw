@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Hot Spots: How to Stop Acute Moist Dermatitis From Spreading",
+        "slug": "dog-hot-spots-acute-moist-dermatitis-treatment-guide",
+        "date": "2026-10-03",
+        "description": "Hot spots on dogs can double in size overnight. Learn the causes, at-home first steps, and when to call your vet before it spreads."
+      },
+      {
         "title": "Dog Dental Disease: The Quiet Problem Affecting 80% of Dogs by Age Three",
         "slug": "dog-dental-disease-prevention-guide",
         "date": "2026-10-01",
@@ -493,6 +499,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Senior Cat Care: 9 Everyday Adjustments That Actually Help",
+        "slug": "senior-cat-care-everyday-adjustments-guide",
+        "date": "2026-10-03",
+        "description": "Learn 9 practical senior cat care adjustments: litter box changes, warmth, nutrition, vet labs, and more that help cats over 10 thrive."
+      },
       {
         "title": "Why Does My Cat Bite Me? Petting Aggression and Play Biting Explained by a Behavior Nerd",
         "slug": "why-does-my-cat-bite-me-petting-aggression-play-biting-guide",
@@ -990,6 +1002,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Why Your Rabbit Isn't Eating: Stasis, Stress, and the 12-Hour Rule",
+        "slug": "rabbit-not-eating-gi-stasis-12-hour-rule-guide",
+        "date": "2026-10-03",
+        "description": "A rabbit that stops eating is a medical emergency. Learn the early warning signs of GI stasis, what to do in the first 12 hours, and how to prevent it."
+      },
       {
         "title": "Rabbit Head Tilt (Wry Neck): What It Means, What To Do, and What I Wish I'd Known Sooner",
         "slug": "rabbit-head-tilt-wry-neck-causes-treatment-guide",
