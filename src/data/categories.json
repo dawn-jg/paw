@@ -1470,6 +1470,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Drip Acclimation vs Float and Pour: The Fish Introduction Method That Actually Saves Lives",
+        "slug": "drip-acclimation-vs-float-and-pour-fish-introduction-guide",
+        "date": "2026-10-04",
+        "description": "Drip acclimation or float and pour? Learn which method protects your new fish from pH shock, temperature stress, and osmotic failure — with exact steps."
+      },
+      {
         "title": "Why Is My Aquarium Water Cloudy? The 7 Causes and Exactly How to Fix Each One",
         "slug": "why-is-my-aquarium-water-cloudy-causes-fixes-guide",
         "date": "2026-10-02",
@@ -1961,6 +1967,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Reptile Shedding Problems: Stuck Shed, Dysecdysis, and How to Fix Them Before They Cost You a Toe",
+        "slug": "reptile-shedding-problems-stuck-shed-dysecdysis-guide",
+        "date": "2026-10-04",
+        "description": "Stuck shed in reptiles is more than cosmetic. Learn why dysecdysis happens, how to fix retained skin safely, and when to call an exotic vet."
+      },
+      {
         "title": "Reptile Brumation vs Hibernation: What's Actually Happening and How to Manage It Safely",
         "slug": "reptile-brumation-vs-hibernation-care-guide",
         "date": "2026-10-02",
@@ -2439,6 +2451,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Why Your Bird Chews Everything: Destructive Behavior Causes and Fixes",
+        "slug": "bird-destructive-chewing-causes-fixes-guide",
+        "date": "2026-10-04",
+        "description": "Is your bird chewing furniture, cables, and baseboards? Learn why parrots destroy things and how to redirect the behavior before it becomes a habit."
+      },
       {
         "title": "Why Your Bird Sits on the Cage Floor: 9 Reasons and What to Do",
         "slug": "bird-sitting-on-cage-floor-causes-when-to-worry-guide",
