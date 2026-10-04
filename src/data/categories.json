@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Why Your Dog's Ears Smell Bad: Infections, Allergies, and the Fix",
+        "slug": "why-dog-ears-smell-bad-infection-allergy-treatment-guide",
+        "date": "2026-10-05",
+        "description": "That yeasty, musty smell coming from your dog's ears isn't normal. Learn the real causes, when it's an infection, and how to treat it properly."
+      },
+      {
         "title": "Dog Hot Spots: How to Stop Acute Moist Dermatitis From Spreading",
         "slug": "dog-hot-spots-acute-moist-dermatitis-treatment-guide",
         "date": "2026-10-03",
@@ -499,6 +505,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Cat Allergies: Why Your Cat Is Itching and What Actually Helps",
+        "slug": "cat-allergies-itching-causes-treatment-guide",
+        "date": "2026-10-05",
+        "description": "Cat allergies explained by a vet tech: flea, food, and environmental triggers, plus step-by-step relief that works. Learn when to see your vet."
+      },
       {
         "title": "Senior Cat Care: 9 Everyday Adjustments That Actually Help",
         "slug": "senior-cat-care-everyday-adjustments-guide",
@@ -1002,6 +1014,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "Chinchilla Dust Baths: Why They Need Them, How Often, and What I Learned the Hard Way",
+        "slug": "chinchilla-dust-baths-how-often-guide",
+        "date": "2026-10-05",
+        "description": "Chinchillas need dust baths to stay clean and healthy. Learn how often, what dust to use, and common mistakes that cause dry skin and stress."
+      },
       {
         "title": "Why Your Rabbit Isn't Eating: Stasis, Stress, and the 12-Hour Rule",
         "slug": "rabbit-not-eating-gi-stasis-12-hour-rule-guide",
