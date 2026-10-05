@@ -1488,6 +1488,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Fishless Cycling: The 4-6 Week Method That Saves Fish From New Tank Syndrome",
+        "slug": "fishless-cycling-new-tank-syndrome-guide",
+        "date": "2026-10-06",
+        "description": "Fishless cycling builds a biofilter before you add fish. Here's the 4-6 week ammonia-dosing method that prevents new tank syndrome and fish deaths."
+      },
+      {
         "title": "Drip Acclimation vs Float and Pour: The Fish Introduction Method That Actually Saves Lives",
         "slug": "drip-acclimation-vs-float-and-pour-fish-introduction-guide",
         "date": "2026-10-04",
@@ -1985,6 +1991,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Reptile Shedding Problems: Why Your Snake or Lizard Is Stuck and How to Fix It Before It Costs You a Toe",
+        "slug": "reptile-stuck-shed-dysecdysis-fix-guide-2026",
+        "date": "2026-10-06",
+        "description": "Stuck shed, retained eye caps, and dysecdysis explained. Learn why it happens, how to fix it safely, and the humidity mistakes that cause it."
+      },
+      {
         "title": "Reptile Shedding Problems: Stuck Shed, Dysecdysis, and How to Fix Them Before They Cost You a Toe",
         "slug": "reptile-shedding-problems-stuck-shed-dysecdysis-guide",
         "date": "2026-10-04",
@@ -2469,6 +2481,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Bird Beak Overgrowth: Why It Happens and How to Fix It Safely",
+        "slug": "bird-beak-overgrowth-causes-trimming-prevention-guide",
+        "date": "2026-10-06",
+        "description": "Is your bird's beak looking too long or flaky? Learn the real causes of overgrowth, safe trimming, and daily habits that keep beaks healthy."
+      },
       {
         "title": "Why Your Bird Chews Everything: Destructive Behavior Causes and Fixes",
         "slug": "bird-destructive-chewing-causes-fixes-guide",
