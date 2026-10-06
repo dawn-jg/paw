@@ -3,6 +3,12 @@
     "name": "Dogs",
     "posts": [
       {
+        "title": "Dog Zoomies: Why Your Dog Runs Like a Maniac (and When It's Actually a Problem)",
+        "slug": "dog-zoomies-why-dogs-run-like-maniacs-guide",
+        "date": "2026-10-07",
+        "description": "Dog zoomies explained: why dogs sprint in circles, what triggers FRAPs, when the behavior signals a problem, and how to manage the chaos safely."
+      },
+      {
         "title": "Why Your Dog's Ears Smell Bad: Infections, Allergies, and the Fix",
         "slug": "why-dog-ears-smell-bad-infection-allergy-treatment-guide",
         "date": "2026-10-05",
@@ -505,6 +511,12 @@
   "Cats": {
     "name": "Cats",
     "posts": [
+      {
+        "title": "Cat Ear Infections: Why They Happen and How to Catch Them Early",
+        "slug": "cat-ear-infections-causes-symptoms-treatment-guide",
+        "date": "2026-10-07",
+        "description": "Cat ear infections are painful and often missed. Learn the causes, early signs, vet-approved cleaning routines, and when to call your vet."
+      },
       {
         "title": "Cat Allergies: Why Your Cat Is Itching and What Actually Helps",
         "slug": "cat-allergies-itching-causes-treatment-guide",
@@ -1014,6 +1026,12 @@
   "Small Pets": {
     "name": "Small Pets",
     "posts": [
+      {
+        "title": "How to Trim a Hamster's Nails (Yes, Really) Without Getting Bitten",
+        "slug": "how-to-trim-hamster-nails-step-by-step",
+        "date": "2026-10-07",
+        "description": "A step-by-step guide to safely trimming your hamster's nails, including handling tips, tools, and how to avoid the quick. Learn from a pro."
+      },
       {
         "title": "Chinchilla Dust Baths: Why They Need Them, How Often, and What I Learned the Hard Way",
         "slug": "chinchilla-dust-baths-how-often-guide",
