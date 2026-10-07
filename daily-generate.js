@@ -74,6 +74,12 @@ catch (e) { console.error('FATAL: cannot read posts.json:', e.message); process.
 const posts = Array.isArray(postsRaw) ? postsRaw : Object.values(postsRaw);
 
 const GOOD_ASINS = JSON.parse(fs.readFileSync(GOOD_ASINS_FILE, 'utf8'));
+// ASIN -> 真实商品名。没有商品名的 ASIN 一律不入池，避免模型"猜"出一个对不上的商品。
+const NAMES_FILE = path.join(ROOT, 'asin-names.json');
+let ASIN_NAMES = {};
+try { ASIN_NAMES = JSON.parse(fs.readFileSync(NAMES_FILE, 'utf8')); } catch (e) {
+  console.warn('WARN: asin-names.json 读取失败，将无法给模型提供商品名:', e.message);
+}
 const allSlugs = new Set(posts.map(p => p.slug));
 const catSlugs = {};
 posts.forEach(p => {
@@ -171,11 +177,22 @@ function extractJSON(text) {
   throw new Error('JSON parse failed: ' + t.slice(0, 300));
 }
 
-function poolFor(cat) { return (GOOD_ASINS[cat] || []).slice(); }
+// 只返回"有商品名"的条目；没有商品名的 ASIN 直接剔除（宁缺毋滥，
+// 避免模型拿到裸编号后自行编造一个对不上的商品描述）
+function poolFor(cat) {
+  return (GOOD_ASINS[cat] || [])
+    .filter(a => ASIN_NAMES[a])
+    .map(a => ({ asin: a, name: ASIN_NAMES[a] }));
+}
+function poolBlock(cat) {
+  const pool = poolFor(cat);
+  if (!pool.length) return '   (本类目暂无可核实的商品，本次不要添加任何联盟链接)';
+  return pool.map(x => '   - ' + x.asin + '  =  ' + x.name).join('\n');
+}
 
 // ─── Prompt 构建 ───────────────────────────────────
 function buildPrompt(cat) {
-  const pool = poolFor(cat);
+  const poolBlockStr = poolBlock(cat);
   let localImgs = [];
   try {
     localImgs = fs.readdirSync(path.join(ROOT, 'public', 'images', 'products'))
@@ -198,8 +215,15 @@ function buildPrompt(cat) {
 3. content = HTML fragment ONLY — start with <h2>, NO <!DOCTYPE>/<html>/<head>/<body>/<main>/<meta>/<title>. Use literal & not &amp;.
    CRITICAL: Inside content, NEVER use double quote characters (") — NOT for HTML attributes, NOT for quoted words. Use single quotes everywhere: <img src='/images/products/X.jpg' alt='description' width='600' height='400'>, and for quoted words write: He said 'sit' before the treat. This keeps the JSON valid.
 4. 2000+ words in content.
-5. AT MOST 4 Amazon affiliate links, format exactly: https://amazon.com/dp/ASIN?tag=nannan09-20
-   Use ONLY ASINs from this known-good pool for ${cat}: ${pool.join(', ')}
+5. AT MOST 4 Amazon affiliate links. Format EXACTLY like this (single quotes, all four attributes):
+   <a href='https://amazon.com/dp/ASIN?tag=nannan09-20' rel='nofollow sponsored noopener' target='_blank'>anchor text</a>
+   NEVER paste a bare URL as plain text — every link must be a full <a> tag as above.
+   Use ONLY these ASINs for ${cat}. Each ASIN is a FIXED, real product — the name after the = sign is what that ASIN actually is on Amazon:
+${poolBlockStr}
+   CRITICAL — product/link consistency:
+   - The sentence describing a product and its anchor text MUST match the real product name listed above for the ASIN you link.
+   - NEVER invent a product, and NEVER attach a product description to an ASIN whose listed name is something else.
+   - If none of the listed products fits the point you are making, do NOT add a link. Fewer correct links beats more wrong ones.
 6. EXACTLY 2 images — this is MANDATORY, your article MUST contain exactly two <img> tags in content. Use SINGLE QUOTES for HTML attributes inside content (e.g. <img src='/images/products/{ASIN}.jpg' alt='description' width='600' height='400'>) — this keeps the JSON valid. If any of your article's ASINs have local files, use the first 2 such ASINs. Local files available: ${localImgs.join(', ')}. If you did not use any ASIN with a local image, add the fallback images: <img src='https://picsum.photos/seed/{slug}-1/600/400' alt='...' width='600' height='400'> and <img src='https://picsum.photos/seed/{slug}-2/600/400' alt='...' width='600' height='400'>. NEVER loremflickr. Count your <img> tags before finishing — there must be exactly 2.
 7. DO NOT include any internal site links — the pipeline adds them automatically.
 8. At least 1-2 citations to credible external sources (ASPCA, AVMA, Humane Society, AAFP, AKC, FDA, USDA, peer-reviewed studies). Format: "According to the [Organization], ..."
