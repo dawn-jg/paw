@@ -1506,6 +1506,12 @@
     "name": "Fish",
     "posts": [
       {
+        "title": "Aquarium Filter Media: What Goes in the Canister and What's a Waste of Money",
+        "slug": "aquarium-filter-media-what-to-use-guide",
+        "date": "2026-10-08",
+        "description": "Filter media explained without the marketing nonsense: what each layer actually does, what to ditch, and how to stack a canister or HOB properly."
+      },
+      {
         "title": "Fishless Cycling: The 4-6 Week Method That Saves Fish From New Tank Syndrome",
         "slug": "fishless-cycling-new-tank-syndrome-guide",
         "date": "2026-10-06",
@@ -2009,6 +2015,12 @@
     "name": "Reptiles",
     "posts": [
       {
+        "title": "Reptile Shedding Problems: Why Your Snake or Lizard Is Stuck and How to Fix It Before It Costs a Toe",
+        "slug": "reptile-shedding-problems-stuck-shed-fix-guide",
+        "date": "2026-10-08",
+        "description": "Stuck shed on a reptile can cost toes or tail tips. Learn the real causes, the safe fix, and how to prevent dysecdysis for good."
+      },
+      {
         "title": "Reptile Shedding Problems: Why Your Snake or Lizard Is Stuck and How to Fix It Before It Costs You a Toe",
         "slug": "reptile-stuck-shed-dysecdysis-fix-guide-2026",
         "date": "2026-10-06",
@@ -2499,6 +2511,12 @@
   "Birds": {
     "name": "Birds",
     "posts": [
+      {
+        "title": "Why Your Bird Grinds Its Beak (And When It's Actually a Problem)",
+        "slug": "bird-beak-grinding-when-to-worry-guide",
+        "date": "2026-10-08",
+        "description": "Beak grinding in birds is usually a sign of comfort and healthy beak maintenance. Here's how to tell normal grinding from dental-style pain signals."
+      },
       {
         "title": "Bird Beak Overgrowth: Why It Happens and How to Fix It Safely",
         "slug": "bird-beak-overgrowth-causes-trimming-prevention-guide",
