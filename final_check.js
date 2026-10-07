@@ -20,7 +20,7 @@ slugs.forEach(function (s) {
   if (a.description.length < 120 || a.description.length > 160) errs.push('desc len ' + a.description.length);
   var aff = a.content.match(/amazon\.com\/dp\/[A-Z0-9]{10}/g) || [];
   if (aff.length > 4 || aff.length < 2) errs.push('aff ' + aff.length);
-  var noTag = a.content.match(/amazon\.com\/dp\/[A-Z0-9]{10}(?!\?tag=paw070-20)/g);
+  var noTag = a.content.match(/amazon\.com\/dp\/[A-Z0-9]{10}(?!\?tag=nannan09-20)/g);
   if (noTag) errs.push('untagged aff links');
   var malformed = a.content.match(/amazon\.com\/dp\/[A-Z0-9]{9}([^A-Z0-9]|$)/g);
   if (malformed) errs.push('malformed ASIN');

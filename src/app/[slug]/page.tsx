@@ -400,7 +400,7 @@ function ArticlePageContent({ post }: { post: Post }) {
                     offers.push({
                       '@type': 'Offer',
                       name: p.name,
-                      url: `https://www.amazon.com/dp/${p.asin}?tag=paw070-20`,
+                      url: `https://www.amazon.com/dp/${p.asin}?tag=nannan09-20`,
                       availability: 'https://schema.org/InStock',
                     });
                     if (offers.length >= 6) break;

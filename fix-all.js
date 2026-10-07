@@ -133,7 +133,7 @@ function injectAmazonLinks(content, asins, category) {
   // Add "Where to Buy" section at the end of the article with product links
   var links = asins.map(function(asin, i) {
     var name = asinNames[asin] || (category + ' Product ' + (i + 1));
-    return '<div class="product-buy-box">\n  <span class="product-number">#' + (i + 1) + '</span>\n  <strong>' + name + '</strong>\n  <a href="https://www.amazon.com/dp/' + asin + '?tag=paw070-20" rel="nofollow sponsored noopener" target="_blank" class="amazon-btn">Check Price on Amazon →</a>\n</div>';
+    return '<div class="product-buy-box">\n  <span class="product-number">#' + (i + 1) + '</span>\n  <strong>' + name + '</strong>\n  <a href="https://www.amazon.com/dp/' + asin + '?tag=nannan09-20" rel="nofollow sponsored noopener" target="_blank" class="amazon-btn">Check Price on Amazon →</a>\n</div>';
   });
 
   var section = '\n\n<!-- Affiliate Product Links -->\n<div class="where-to-buy">\n<h2>Where to Buy: Our Top Picks</h2>\n<p class="affiliate-disclosure"><em>As an Amazon Associate, PawCritic earns from qualifying purchases. This does not affect our reviews or recommendations.</em></p>\n<div class="product-links">\n' + links.join('\n') + '\n</div>\n</div>';

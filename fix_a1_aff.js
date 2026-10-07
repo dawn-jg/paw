@@ -11,7 +11,7 @@ var endQuote = seg.indexOf('"', rel);
 var linkHtml = seg.slice(rel - 12, endQuote + 1); // from <a href=" to "
 console.log('Blue Buffalo amazon link html:', JSON.stringify(linkHtml));
 // Find the exact <a ...>Check Price on Amazon</a> for Blue Buffalo
-var re = /<a href="https:\/\/www\.amazon\.com\/dp\/B000255NCI\?tag=paw070-20"[^>]*>Check Price on Amazon<\/a> \| /g;
+var re = /<a href="https:\/\/www\.amazon\.com\/dp\/B000255NCI\?tag=nannan09-20"[^>]*>Check Price on Amazon<\/a> \| /g;
 var m = re.exec(c);
 console.log('match found at', m ? m.index : -1, m ? JSON.stringify(m[0]) : '');
 if (m) {

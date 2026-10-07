@@ -34,7 +34,7 @@ slugs.forEach(function (s) {
   console.log('affiliate links:', aff.length, aff.join(', '));
   var badAff = a.content.match(/amazon\.com\/dp\/[A-Z0-9]{9}(?:[^A-Z0-9]|$)/g);
   if (badAff) console.log('MALFORMED ASIN:', badAff);
-  var noTag = a.content.match(/amazon\.com\/dp\/[A-Z0-9]{10}(?!\?tag=paw070-20)/g);
+  var noTag = a.content.match(/amazon\.com\/dp\/[A-Z0-9]{10}(?!\?tag=nannan09-20)/g);
   if (noTag) console.log('NO TAG:', noTag);
 
   // 2. citations

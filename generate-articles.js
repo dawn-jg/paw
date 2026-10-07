@@ -6,7 +6,7 @@ const path = require('path');
 // ============================================================
 const POSTS_PATH = 'D:/pawcritic-next/src/data/posts.json';
 const IMG_DIR = 'D:/pawcritic-next/public/images/products';
-const TAG = 'paw070-20';
+const TAG = 'nannan09-20';
 const TODAY = '2026-07-15';
 
 // Check existing images
@@ -924,7 +924,7 @@ for (const a of newArticles) {
 
 // Count affiliate links
 for (const a of newArticles) {
-  const affCount = (a.content.match(/amazon\.com\/dp\/[A-Z0-9]+\?tag=paw070-20/g) || []).length;
+  const affCount = (a.content.match(/amazon\.com\/dp\/[A-Z0-9]+\?tag=nannan09-20/g) || []).length;
   console.log(`${a.slug}: ${affCount} affiliate links, ~${a.charCount} text chars`);
 }
 

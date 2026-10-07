@@ -4,7 +4,7 @@ var a = p.find(function (x) { return x.slug === 'best-dog-food-for-large-breeds-
 var c = a.content;
 
 // The raw pattern for each product's link line:
-var re = /<p>(\?\?)? <a href="https:\/\/www\.amazon\.com\/dp\/B0GTV4919Y\?tag=paw070-20" rel="nofollow sponsored">Check Price on Amazon<\/a> \| <a href="https:\/\/www\.chewy\.com\/[^"]*"[^>]*>Check Price on Chewy<\/a><\/p>/g;
+var re = /<p>(\?\?)? <a href="https:\/\/www\.amazon\.com\/dp\/B0GTV4919Y\?tag=nannan09-20" rel="nofollow sponsored">Check Price on Amazon<\/a> \| <a href="https:\/\/www\.chewy\.com\/[^"]*"[^>]*>Check Price on Chewy<\/a><\/p>/g;
 var m;
 var idx = 0;
 while ((m = re.exec(c))) {

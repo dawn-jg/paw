@@ -4,7 +4,7 @@ var path = require('path');
 var POSTS = path.join(__dirname, 'src', 'data', 'posts.json');
 var p = JSON.parse(fs.readFileSync(POSTS, 'utf8'));
 function g(s) { return p.find(function (x) { return x.slug === s; }); }
-function amz(asin) { return 'https://www.amazon.com/dp/' + asin + '?tag=paw070-20'; }
+function amz(asin) { return 'https://www.amazon.com/dp/' + asin + '?tag=nannan09-20'; }
 
 // ---- mojibake fix: U+95B3 + '?' or U+FF1F -> em-dash ; U+9225 -> ellipsis
 function fixMojibake(str) {
@@ -25,7 +25,7 @@ function setBoxAsin(str, boxIndex, asin) {
   if (href === -1) return str;
   var endQuote = str.indexOf('"', href);
   if (endQuote === -1) return str;
-  return str.slice(0, href) + 'amazon.com/dp/' + asin + '?tag=paw070-20' + str.slice(endQuote);
+  return str.slice(0, href) + 'amazon.com/dp/' + asin + '?tag=nannan09-20' + str.slice(endQuote);
 }
 
 // ---- set the label of the i-th product-buy-box ----

@@ -198,7 +198,7 @@ function buildPrompt(cat) {
 3. content = HTML fragment ONLY — start with <h2>, NO <!DOCTYPE>/<html>/<head>/<body>/<main>/<meta>/<title>. Use literal & not &amp;.
    CRITICAL: Inside content, NEVER use double quote characters (") — NOT for HTML attributes, NOT for quoted words. Use single quotes everywhere: <img src='/images/products/X.jpg' alt='description' width='600' height='400'>, and for quoted words write: He said 'sit' before the treat. This keeps the JSON valid.
 4. 2000+ words in content.
-5. AT MOST 4 Amazon affiliate links, format exactly: https://amazon.com/dp/ASIN?tag=paw070-20
+5. AT MOST 4 Amazon affiliate links, format exactly: https://amazon.com/dp/ASIN?tag=nannan09-20
    Use ONLY ASINs from this known-good pool for ${cat}: ${pool.join(', ')}
 6. EXACTLY 2 images — this is MANDATORY, your article MUST contain exactly two <img> tags in content. Use SINGLE QUOTES for HTML attributes inside content (e.g. <img src='/images/products/{ASIN}.jpg' alt='description' width='600' height='400'>) — this keeps the JSON valid. If any of your article's ASINs have local files, use the first 2 such ASINs. Local files available: ${localImgs.join(', ')}. If you did not use any ASIN with a local image, add the fallback images: <img src='https://picsum.photos/seed/{slug}-1/600/400' alt='...' width='600' height='400'> and <img src='https://picsum.photos/seed/{slug}-2/600/400' alt='...' width='600' height='400'>. NEVER loremflickr. Count your <img> tags before finishing — there must be exactly 2.
 7. DO NOT include any internal site links — the pipeline adds them automatically.
@@ -230,7 +230,7 @@ Pick a fresh, searchable topic not covered above. Return ONLY the JSON object.`;
 // ─── aff 链接裁剪（超 4 时去掉多余链接的 href，保留文本）──────────
 function trimAffLinks(content, max = 4) {
   // 匹配完整 <a href="amazon...">...</a> 对
-  const re = /<a href="(https:\/\/amazon\.com\/dp\/[A-Z0-9]{10}\?tag=paw070-20)"[^>]*>([\s\S]*?)<\/a>/g;
+  const re = /<a href="(https:\/\/amazon\.com\/dp\/[A-Z0-9]{10}\?tag=nannan09-20)"[^>]*>([\s\S]*?)<\/a>/g;
   const links = [];
   let m;
   while ((m = re.exec(content)) !== null) links.push({ full: m[0], href: m[1], text: m[2] });
@@ -258,7 +258,7 @@ function validateArticle(obj, cat) {
 
   const affCount = (obj.content.match(/amazon\.com\/dp\//g) || []).length;
   if (affCount > 4) throw new Error('Too many aff links: ' + affCount + ' for ' + cat);
-  const badAff = obj.content.match(/amazon\.com\/dp\/([A-Z0-9]{10})(?!\?tag=paw070-20)/g);
+  const badAff = obj.content.match(/amazon\.com\/dp\/([A-Z0-9]{10})(?!\?tag=nannan09-20)/g);
   if (badAff) throw new Error('Malformed aff links: ' + badAff.join(','));
 
   const imgCount = (obj.content.match(/<img /g) || []).length;

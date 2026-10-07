@@ -40,7 +40,7 @@ thinArticles.forEach(function(x) {
   console.log('  [' + x.date + '] [' + (x.category || '?') + '] ' + x.slug + ' (' + c.length + ' chars, ' + amzC + ' amz)');
 });
 
-// Also list all ASINs with tag=paw070-20 check
-var tagCheck = (txt.match(/tag=paw070-20/g) || []).length;
+// Also list all ASINs with tag=nannan09-20 check
+var tagCheck = (txt.match(/tag=nannan09-20/g) || []).length;
 var totalLinks = (txt.match(/amazon\.com\/dp\//g) || []).length;
 console.log('\nTotal Amazon links: ' + totalLinks + ', with tag: ' + tagCheck + ', missing tag: ' + (totalLinks - tagCheck));

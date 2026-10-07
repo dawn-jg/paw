@@ -31,8 +31,8 @@ articles.forEach((a, i) => {
     // Insert B001P3NU30 as an early link so it's in the first 2
     // Add it to the Top Pick section
     c = c.replace(
-      'Check the current price: <a href="https://www.amazon.com/dp/B00020SVDG?tag=paw070-20">VISTOP Dog Pool on Amazon</a>',
-      'Check the current price: <a href="https://www.amazon.com/dp/B00020SVDG?tag=paw070-20">VISTOP Dog Pool on Amazon</a> | Also try the <a href="https://www.amazon.com/dp/B001P3NU30?tag=paw070-20">Virbac C.E.T. Dental Chews</a> for post-swim dental care'
+      'Check the current price: <a href="https://www.amazon.com/dp/B00020SVDG?tag=nannan09-20">VISTOP Dog Pool on Amazon</a>',
+      'Check the current price: <a href="https://www.amazon.com/dp/B00020SVDG?tag=nannan09-20">VISTOP Dog Pool on Amazon</a> | Also try the <a href="https://www.amazon.com/dp/B001P3NU30?tag=nannan09-20">Virbac C.E.T. Dental Chews</a> for post-swim dental care'
     );
   }
   
@@ -41,12 +41,12 @@ articles.forEach((a, i) => {
     // Insert B087DNHXD4 as a very early link (it's the only cat image we have)
     c = c.replace(
       '<p>Before selecting a product',
-      '<p>For puzzle enrichment alongside flea prevention, check the <a href="https://www.amazon.com/dp/B087DNHXD4?tag=paw070-20">Nina Ottosson Cat Puzzle Feeder</a> for indoor cats.</p>\n\n<p>Before selecting a product'
+      '<p>For puzzle enrichment alongside flea prevention, check the <a href="https://www.amazon.com/dp/B087DNHXD4?tag=nannan09-20">Nina Ottosson Cat Puzzle Feeder</a> for indoor cats.</p>\n\n<p>Before selecting a product'
     );
     // Also insert B00178LI50 which has an image
     c = c.replace(
       '<p><strong>Year-round prevention is essential.</strong>',
-      '<p>For safe outdoor access, consider the <a href="https://www.amazon.com/dp/B00178LI50?tag=paw070-20">Zoo Med Turtle Dock</a> as a multi-purpose pet platform.</p>\n\n<p><strong>Year-round prevention is essential.</strong>'
+      '<p>For safe outdoor access, consider the <a href="https://www.amazon.com/dp/B00178LI50?tag=nannan09-20">Zoo Med Turtle Dock</a> as a multi-purpose pet platform.</p>\n\n<p><strong>Year-round prevention is essential.</strong>'
     );
   }
   

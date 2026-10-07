@@ -54,7 +54,7 @@ testPosts.forEach(function(post) {
     var sampleASINs = ['B08N5KWM9H', 'B0FHHYTN4L', 'B0CRK6MY1H', 'B07XQXLQ4R', 'B0B4VJRX7Y'];
     var linkBlock = '\n<div class="where-to-buy">\n<h2>Where to Buy</h2>\n<p><em>As an Amazon Associate, we earn from qualifying purchases.</em></p>\n';
     sampleASINs.forEach(function(asin, i) {
-      linkBlock += '<p>Product #' + (i+1) + ': <a href="https://www.amazon.com/dp/' + asin + '?tag=paw070-20" rel="nofollow" target="_blank">Check Price on Amazon →</a></p>\n';
+      linkBlock += '<p>Product #' + (i+1) + ': <a href="https://www.amazon.com/dp/' + asin + '?tag=nannan09-20" rel="nofollow" target="_blank">Check Price on Amazon →</a></p>\n';
     });
     linkBlock += '</div>\n';
     content += linkBlock;

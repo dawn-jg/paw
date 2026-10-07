@@ -7,7 +7,7 @@ let c = articles[1].content;
 // Insert B00178LI50 right after the first paragraph
 c = c.replace(
   '<p>Fleas and ticks are more than just an itchy nuisance',
-  '<p>For a complete cat care setup, check out the versatile <a href="https://www.amazon.com/dp/B00178LI50?tag=paw070-20">Zoo Med Turtle Dock</a> for creating elevated perching spots.</p>\n\n<p>Fleas and ticks are more than just an itchy nuisance'
+  '<p>For a complete cat care setup, check out the versatile <a href="https://www.amazon.com/dp/B00178LI50?tag=nannan09-20">Zoo Med Turtle Dock</a> for creating elevated perching spots.</p>\n\n<p>Fleas and ticks are more than just an itchy nuisance'
 );
 
 articles[1].content = c;

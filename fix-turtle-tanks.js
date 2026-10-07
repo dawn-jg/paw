@@ -22,19 +22,19 @@ c = c.replace(/\?\?/g, '—');
 // Replace Amazon search links with product ASINs
 const linkReplacements = [
   // Product 1: Aqueon LED Kit
-  ['**(https://www.amazon.com/s?k=Aqueon+Aquarium+LED+Kit&tag=paw070-20', '**(https://www.amazon.com/dp/B004GX47TW?tag=paw070-20'],
+  ['**(https://www.amazon.com/s?k=Aqueon+Aquarium+LED+Kit&tag=nannan09-20', '**(https://www.amazon.com/dp/B004GX47TW?tag=nannan09-20'],
   // Product 2: Fluval Flex
-  ['**(https://www.amazon.com/s?k=Fluval+Flex+Aquarium&tag=paw070-20', '**(https://www.amazon.com/dp/B07JH4JHTC?tag=paw070-20'],
+  ['**(https://www.amazon.com/s?k=Fluval+Flex+Aquarium&tag=nannan09-20', '**(https://www.amazon.com/dp/B07JH4JHTC?tag=nannan09-20'],
   // Product 3: Marineland BiOrb
-  ['**(https://www.amazon.com/s?k=Marineland+BiOrb+Aquarium&tag=paw070-20', '**(https://www.amazon.com/dp/B081VKRX4Q?tag=paw070-20'],
+  ['**(https://www.amazon.com/s?k=Marineland+BiOrb+Aquarium&tag=nannan09-20', '**(https://www.amazon.com/dp/B081VKRX4Q?tag=nannan09-20'],
   // Product 4: API Fish Tank
-  ['**(https://www.amazon.com/s?k=API+Fish+Tank+Aquarium&tag=paw070-20', '**(https://www.amazon.com/dp/B00DC2BJWG?tag=paw070-20'],
+  ['**(https://www.amazon.com/s?k=API+Fish+Tank+Aquarium&tag=nannan09-20', '**(https://www.amazon.com/dp/B00DC2BJWG?tag=nannan09-20'],
   // Product 5: Zoo Med
-  ['**(https://www.amazon.com/s?k=Zoo+Med+AquaTurtle+Habitat+Deluxe+Kit&tag=paw070-20', '**(https://www.amazon.com/dp/B00178LI50?tag=paw070-20'],
+  ['**(https://www.amazon.com/s?k=Zoo+Med+AquaTurtle+Habitat+Deluxe+Kit&tag=nannan09-20', '**(https://www.amazon.com/dp/B00178LI50?tag=nannan09-20'],
   // Product 6: Penn Plax
-  ['**(https://www.amazon.com/s?k=Penn+Plax+Turtle+Tank&tag=paw070-20', '**(https://www.amazon.com/dp/B004PBCFG2?tag=paw070-20'],
+  ['**(https://www.amazon.com/s?k=Penn+Plax+Turtle+Tank&tag=nannan09-20', '**(https://www.amazon.com/dp/B004PBCFG2?tag=nannan09-20'],
   // Product 7: OASE
-  ['**(https://www.amazon.com/s?k=OASE+BioMaster+Thermo+Canister+Filter&tag=paw070-20', '**(https://www.amazon.com/dp/B0F3LRD8KK?tag=paw070-20'],
+  ['**(https://www.amazon.com/s?k=OASE+BioMaster+Thermo+Canister+Filter&tag=nannan09-20', '**(https://www.amazon.com/dp/B0F3LRD8KK?tag=nannan09-20'],
 ];
 
 for (const [old, nu] of linkReplacements) {

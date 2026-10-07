@@ -4,7 +4,7 @@ var a = p.find(function (x) { return x.slug === 'best-dog-food-for-large-breeds-
 var c = a.content;
 
 // Step 1: as in refresh script
-c = c.split('https://www.amazon.com/dp/B0GTV4919Y?tag=paw070-20').join('https://www.amazon.com/dp/B001P3NU30?tag=paw070-20');
+c = c.split('https://www.amazon.com/dp/B0GTV4919Y?tag=nannan09-20').join('https://www.amazon.com/dp/B001P3NU30?tag=nannan09-20');
 
 var map = [
   ['Royal Canin Large Breed Adult', 'B001P3NU30'],
@@ -26,7 +26,7 @@ map.forEach(function (pair) {
       var end = after.indexOf('"');
       console.log('   end =', end);
       if (end !== -1) {
-        var repl = 'amazon.com/dp/' + pair[1] + '?tag=paw070-20';
+        var repl = 'amazon.com/dp/' + pair[1] + '?tag=nannan09-20';
         // PREVIEW only — don't modify
         var newc = c.slice(0, h + li) + repl + after.slice(end);
         console.log('   new len =', newc.length, '| tail:', JSON.stringify(newc.slice(newc.length - 60)));
