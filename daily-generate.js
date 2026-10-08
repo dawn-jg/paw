@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /**
- * daily-generate.js — PawCritic 每日 3 篇本地确定性管线（替代不可靠的子 agent cron）
+ * daily-generate.js — PawCritic 每日 1 篇本地确定性管线（替代不可靠的子 agent cron）
  *
  * 流程：
- *   1. 读 posts.json，检查今天是否已有 3 篇文章（幂等，有则跳过）
- *   2. 按日期奇偶确定分组：偶=Group A(Fish+Reptiles+Birds)，奇=Group B(Dogs+Cats+Small Pets)
+ *   1. 读 posts.json，检查今天是否已有 1 篇文章（幂等，有则跳过）
+ *   2. 分组：偶日=Group A(Fish/Reptiles/Birds)，奇日=Group B(Dogs/Cats/Small Pets)，
+ *      组内按 6 天周期轮换取 1 个分类（Group A: Reptiles→Birds→Fish…；Group B: Dogs→Cats→Small Pets…）
  *   3. 从 posts.json 提取上下文（现有 slug/近期主题/分类 ASIN 池/本地产品图）
- *   4. 直连 DeepSeek API，串行生成 3 篇（每篇独立 prompt，含 ANTI-AI VOICE 约束）
+ *   4. 直连 LLM API，生成 1 篇（独立 prompt，含 ANTI-AI VOICE 约束）
  *   5. 每篇严格校验：2000+ 词 / aff≤4 / 恰好2图 / desc 120-160 / 无AI套话 / slug不重复
  *   6. 脚本后处理：注入 Related reading 真实内链（从同分类真实 slug 池挑选，3 条）
  *   7. 合并 posts.json → validate-asins.js → rebuild-data.js → git commit+push → cron-verify.js
@@ -43,14 +44,20 @@ const DAY_NUM = parseInt(DATE.slice(8, 10), 10);
 const GROUP = DAY_NUM % 2 === 0 ? 'A' : 'B';
 const CATS = GROUP === 'A' ? ['Fish', 'Reptiles', 'Birds'] : ['Dogs', 'Cats', 'Small Pets'];
 
-// 作者分配
+// 作者署名：统一为编辑团队。本站不使用虚构个人人设，也不声称任何
+// 专业资质、执业头衔或亲身产品实测经历（与 src/app/author/[slug] 及 how-we-test 页一致）。
+const EDITORIAL = {
+  author: 'PawCritic Editorial Team',
+  authorSlug: 'editorial-team',
+  authorBio: "PawCritic's editorial team builds every guide from manufacturer specifications, published veterinary and industry guidance, and large-scale analysis of verified owner feedback. We do not operate a physical testing lab, and we do not claim to have personally used every product we cover."
+};
 const AUTHORS = {
-  'Dogs': { author: 'Dr. Sarah Chen', authorSlug: 'sarah-chen', authorBio: 'Dr. Sarah Chen is a licensed veterinarian with over 12 years of clinical experience in small animal practice. She writes PawCritic\u2019s dog and cat guides, focusing on practical, evidence-based pet care advice.' },
-  'Cats': { author: 'Dr. Sarah Chen', authorSlug: 'sarah-chen', authorBio: 'Dr. Sarah Chen is a licensed veterinarian with over 12 years of clinical experience in small animal practice. She writes PawCritic\u2019s dog and cat guides, focusing on practical, evidence-based pet care advice.' },
-  'Small Pets': { author: 'Emily Zhao', authorSlug: 'emily-zhao', authorBio: 'Emily Zhao is a small animal specialist and former shelter volunteer who has cared for rabbits, guinea pigs, hamsters, and rats for over a decade. She covers small pets and birds for PawCritic.' },
-  'Fish': { author: 'Marcus Rivera', authorSlug: 'marcus-rivera', authorBio: 'Marcus Rivera is an aquatics specialist with 15 years of experience keeping freshwater and reef tanks. He covers fish and reptile topics for PawCritic.' },
-  'Reptiles': { author: 'Marcus Rivera', authorSlug: 'marcus-rivera', authorBio: 'Marcus Rivera is an aquatics and herpetology specialist with 15 years of hands-on experience. He covers fish and reptile topics for PawCritic.' },
-  'Birds': { author: 'Emily Zhao', authorSlug: 'emily-zhao', authorBio: 'Emily Zhao is a small animal specialist and former shelter volunteer who has cared for rabbits, guinea pigs, hamsters, and rats for over a decade. She covers small pets and birds for PawCritic.' }
+  'Dogs': EDITORIAL,
+  'Cats': EDITORIAL,
+  'Small Pets': EDITORIAL,
+  'Fish': EDITORIAL,
+  'Reptiles': EDITORIAL,
+  'Birds': EDITORIAL
 };
 
 // AI 套话黑名单（用于生成后校验）
@@ -87,19 +94,22 @@ posts.forEach(p => {
   catSlugs[p.category].push(p.slug);
 });
 
-// ─── 幂等检查：今天是否已有 3 篇 ─────────────────────
+// ─── 每日产出篇数：1 篇（组内按 6 天周期轮换分类）─────
+const DAILY_COUNT = 1;
+// 组内轮换：偶日 Group A 取 Reptiles/Birds/Fish…，奇日 Group B 取 Dogs/Cats/Small Pets…
+const rotationIdx = Math.floor(DAY_NUM / 2) % CATS.length;
+const targetCat = CATS[rotationIdx];
+
+// ─── 幂等检查：今天是否已有 1 篇 ─────────────────────
 const todayPosts = posts.filter(p => p.date === DATE);
-if (todayPosts.length >= 3) {
-  console.log('SKIP: ' + DATE + ' already has ' + todayPosts.length + ' articles. Nothing to do.');
+if (todayPosts.length >= DAILY_COUNT) {
+  console.log('SKIP: ' + DATE + ' already has ' + todayPosts.length + ' article(s). Nothing to do.');
   process.exit(0);
 }
-if (todayPosts.length > 0) {
-  console.log('WARN: ' + DATE + ' has ' + todayPosts.length + ' articles (<3). Will generate ' + (3 - todayPosts.length) + ' more for missing categories.');
-}
-// 已有今天文章的类别，跳过这些类别
+// 仅生成当天轮换到的分类（已发过则跳过）
 const doneCats = new Set(todayPosts.map(p => p.category));
-const catsToDo = CATS.filter(c => !doneCats.has(c));
-console.log('DATE=' + DATE + ' (day ' + DAY_NUM + ') GROUP=' + GROUP + ' -> ' + catsToDo.join(', '));
+const catsToDo = [targetCat].filter(c => !doneCats.has(c)).slice(0, DAILY_COUNT);
+console.log('DATE=' + DATE + ' (day ' + DAY_NUM + ') GROUP=' + GROUP + ' | target=' + targetCat + ' -> ' + (catsToDo.join(', ') || '(skipped)'));
 
 // ─── LLM Provider 配置（优先智谱 GLM Coding Plan，DeepSeek fallback）─────
 const cfg = JSON.parse(fs.readFileSync('C:/Users/D3-AI/.qclaw/openclaw.json', 'utf8'));
