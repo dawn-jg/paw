@@ -64,6 +64,122 @@ const EMOJI: Record<string, string> = {
   'Birds': '\uD83E\uDD9C', 'Fish': '\uD83D\uDC20', 'Reptiles': '\uD83E\uDD8E',
 };
 
+// ─── SEO title normalisation ─────────────────────────
+// The root layout appends " | PawCritic" (11 chars) to every title, and Google
+// truncates SERP titles at roughly 580px (~60 chars), so a headline longer than
+// 49 chars gets cut mid-word. Articles keep their full headline in the <h1>,
+// breadcrumb and OpenGraph tags — only <title> is shortened here.
+const TITLE_BRAND = ' | PawCritic';
+const TITLE_MAX = 60;
+const TITLE_STOPWORDS = /\s+(?:a|an|and|or|for|the|of|to|with|in|on|at|that|which|is|are|was|were|from|by|your|their|its|as|but|not|it|you|when|how|why|what|into|so|vs)$/i;
+
+function tidyTitle(s: string): string {
+  let out = s
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([:;,.!?)])/g, '$1')
+    .replace(/\(\s*\)/g, '')
+    .replace(/['"|:;,\u2010-\u2015&-]+$/, '')
+    .trim();
+  let prev = '';
+  while (prev !== out) {
+    prev = out;
+    out = out
+      .replace(TITLE_STOPWORDS, '')
+      .replace(/\(\s*\)/g, '')
+      .replace(/['"|:;,\u2010-\u2015&-]+$/, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  return out;
+}
+
+function fitsTitle(s: string): boolean {
+  return (s + TITLE_BRAND).length <= TITLE_MAX;
+}
+
+function stripYear(s: string): string {
+  return tidyTitle(s.replace(/\s*\b20\d\d\b\s*/g, ' '));
+}
+
+/** Cut a "Head: Subtitle" headline at the colon, but only when the whole subtitle fits. */
+function colonSubtitle(base: string): string | null {
+  const i = base.indexOf(':');
+  if (i < 20) return null;
+  const head = base.slice(0, i);
+  const tail = base.slice(i + 1).trim();
+  if (!head || !tail) return null;
+  const full = tidyTitle(`${head}: ${tail}`);
+  return full.length >= 18 && fitsTitle(full) ? full : null;
+}
+
+// Editorial qualifiers used only to break a rare title collision.
+const TITLE_SUFFIXES = ['', ' Guide', ' Tips', ' Explained', ' 2026'];
+
+/**
+ * Shorten one headline. Candidates are tried in order of preference and the
+ * first one not already in `taken` wins, so no two articles can ever share a
+ * <title>:
+ *   1. bare natural cuts at punctuation (keeps the most informative head)
+ *   2. the "Head: Subtitle" cut when the entire subtitle still fits
+ *   3. word-boundary truncations from the character budget downwards
+ *   4. a short qualifier, then a numeric counter, as guaranteed-unique resorts.
+ */
+function shortenTitle(raw: string, taken: Set<string>): string {
+  const base = raw.replace(/\s*\|\s*PawCritic\s*$/i, '').trim();
+  if (fitsTitle(base)) return base;
+
+  const cands: string[] = [];
+  const consider = (s?: string | null) => {
+    if (!s) return;
+    const c = tidyTitle(s);
+    if (c.length >= 18 && fitsTitle(c) && !cands.includes(c)) cands.push(c);
+  };
+
+  for (const sep of [':', ' \u2014 ', ' \u2013 ', ' - ', '(', '?']) {
+    const i = base.indexOf(sep);
+    if (i < 20) continue;
+    consider(base.slice(0, i));
+    consider(stripYear(base.slice(0, i)));
+  }
+  consider(colonSubtitle(base));
+
+  const budget = TITLE_MAX - TITLE_BRAND.length;
+  for (let i = Math.min(base.length, budget); i >= 18; i--) {
+    if (i < base.length && base[i] !== ' ') continue;
+    consider(base.slice(0, i));
+  }
+
+  for (const c of cands) if (!taken.has(c)) return c;
+
+  // Every candidate is already used: append a qualifier, then a counter.
+  const best = cands[0] || tidyTitle(base.slice(0, budget));
+  for (const suffix of TITLE_SUFFIXES) {
+    const c = tidyTitle(best + suffix);
+    if (c.length >= 18 && fitsTitle(c) && !taken.has(c)) return c;
+  }
+  let n = 2;
+  while (taken.has(`${best} (${n})`)) n++;
+  return `${best} (${n})`;
+}
+
+// Resolved once per build; collisions are broken in posts.json order.
+const SEO_TITLES: Map<string, string> = (() => {
+  const all = loadPosts();
+  const map = new Map<string, string>();
+  const taken = new Set<string>();
+  for (const p of all) {
+    const base = p.title.replace(/\s*\|\s*PawCritic\s*$/i, '').trim();
+    if (fitsTitle(base)) { taken.add(base); map.set(p.slug, base); }
+  }
+  for (const p of all) {
+    if (map.has(p.slug)) continue;
+    const t = shortenTitle(p.title, taken);
+    taken.add(t);
+    map.set(p.slug, t);
+  }
+  return map;
+})();
+
 type RouteResult =
   | { type: 'category'; key: string }
   | { type: 'info'; slug: string }
@@ -107,6 +223,26 @@ export function generateStaticParams() {
 }
 
 // ─── Metadata ────────────────────────────────────────
+// 每篇文章的分享图存在 public/og/<slug>.png；但并非所有文章都有（约 160 篇缺失），
+// 缺图时 og:image / twitter:image 会指向 404。回落到站点主图。
+const OG_DIR = path.join(process.cwd(), 'public', 'og');
+let _ogSlugs: Set<string> | null = null;
+function ogSlugs(): Set<string> {
+  if (!_ogSlugs) {
+    try {
+      _ogSlugs = new Set(fs.readdirSync(OG_DIR).map((f) => f.replace(/\.png$/i, '')));
+    } catch {
+      _ogSlugs = new Set<string>();
+    }
+  }
+  return _ogSlugs;
+}
+function ogImageUrl(slug: string): string {
+  return ogSlugs().has(slug)
+    ? `https://pawcritic.com/og/${slug}.png`
+    : 'https://pawcritic.com/og-image.png';
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const resolved = resolveRoute(slug);
@@ -122,7 +258,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (resolved.type === 'info') return { ...(PAGE_META[slug] ?? { title: slug }), alternates: { canonical: `https://pawcritic.com/${slug}` } };
   if (resolved.type === 'listing') return { ...(PAGE_META[slug] ?? { title: slug }), alternates: { canonical: `https://pawcritic.com/${slug}` } };
   return {
-    title: resolved.post.title,
+    title: SEO_TITLES.get(slug) || resolved.post.title,
     description: resolved.post.description,
     alternates: { canonical: `https://pawcritic.com/${slug}` },
     ...(NOINDEX_SLUGS.has(slug) ? { robots: { index: false, follow: true } } : {}),
@@ -132,13 +268,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: `https://pawcritic.com/${slug}`,
       publishedTime: resolved.post.date,
-      images: [{ url: `https://pawcritic.com/og/${slug}.png`, width: 1200, height: 630 }],
+      images: [{ url: ogImageUrl(slug), width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: resolved.post.title,
       description: resolved.post.description,
-      images: [`https://pawcritic.com/og/${slug}.png`],
+      images: [ogImageUrl(slug)],
     },
   };
 }
@@ -165,7 +301,7 @@ function CategoryPageContent({ categoryKey }: { categoryKey: string }) {
         {category.posts.map(post => (
           <Link key={post.slug} href={`/${post.slug}`} className="review-card">
             <div className="review-card-content">
-              <h3>{post.title}</h3>
+              <h2>{post.title}</h2>
               <p>{post.description}</p>
               <div className="card-meta">
                 <span>{post.date}</span>
@@ -286,20 +422,51 @@ function ArticlePageContent({ post }: { post: Post }) {
   const hasRealRatings = ratedProducts.length >= 3;
   const faq = extractFaq(post.content);
 
+  // Editorial-team bylines are an organisation, not a natural person — Person
+  // markup for a team name sends a false author signal to search engines.
+  const authorLd = post.author
+    ? post.authorSlug === 'editorial-team'
+      ? {
+          '@type': 'Organization',
+          name: post.author,
+          url: `https://pawcritic.com/author/${post.authorSlug}`,
+        }
+      : {
+          '@type': 'Person',
+          name: post.author,
+          ...(post.authorSlug ? { url: `https://pawcritic.com/author/${post.authorSlug}` } : {}),
+        }
+    : { '@type': 'Organization', name: 'PawCritic' };
+
+  // Deduplicate offers by ASIN and cap at 6 (articles repeat the same product buttons).
+  // Google requires Product markup to carry at least one of offers / review / aggregateRating —
+  // a Product block with `offers: []` and no rating is invalid and only earns GSC warnings.
+  const productOffers = (() => {
+    const seenAsins = new Set<string>();
+    const offers: { '@type': string; name: string; url: string; availability: string }[] = [];
+    for (const p of reviewedProducts) {
+      if (p.asin && !seenAsins.has(p.asin)) {
+        seenAsins.add(p.asin);
+        offers.push({
+          '@type': 'Offer',
+          name: p.name,
+          url: `https://www.amazon.com/dp/${p.asin}?tag=nannan09-20`,
+          availability: 'https://schema.org/InStock',
+        });
+        if (offers.length >= 6) break;
+      }
+    }
+    return offers;
+  })();
+  const emitProductLd = productOffers.length > 0 || hasRealRatings;
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: post.author ? {
-      '@type': 'Person',
-      name: post.author,
-      url: post.authorSlug ? `https://pawcritic.com/author/${post.authorSlug}` : undefined,
-    } : {
-      '@type': 'Organization',
-      name: 'PawCritic',
-    },
+    author: authorLd,
     publisher: {
       '@type': 'Organization',
       name: 'PawCritic',
@@ -355,8 +522,9 @@ function ArticlePageContent({ post }: { post: Post }) {
         />
       )}
 
-      {/* Product + Review JSON-LD — only when real ratings exist; offers use real ASINs */}
-      {reviewedProducts.length > 0 && (
+      {/* Product + Review JSON-LD — only emitted when it is actually valid:
+          real ratings and/or at least one ASIN-backed offer. */}
+      {emitProductLd && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -373,13 +541,7 @@ function ArticlePageContent({ post }: { post: Post }) {
                     ratingValue: p.rating,
                     bestRating: 5,
                   },
-                  author: post.author ? {
-                    '@type': 'Person',
-                    name: post.author,
-                  } : {
-                    '@type': 'Organization',
-                    name: 'PawCritic',
-                  },
+                  author: authorLd,
                   name: p.name,
                 })),
                 aggregateRating: {
@@ -390,24 +552,7 @@ function ArticlePageContent({ post }: { post: Post }) {
                   reviewCount: ratedProducts.length,
                 },
               }),
-              offers: (() => {
-                // Deduplicate by ASIN and cap at 6 offers (articles may have multiple buttons for the same product)
-                const seenAsins = new Set<string>();
-                const offers: { '@type': string; name: string; url: string; availability: string }[] = [];
-                for (const p of reviewedProducts) {
-                  if (p.asin && !seenAsins.has(p.asin)) {
-                    seenAsins.add(p.asin);
-                    offers.push({
-                      '@type': 'Offer',
-                      name: p.name,
-                      url: `https://www.amazon.com/dp/${p.asin}?tag=nannan09-20`,
-                      availability: 'https://schema.org/InStock',
-                    });
-                    if (offers.length >= 6) break;
-                  }
-                }
-                return offers;
-              })(),
+              offers: productOffers,
             })}
           }
         />
@@ -579,10 +724,26 @@ const INFO_CONTENT: Record<string, { heading: string; emoji: string; sections: A
 };
 
 const LISTING_META: Record<string, { heading: string; subtitle: string; emoji: string }> = {
-  blog: { heading: 'Blog', subtitle: 'Pet care tips, stories, and expert insights from the PawCritic team.', emoji: '📝' },
-  'buying-guides': { heading: 'Buying Guides', subtitle: 'Comprehensive guides to help you choose the right products for your pet.', emoji: '🛒' },
-  comparisons: { heading: 'Comparisons', subtitle: 'Side-by-side product comparisons to help you make informed choices.', emoji: '⚖️' },
+  blog: { heading: 'Blog', subtitle: 'Pet care explainers, how-to guides and behaviour breakdowns from the PawCritic editorial team.', emoji: '📝' },
+  'buying-guides': { heading: 'Buying Guides', subtitle: 'Every best-of and how-to-choose guide, with specs, safety notes and verified owner feedback.', emoji: '🛒' },
+  comparisons: { heading: 'Comparisons', subtitle: 'Head-to-head comparisons — which of two options actually fits your pet.', emoji: '⚖️' },
 };
+
+// The three footer listing pages each render a DIFFERENT, disjoint slice of the
+// corpus. They previously all rendered every post, which made them near-duplicate
+// pages (identical card lists differing only by <h1>).
+function isBuyingGuide(slug: string): boolean {
+  return /^best-/.test(slug) || /buying-guide/.test(slug) || /^how-to-choose/.test(slug);
+}
+function isComparison(slug: string): boolean {
+  return /-vs-/.test(slug) || /-comparison$/.test(slug);
+}
+function postsForListing(slug: string): Post[] {
+  const all = loadPosts().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  if (slug === 'buying-guides') return all.filter((p) => isBuyingGuide(p.slug));
+  if (slug === 'comparisons') return all.filter((p) => !isBuyingGuide(p.slug) && isComparison(p.slug));
+  return all.filter((p) => !isBuyingGuide(p.slug) && !isComparison(p.slug));
+}
 
 // ──────────────────────────────────────────────────────
 //  Info page component
@@ -617,7 +778,7 @@ function InfoPageContent({ slug }: { slug: string }) {
 // ──────────────────────────────────────────────────────
 function ListingPageContent({ slug }: { slug: string }) {
   const meta = LISTING_META[slug];
-  const posts = loadPosts().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const posts = postsForListing(slug);
 
   return (
     <main className="category-page">
@@ -626,6 +787,7 @@ function ListingPageContent({ slug }: { slug: string }) {
           <span className="cat-emoji">{meta.emoji}</span>
           <h1>{meta.heading}</h1>
           <p>{meta.subtitle}</p>
+          <p className="listing-count">{posts.length} articles</p>
         </div>
       </section>
 
@@ -634,7 +796,7 @@ function ListingPageContent({ slug }: { slug: string }) {
           <Link key={post.slug} href={`/${post.slug}`} className="review-card">
             <div className="review-card-content">
               <span className="badge review-badge">{post.category}</span>
-              <h3>{post.title}</h3>
+              <h2>{post.title}</h2>
               <p>{post.description}</p>
               <div className="card-meta">
                 <span>{post.date}</span>

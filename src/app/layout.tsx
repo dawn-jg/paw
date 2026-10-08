@@ -5,10 +5,10 @@ import Footer from './components/Footer'
 
 export const metadata: Metadata = {
   title: { default: 'PawCritic: Honest Pet Product Reviews & Buying Guides (2026)', template: '%s | PawCritic' },
-  description: 'Honest, research-backed pet product reviews and buying guides for dogs, cats, birds, fish, reptiles, and small pets. Expert-tested picks to help you choose the best for your furry, feathered, and scaly friends.',
+  description: 'Honest, research-backed pet product reviews and buying guides for dogs, cats, birds, fish, reptiles, and small pets. Research-backed picks to help you choose the best for your furry, feathered, and scaly friends.',
   openGraph: {
     title: 'PawCritic: Honest Pet Product Reviews & Buying Guides (2026)',
-    description: 'Honest, research-backed pet product reviews and buying guides for dogs, cats, birds, fish, reptiles, and small pets. Expert-tested picks to help you choose the best.',
+    description: 'Honest, research-backed pet product reviews and buying guides for dogs, cats, birds, fish, reptiles, and small pets. Research-backed picks to help you choose the best.',
     url: 'https://pawcritic.com',
     siteName: 'PawCritic',
     locale: 'en_US',
@@ -37,7 +37,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" as="style" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         {/* JSON-LD Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebSite","name":"PawCritic","url":"https://pawcritic.com","description":"Honest pet product reviews backed by research, testing, and a genuine love for animals.","potentialAction":{"@type":"SearchAction","target":"https://pawcritic.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}) }} />
+        {/* 注：不输出 potentialAction/SearchAction —— 站内搜索是客户端模态框、没有 /search 落地页，
+            指向 404 的 Sitelinks Search Box 标记会被 Google 判为无效。 */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebSite","name":"PawCritic","url":"https://pawcritic.com","description":"Honest pet product reviews backed by research and verified owner feedback."}) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"PawCritic","url":"https://pawcritic.com","logo":"https://pawcritic.com/og-image.png","description":"Honest, research-backed pet product reviews.","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"hello@pawcritic.com"}}) }} />
         {/* 51.la Analytics — polls until SDK is ready (static-export safe) */}
         <script src="https://sdk.51.la/js-sdk-pro.min.js" async />

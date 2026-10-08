@@ -249,7 +249,7 @@ img { max-width: 100%; height: auto; }
 .review-badge { position: absolute; top: 0.75rem; left: 0.75rem; }
 .review-body { padding: 1.25rem 1.5rem 1.5rem; }
 .review-rating { font-size: 0.9rem; font-weight: 700; color: var(--color-amber-dark); display: block; margin-bottom: 0.5rem; }
-.review-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; color: var(--color-charcoal); }
+.review-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.4; color: var(--color-charcoal); }
 .review-excerpt { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .review-link { font-weight: 700; font-size: 0.9rem; color: var(--color-sage); }
 
@@ -623,6 +623,12 @@ img { max-width: 100%; height: auto; }
   font-size: 1.1rem;
 }
 
+.listing-count {
+  font-size: 0.95rem !important;
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -654,11 +660,12 @@ img { max-width: 100%; height: auto; }
   flex-direction: column;
 }
 
+.review-card-content h2,
 .review-card-content h3 {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   color: var(--text);
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   line-height: 1.4;
 }
 

@@ -1,0 +1,22 @@
+# Cloudflare Pages headers
+# 规则要点：只对「文件名带内容 hash 或命名稳定」的静态资源设置长缓存。
+# 注意：Cloudflare 会把同时命中的多条规则的同名 header 用逗号拼接成一个非法值，
+# 因此下面每条规则的路径前缀互不重叠。
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og/*
+  Cache-Control: public, max-age=604800
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/og-image.png
+  Cache-Control: public, max-age=604800
+
+/ads.txt
+  Cache-Control: public, max-age=86400

@@ -13,6 +13,8 @@ interface AuthorProfile {
   name: string;
   title: string;
   bio: string;
+  /** ≤158 chars — used for <meta name="description">. `bio` is the long version rendered on the page. */
+  seoDescription: string;
   initials: string;
   sameAs: string[];
 }
@@ -22,6 +24,8 @@ const AUTHORS: Record<string, AuthorProfile> = {
     name: 'PawCritic Editorial Team',
     title: 'Research & Editorial',
     bio: "PawCritic's editorial team builds every guide from manufacturer specifications, published veterinary and industry guidance, and large-scale analysis of verified owner feedback. We do not operate a physical testing lab, and we do not claim to have personally used every product we cover. Read our full research methodology on the How We Research page.",
+    seoDescription:
+      'The PawCritic editorial team builds every review from manufacturer specs, published veterinary guidance and verified owner feedback. Read our methodology.',
     initials: 'PC',
     sameAs: [],
   },
@@ -45,7 +49,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!author) return { title: 'Author Not Found' };
   return {
     title: author.name,
-    description: author.bio,
+    description: author.seoDescription || author.bio.slice(0, 155).replace(/\s+\S*$/, '') + '…',
+    alternates: { canonical: `https://pawcritic.com/author/${slug}` },
+    openGraph: {
+      title: author.name,
+      description: author.seoDescription || author.bio.slice(0, 155).replace(/\s+\S*$/, '') + '…',
+      url: `https://pawcritic.com/author/${slug}`,
+      type: 'profile',
+    },
   };
 }
 

@@ -48,7 +48,7 @@ export default function ReviewsPage() {
               <span className="badge review-badge">{post.category}</span>
             </div>
             <div className="review-body">
-              <h3 className="review-title">{post.title}</h3>
+              <h2 className="review-title">{post.title}</h2>
               <p className="review-excerpt">
                 {post.description || post.title.substring(0, 80)}
               </p>
