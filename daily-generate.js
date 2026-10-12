@@ -13,12 +13,18 @@
  *   7. 合并 posts.json → validate-asins.js → rebuild-data.js → git commit+push → cron-verify.js
  *   8. 全程幂等：任一步失败即退出码 1，不产生半成品提交
  *
- * 用法：
- *   node daily-generate.js            # 正常生成
+ * 用法（三种模式）：
+ *   node daily-generate.js            # 模式 C：直连外部 LLM 生成（需可用 key）
+ *   node daily-generate.js --dump-prompt        # 模式 A：导出今日写作 prompt 到 _daily_prompt.txt
+ *   node daily-generate.js --draft _daily_draft.json   # 模式 B：导入草稿并完成校验/落盘/提交
  *   node daily-generate.js --dry-run  # 只生成不提交（调试用，保留 _daily_articles.json）
  *   node daily-generate.js --date 2026-08-28   # 指定日期（测试用）
  *
- * 依赖：DeepSeek API key 从 C:/Users/D3-AI/.qclaw/openclaw.json 读取
+ * 模式 A + B 组成「平台侧模型供给内容」的通道：外部 key 全部失效时，
+ * 由平台侧模型按 _daily_prompt.txt 写稿 → 存为 _daily_draft.json → 模式 B 接管
+ * 全部确定性环节（校验/内链注入/合并/validate/rebuild/commit/push/cron-verify）。
+ *
+ * 依赖：模式 C 需要 C:/Users/D3-AI/.qclaw/openclaw.json 里的 provider key；A/B 模式不需要。
  */
 const fs = require('fs');
 const path = require('path');
@@ -32,7 +38,10 @@ const GIT = 'C:/Git/bin/git.exe';
 // ─── 配置 ───────────────────────────────────────────
 const ARGS = process.argv.slice(2);
 const DRY_RUN = ARGS.includes('--dry-run');
+const DUMP_PROMPT = ARGS.includes('--dump-prompt');
 const dateArgIdx = ARGS.indexOf('--date');
+const draftArgIdx = ARGS.indexOf('--draft');
+const DRAFT_FILE = draftArgIdx !== -1 ? ARGS[draftArgIdx + 1] : null;
 // 用本地时区（Asia/Shanghai）日期，避免 UTC 慢一天问题
 function localToday() {
   const d = new Date();
@@ -112,32 +121,40 @@ const catsToDo = [targetCat].filter(c => !doneCats.has(c)).slice(0, DAILY_COUNT)
 console.log('DATE=' + DATE + ' (day ' + DAY_NUM + ') GROUP=' + GROUP + ' | target=' + targetCat + ' -> ' + (catsToDo.join(', ') || '(skipped)'));
 
 // ─── LLM Provider 配置（优先智谱 GLM Coding Plan，DeepSeek fallback）─────
-const cfg = JSON.parse(fs.readFileSync('C:/Users/D3-AI/.qclaw/openclaw.json', 'utf8'));
-
-const PROVIDERS = [
-  {
-    name: 'zai-coding',
-    baseURL: 'https://open.bigmodel.cn/api/coding/paas/v4',
-    apiKey: cfg.models.providers.zai.apiKey,
-    model: 'glm-5.3',
-    reasoning: true
-  },
-  {
-    name: 'deepseek',
-    baseURL: (cfg.models.providers.deepseek.baseURL || 'https://api.deepseek.com').replace(/\/$/, ''),
-    apiKey: cfg.models.providers.deepseek.apiKey,
-    model: 'deepseek-v4-flash',
-    reasoning: true
-  }
-];
+// 注意：只有「直接调外部 LLM」的模式才需要这里。--dump-prompt / --draft 模式
+// 完全不读配置文件，因此在所有外部 key 失效时管线依然可用（由平台侧模型供给内容）。
+let PROVIDERS = [];
+try {
+  const cfg = JSON.parse(fs.readFileSync('C:/Users/D3-AI/.qclaw/openclaw.json', 'utf8'));
+  PROVIDERS = [
+    {
+      name: 'zai-coding',
+      baseURL: 'https://open.bigmodel.cn/api/coding/paas/v4',
+      apiKey: cfg.models.providers.zai.apiKey,
+      model: 'glm-5.3',
+      // glm-5.3 不允许关闭思考（关闭会返回 400 / code 1210），因此这里不发 thinking 字段
+      thinking: null
+    },
+    {
+      name: 'deepseek',
+      baseURL: (cfg.models.providers.deepseek.baseURL || 'https://api.deepseek.com').replace(/\/$/, ''),
+      apiKey: cfg.models.providers.deepseek.apiKey,
+      model: 'deepseek-v4-flash',
+      thinking: null
+    }
+  ];
+} catch (e) {
+  console.warn('WARN: LLM 配置读取失败（--dump-prompt / --draft 模式不受影响）: ' + e.message);
+}
 
 async function callLLM(messages, maxTokens = 64000) {
+  if (!PROVIDERS.length) throw new Error('No LLM providers configured (config unreadable). Use --dump-prompt + --draft instead.');
   let lastErr = null;
   for (const prov of PROVIDERS) {
     try {
       const url = prov.baseURL.replace(/\/$/, '') + '/chat/completions';
       const body = { model: prov.model, messages, max_tokens: maxTokens, temperature: 0.8 };
-      if (prov.reasoning) body.thinking = { type: 'disabled' };
+      if (prov.thinking) body.thinking = prov.thinking;
       const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + prov.apiKey },
@@ -244,7 +261,13 @@ ${poolBlockStr}
 === ANTI-AI VOICE (MANDATORY) ===
 BANNED phrases: "In today's fast-paced world", "Whether you're a seasoned pet owner", "Let's dive in", "It's important to note that", "In conclusion", "As we've seen", "Without further ado", "Delve into", "Navigate the world of", "Embark on a journey", "Game-changer", "Needless to say", "Moreover," / "Furthermore," / "Additionally," at sentence start, "crucial" more than once, "when it comes to", "pet parent", "furry friend", formulaic closings like "...ensuring your pet's health and happiness for years to come".
 BANNED structures: 3-part intro formula, bullet lists of exactly 3 items repeatedly, every paragraph exactly 3-4 sentences, "On one hand... on the other hand" hedging, generic closing that repeats the intro.
-DO: open with a specific observation, surprising fact, strong opinion, or direct question; vary sentence length; use contractions; be colloquial; give specific numbers/temperatures/measurements; take a stance ("I recommend"); mention personal experience ("I've seen this go wrong"); end with a practical takeaway, not a summary.
+DO: open with a specific observation, surprising fact, strong opinion, or direct question; vary sentence length; use contractions; be colloquial; give specific numbers/temperatures/measurements; take a clear editorial stance ("we recommend", "the safer choice is"); end with a practical takeaway, not a summary.
+
+=== VOICE: EDITORIAL TEAM ONLY (MANDATORY) ===
+Write as the PawCritic editorial team, using "we" / "our" / "the team".
+NEVER write first-person experience or testing claims: no "I've seen", "I tested", "I use", "in my experience", "my own dog/cat", "when I", "my client".
+The site does not operate a testing lab and does not claim to have personally used any product (see /how-we-test).
+Ground every claim in published veterinary/industry guidance, manufacturer specifications, or verified owner feedback — never in personal hands-on experience.
 
 === TOPIC SELECTION ===
 Recent ${cat} articles (do NOT duplicate):
@@ -358,12 +381,114 @@ async function genOne(cat, retries = 4) {
   }
 }
 
+// ─── 草稿导入（平台侧模型供给内容时使用）──────────────
+// 草稿 JSON 接受三种形状：裸对象 / {article:{...}} / [ {...} ]
+function ingestDraft(draftRaw, cat) {
+  let obj = draftRaw;
+  if (Array.isArray(obj)) obj = obj[0];
+  else if (obj && obj.article) obj = obj.article;
+  if (!obj || typeof obj !== 'object') throw new Error('draft is not a JSON object');
+
+  obj.content = trimAffLinks(String(obj.content || ''));
+  obj.title = String(obj.title || '').trim();
+  obj.slug = String(obj.slug || '').trim();
+  obj.description = String(obj.description || '').trim();
+  obj.date = DATE;
+  obj.category = cat;
+  validateArticle(obj, cat);
+  obj.content = injectRelated(obj.content, cat, obj.slug);
+  obj.author = AUTHORS[cat].author;
+  obj.authorSlug = AUTHORS[cat].authorSlug;
+  obj.authorBio = AUTHORS[cat].authorBio;
+  allSlugs.add(obj.slug);
+  return obj;
+}
+
+// ─── 落盘 + 校验 + 提交（--draft 与直连 LLM 两条路径共用）────
+function finalize(results) {
+  console.log('\n=== Generated ' + results.length + ' article(s) ===');
+
+  const backupFile = path.join(ROOT, '_daily_articles.json');
+  fs.writeFileSync(backupFile, JSON.stringify(results, null, 2), 'utf8');
+
+  if (DRY_RUN) {
+    console.log('DRY RUN: not merging/committing. Backup at ' + backupFile);
+    return;
+  }
+
+  const newPosts = results.map(o => ({
+    title: o.title, slug: o.slug, date: o.date, category: o.category,
+    description: o.description, author: o.author, authorSlug: o.authorSlug,
+    authorBio: o.authorBio, content: o.content
+  }));
+  const merged = posts.concat(newPosts);
+  fs.writeFileSync(POSTS, JSON.stringify(merged, null, 2), 'utf8');
+  console.log('Merged into posts.json: ' + posts.length + ' -> ' + merged.length);
+
+  console.log('\n--- validate-asins ---');
+  execSync('node ' + path.join(ROOT, 'validate-asins.js'), { stdio: 'inherit', cwd: ROOT });
+
+  console.log('\n--- rebuild-data ---');
+  execSync('node ' + path.join(ROOT, 'rebuild-data.js'), { stdio: 'inherit', cwd: ROOT });
+
+  console.log('\n--- git commit + push ---');
+  execSync(GIT + ' add src/data/posts.json src/data/categories.json src/data/latest.json', { cwd: ROOT, stdio: 'inherit' });
+  const msg = 'Add ' + newPosts.length + ' Group ' + GROUP + ' article(s) for ' + DATE + ' (' + newPosts.map(p => p.slug).join(', ') + ')';
+  execSync('"' + GIT + '" commit -m "' + msg + '"', { cwd: ROOT, stdio: 'inherit' });
+  try {
+    execSync('"' + GIT + '" push origin main', { cwd: ROOT, stdio: 'inherit' });
+  } catch (e) {
+    // push 可能因 stderr 报退出码 1（PowerShell 误报），检查是否实际成功
+    console.log('push exit code ' + e.status + ' (may be PowerShell stderr false-positive)');
+  }
+
+  console.log('\n--- cron-verify ---');
+  try {
+    execSync('node ' + path.join(ROOT, 'cron-verify.js') + ' --min-articles ' + results.length, { cwd: ROOT, stdio: 'inherit' });
+  } catch (e) {
+    console.error('VERIFY FAILED (exit ' + e.status + ')');
+    process.exit(1);
+  }
+
+  try { fs.unlinkSync(backupFile); console.log('cleaned: ' + backupFile); } catch (e) {}
+
+  console.log('\n=== SUCCESS ===');
+}
+
 // ─── 主流程 ────────────────────────────────────────
 async function main() {
   console.log('=== PawCritic daily-generate ===');
   console.log('Date: ' + DATE + ' | Group ' + GROUP + ' | Categories: ' + catsToDo.join(', '));
-  if (catsToDo.length === 0) { console.log('All categories already done for today. Exit.'); process.exit(0); }
+  if (catsToDo.length === 0) { console.log('SKIP: all categories already done for today. Exit.'); process.exit(0); }
 
+  // ── 模式 A：--dump-prompt —— 只输出今天的写作 prompt（供平台侧模型写稿，不调外部 API）
+  if (DUMP_PROMPT) {
+    const promptFile = path.join(ROOT, '_daily_prompt.txt');
+    fs.writeFileSync(promptFile, buildPrompt(targetCat), 'utf8');
+    console.log('=== DUMP-PROMPT ===');
+    console.log('DATE=' + DATE);
+    console.log('CATEGORY=' + targetCat);
+    console.log('PROMPT_FILE=' + promptFile);
+    console.log('DRAFT_TARGET=' + path.join(ROOT, '_daily_draft.json'));
+    return;
+  }
+
+  // ── 模式 B：--draft <file> —— 导入平台侧模型写好的草稿，走同一套校验/落盘/提交
+  if (DRAFT_FILE) {
+    let raw;
+    try { raw = JSON.parse(fs.readFileSync(DRAFT_FILE, 'utf8')); }
+    catch (e) { console.error('FATAL: cannot read/parse draft ' + DRAFT_FILE + ': ' + e.message); process.exit(1); }
+
+    let obj;
+    try { obj = ingestDraft(raw, targetCat); }
+    catch (e) { console.error('FATAL: draft rejected by validation: ' + e.message); process.exit(1); }
+
+    console.log('  draft=' + DRAFT_FILE + ' -> accepted (' + obj.slug + ')');
+    finalize([obj]);
+    return;
+  }
+
+  // ── 模式 C：直连外部 LLM（需要可用的 provider key）
   // 余额预检（逐个 provider，任一可用即可继续）
   let anyOk = false;
   for (const prov of PROVIDERS) {
@@ -388,14 +513,12 @@ async function main() {
 
   // 串行生成（单篇 4 次重试后仍失败则跳过，不拖垮整批；至少 1 篇成功即继续提交）
   const results = [];
-  const failedCats = [];
   for (const cat of catsToDo) {
     try {
       const obj = await genOne(cat);
       results.push(obj);
     } catch (e) {
       console.log('  !! category ' + cat + ' FAILED after all retries: ' + e.message + ' — skipping, continuing with the rest');
-      failedCats.push(cat);
     }
   }
   if (results.length === 0) {
@@ -403,61 +526,7 @@ async function main() {
     process.exit(1);
   }
 
-  console.log('\n=== Generated ' + results.length + ' articles ===');
-
-  // 保存备份
-  const backupFile = path.join(ROOT, '_daily_articles.json');
-  fs.writeFileSync(backupFile, JSON.stringify(results, null, 2), 'utf8');
-
-  if (DRY_RUN) {
-    console.log('DRY RUN: not merging/committing. Backup at ' + backupFile);
-    process.exit(0);
-  }
-
-  // 合并
-  const newPosts = results.map(o => ({
-    title: o.title, slug: o.slug, date: o.date, category: o.category,
-    description: o.description, author: o.author, authorSlug: o.authorSlug,
-    authorBio: o.authorBio, content: o.content
-  }));
-  const merged = posts.concat(newPosts);
-  fs.writeFileSync(POSTS, JSON.stringify(merged, null, 2), 'utf8');
-  console.log('Merged into posts.json: ' + posts.length + ' -> ' + merged.length);
-
-  // validate-asins
-  console.log('\n--- validate-asins ---');
-  execSync('node ' + path.join(ROOT, 'validate-asins.js'), { stdio: 'inherit', cwd: ROOT });
-
-  // rebuild-data
-  console.log('\n--- rebuild-data ---');
-  execSync('node ' + path.join(ROOT, 'rebuild-data.js'), { stdio: 'inherit', cwd: ROOT });
-
-  // git commit + push
-  console.log('\n--- git commit + push ---');
-  const gitAdd = GIT + ' add src/data/posts.json src/data/categories.json src/data/latest.json';
-  execSync(gitAdd, { cwd: ROOT, stdio: 'inherit' });
-  const msg = 'Add ' + newPosts.length + ' Group ' + GROUP + ' articles for ' + DATE + ' (' + newPosts.map(p => p.slug).join(', ') + ')';
-  execSync('"' + GIT + '" commit -m "' + msg + '"', { cwd: ROOT, stdio: 'inherit' });
-  try {
-    execSync('"' + GIT + '" push origin main', { cwd: ROOT, stdio: 'inherit' });
-  } catch (e) {
-    // push 可能因 stderr 报退出码 1（PowerShell 误报），检查是否实际成功
-    console.log('push exit code ' + e.status + ' (may be PowerShell stderr false-positive)');
-  }
-
-  // cron-verify
-  console.log('\n--- cron-verify ---');
-  try {
-    execSync('node ' + path.join(ROOT, 'cron-verify.js') + ' --min-articles ' + results.length, { cwd: ROOT, stdio: 'inherit' });
-  } catch (e) {
-    console.error('VERIFY FAILED (exit ' + e.status + ')');
-    process.exit(1);
-  }
-
-  // 清理备份
-  try { fs.unlinkSync(backupFile); console.log('cleaned: ' + backupFile); } catch (e) {}
-
-  console.log('\n=== SUCCESS ===');
+  finalize(results);
 }
 
 main().catch(e => { console.error('FATAL:', e); process.exit(1); });

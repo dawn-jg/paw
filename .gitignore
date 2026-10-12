@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# daily pipeline scratch (never commit)
+_daily_prompt.txt
+_daily_draft.json
+_daily_articles.json
